@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Simpleport V1</title>
+</head>
+<body>
+        <div class="container">
+            <div class="shadow">
+                <img src="img/Tom.jpg" alt="" class="profile">
+            </div>
+            <h1 class="title">Danai Pluemchai</h1>
+            <div class="link-button">
+                <!-- ปุ่ม 1: About Me (ทำงานได้เลย) -->
+                <div class="button-wrapper">
+                    <button class="button" id="aboutBtn"><img src="img/info.png" alt=""></button>
+                    <p class="text">About me</p>
+                </div>
+
+                <!-- ปุ่ม 2: My Links -->
+                <div class="button-wrapper">
+                    <button class="button" id="linksBtn"><img src="img/link.png" alt=""></button>
+                    <p class="text">My Links</p>
+                </div>
+
+                <!-- ปุ่ม 3: FAQ -->
+                <div class="button-wrapper">
+                    <button class="button" id="faqBtn"><img src="img/question.png" alt=""></button>
+                    <p class="text">FAQ</p>
+                </div>
+
+                <!-- ปุ่ม 4: Projects -->
+                <div class="button-wrapper">
+                    <button class="button" id="projectsBtn"><img src="img/folder.png" alt=""></button>
+                    <p class="text">Projects</p>
+                </div>
+
+                <!-- ปุ่ม 5: Contact -->
+                <div class="button-wrapper">
+                    <button class="button" id="contactBtn"><img src="img/contact-mail.png" alt=""></button>
+                    <p class="text">Contact</p>
+                </div>
+
+                <!-- 🔴 กล่องเนื้อหา (ทำงานได้จริง) -->
+                <div id="aboutPanel" class="panel hidden">
+                    <h2>About Me</h2>
+                    <p>สวัสดีค่ะ ฉันชื่อ Danai เป็นนักพัฒนาเว็บไซต์ สนุกกับการสร้างสรรค์สิ่งใหม่ๆ 😊</p>
+                    <button id="closePanel" class="close-btn">ปิด</button>
+                </div>
+
+                <!-- 🔴 กล่องเนื้อหา (เตรียมไว้ล่วงหน้า พร้อมใส่เนื้อหาเอง) -->
+                <div id="linksPanel" class="panel hidden">
+                    <!-- 📝 ใส่เนื้อหาเกี่ยวกับ My Links ที่นี่ เช่น Facebook, IG, GitHub -->
+                    <h2>My Links</h2>
+                    <p>💡 ใส่ลิงก์ของคุณที่นี่ เช่น Facebook, IG, YouTube เป็นต้น</p>
+                    <button id="closeLinks" class="close-btn">ปิด</button>
+                </div>
+
+                <div id="faqPanel" class="panel hidden">
+                    <!-- 📝 ใส่คำถาม-คำตอบ หรือสิ่งที่คนชอบถามบ่อย -->
+                    <h2>FAQ</h2>
+                    <p>💡 ใส่คำถามที่พบบ่อย พร้อมคำตอบ เช่น "ทำเว็บกี่วันเสร็จ?"</p>
+                    <button id="closeFAQ" class="close-btn">ปิด</button>
+                </div>
+
+                <div id="projectsPanel" class="panel hidden">
+                    <!-- 📝 ใส่รายชื่อโปรเจคหรือภาพตัวอย่าง -->
+                    <h2>Projects</h2>
+                    <p>💡 ใส่โปรเจคที่เคยทำ เช่น เว็บขายของ เว็บกาแฟ เว็บพอร์ต ฯลฯ</p>
+                    <button id="closeProjects" class="close-btn">ปิด</button>
+                </div>
+
+                <div id="contactPanel" class="panel hidden">
+                    <!-- 📝 ใส่ช่องทางติดต่อ เช่น อีเมล เบอร์ โทร LINE -->
+                    <h2>Contact</h2>
+                    <p>💡 ใส่ช่องทางติดต่อ เช่น อีเมล, เบอร์โทร, ไลน์ หรือฟอร์มติดต่อ</p>
+                    <button id="closeContact" class="close-btn">ปิด</button>
+                </div>
+            </div>
+        </div>   
+    <script src="js/script.js"></script>
+</body>
+</html>
