@@ -1,671 +1,739 @@
+/* นำเข้าฟอนต์จาก Google Fonts - Noto Sans Thai และ Sriracha */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Sriracha&display=swap');
 
+/* รีเซ็ต CSS พื้นฐานสำหรับทุก element */
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Noto-Sans-Thai", cursive;
+    padding: 0;           /* ลบ padding ทั้งหมด */
+    margin: 0;            /* ลบ margin ทั้งหมด */
+    box-sizing: border-box;  /* กำหนดให้ขนาดรวม padding และ border */
+    font-family: "Noto-Sans-Thai", cursive;  /* กำหนดฟอนต์หลัก */
 }
 
+/* สไตล์สำหรับ body หลัก */
 body{
-    background-color: #f5e7eb;
+    background-color: #f5e7eb;  /* สีพื้นหลังโทนชมพูอ่อน */
 }
 
+/* Media Query สำหรับหน้าจอขนาดใหญ่ (Desktop) 1440px ขึ้นไป */
 @media screen and (min-width:1440px){
 
+    /* จัดกึ่งกลางหน้าจอแนวตั้งและแนวนอน */
     body{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
+        display: flex;              /* ใช้ flexbox */
+        justify-content: center;    /* จัดกึ่งกลางแนวนอน */
+        align-items: center;        /* จัดกึ่งกลางแนวตั้ง */
+        height: 100vh;              /* ความสูงเต็มหน้าจอ */
     }
 
+    /* กล่องหลักที่บรรจุเนื้อหาทั้งหมด */
     .container{
-        width: 1200px;
-        height: 600px;
-        border-radius: 20px;
-        padding: 20px;
-        margin: 25px;
-        background-color: #fea591;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-direction: column;
+        width: 1200px;              /* ความกว้างคงที่ */
+        height: 600px;              /* ความสูงคงที่ */
+        border-radius: 20px;        /* มุมโค้งมน */
+        padding: 20px;              /* ระยะห่างด้านใน */
+        margin: 25px;               /* ระยะห่างด้านนอก */
+        background-color: #fea591;  /* สีพื้นหลังโทนส้ม */
+        display: flex;              /* ใช้ flexbox */
+        justify-content: space-around;  /* กระจายเนื้อหาให้เท่ากัน */
+        align-items: center;        /* จัดแนวตั้งกึ่งกลาง */
+        flex-direction: column;     /* เรียงแนวตั้ง */
     }    
 
+    /* wrapper สำหรับปุ่มและ tooltip */
     .button-wrapper {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        position: relative;         /* ตำแหน่งสัมพัทธ์สำหรับ tooltip */
+        display: flex;              /* ใช้ flexbox */
+        flex-direction: column;     /* เรียงแนวตั้ง */
+        align-items: center;        /* จัดกึ่งกลางแนวนอน */
     }
 
-
+    /* ข้อความ tooltip ที่แสดงเมื่อ hover */
     .text {
-        visibility: hidden;
-        opacity: 0;
-        transition: visibility 0.2s, opacity 0.2s;
-        position: absolute;
-        bottom: 110%;
-        background: #f0917b;
-        color: white;
-        padding: 8px 12px;
-        border-radius: 10px;
-        white-space: nowrap;
-        z-index: 10;
-        
+        visibility: hidden;         /* ซ่อนโดยค่าเริ่มต้น */
+        opacity: 0;                 /* ความโปร่งใส 0% */
+        transition: visibility 0.2s, opacity 0.2s;  /* เอฟเฟกต์การเปลี่ยน */
+        position: absolute;         /* ตำแหน่งสัมบูรณ์ */
+        bottom: 110%;               /* วางเหนือปุ่ม 110% */
+        background: #f0917b;        /* สีพื้นหลังโทนส้มเข้ม */
+        color: white;               /* สีตัวอักษรขาว */
+        padding: 8px 12px;          /* ระยะห่างด้านใน */
+        border-radius: 10px;        /* มุมโค้งมน */
+        white-space: nowrap;        /* ไม่ให้ตัดบรรทัด */
+        z-index: 10;                /* อยู่ด้านบนสุด */
     }
 
+    /* แสดง tooltip เมื่อ hover ที่ button-wrapper */
     .button-wrapper:hover .text {
-        visibility: visible;
-        opacity: 1;
+        visibility: visible;        /* แสดงออกมา */
+        opacity: 1;                 /* ความโปร่งใส 100% */
     }
 
+    /* สไตล์สำหรับปุ่มหลัก */
     .button{
-        width: 100px;
-        height: 100px;
-        border-radius: 20px;
-        background: #fea591;
-        z-index: 3;
-        border: 2px solid #fea591;
+        width: 100px;               /* ความกว้าง */
+        height: 100px;              /* ความสูง */
+        border-radius: 20px;        /* มุมโค้งมน */
+        background: #fea591;        /* สีพื้นหลังเหมือนกล่องหลัก */
+        z-index: 3;                 /* ลำดับชั้น */
+        border: 2px solid #fea591;  /* ขอบสีเดียวกับพื้นหลัง */
     }
 
+    /* เอฟเฟกต์เมื่อ hover ปุ่ม */
     .button:hover{
-        transform: translateY(-2px);
+        transform: translateY(-2px);  /* เลื่อนขึ้น 2px */
     }
 
+    /* รูปภาพในปุ่ม */
     .button img{
-        width: 80px;
-        height: 80px;
+        width: 80px;                /* ความกว้างรูป */
+        height: 80px;               /* ความสูงรูป */
     }
 
+    /* กล่องบรรจุปุ่มลิงก์ทั้งหมด */
     .link-button{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        position: relative;
-        bottom: 60px;
-        gap: 50px;
-
+        display: flex;              /* ใช้ flexbox */
+        justify-content: space-around;  /* กระจายปุ่มให้เท่ากัน */
+        align-items: center;        /* จัดแนวตั้งกึ่งกลาง */
+        position: relative;         /* ตำแหน่งสัมพัทธ์ */
+        bottom: 60px;               /* เลื่อนขึ้น 60px */
+        gap: 50px;                  /* ระยะห่างระหว่างปุ่ม */
     }
 
+    /* รูปโปรไฟล์ */
     .profile{
-        position: relative;
-        left: 15px;
-        top: 15px;
-        border-radius: 200px;
+        position: relative;         /* ตำแหน่งสัมพัทธ์ */
+        left: 15px;                 /* เลื่อนขวา 15px */
+        top: 15px;                  /* เลื่อนลง 15px */
+        border-radius: 200px;       /* ทำให้เป็นวงกลม */
     }
 
+    /* ข้อความหัวเรื่อง */
     .title{
-        position: relative;
-        left: 200px;
-        bottom: 250px;
-        font-size: 62px;
-        color: white;
-        text-shadow: 3px 3px black;
+        position: relative;         /* ตำแหน่งสัมพัทธ์ */
+        left: 200px;                /* เลื่อนขวา 200px */
+        bottom: 250px;              /* เลื่อนขึ้น 250px */
+        font-size: 62px;            /* ขนาดตัวอักษร */
+        color: white;               /* สีตัวอักษรขาว */
+        text-shadow: 3px 3px black; /* เงาตัวอักษรสีดำ */
     }
 
+    /* เงาวงกลมด้านหลังรูปโปรไฟล์ */
     .shadow{
-        border-radius: 200px;
-        position: relative;
-        right: 300px;
-        width: 350px;
-        height: 350px;
-        background-color: #fe8266;
-
+        border-radius: 200px;       /* ทำให้เป็นวงกลม */
+        position: relative;         /* ตำแหน่งสัมพัทธ์ */
+        right: 300px;               /* เลื่อนซ้าย 300px */
+        width: 350px;               /* ความกว้าง */
+        height: 350px;              /* ความสูง */
+        background-color: #fe8266;  /* สีพื้นหลังโทนส้มเข้ม */
     }
 
-
-        /* กล่องเนื้อหาที่แสดงซ้อน */
+    /* กล่องเนื้อหาแบบ popup (modal) ที่แสดงซ้อนทับหน้าจอ */
     .panel {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 90%;
-        max-width: 500px;
-        background-color: #fff;
-        padding: 30px;
-        border-radius: 15px;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-        z-index: 999;
-        display: none;
+        position: fixed;            /* ตำแหน่งคงที่ตามหน้าจอ */
+        top: 50%;                   /* ตำแหน่งแนวตั้ง 50% */
+        left: 50%;                  /* ตำแหน่งแนวนอน 50% */
+        transform: translate(-50%, -50%);  /* เลื่อนให้อยู่กึ่งกลางจริงๆ */
+        width: 90%;                 /* ความกว้าง 90% ของหน้าจอ */
+        max-width: 500px;           /* ความกว้างสูงสุด */
+        background-color: #fff;     /* สีพื้นหลังขาว */
+        padding: 30px;              /* ระยะห่างด้านใน */
+        border-radius: 15px;        /* มุมโค้งมน */
+        box-shadow: 0 8px 24px rgba(0,0,0,0.3);  /* เงาโค้ง */
+        z-index: 999;               /* อยู่ด้านบนสุด */
+        display: none;              /* ซ่อนโดยค่าเริ่มต้น */
     }
 
-    /* ปุ่มปิด */
+    /* ปุ่มปิด modal */
     .close-btn {
-        margin-top: 20px;
-        padding: 10px 15px;
-        background-color: #ff6b81;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
+        margin-top: 20px;           /* ระยะห่างด้านบน */
+        padding: 10px 15px;         /* ระยะห่างด้านใน */
+        background-color: #ff6b81;  /* สีพื้นหลังชมพู */
+        color: white;               /* สีตัวอักษรขาว */
+        border: none;               /* ไม่มีขอบ */
+        border-radius: 8px;         /* มุมโค้งมน */
+        cursor: pointer;            /* แสดงรูปมือเมื่อชี้ */
     }
 
-    /* class ที่ใช้เปิด/ปิดกล่อง */
+    /* class สำหรับแสดง panel */
     .panel.active {
-        display: block;
+        display: block;             /* แสดงออกมา */
     }
 
+    /* class สำหรับซ่อน element */
     .hidden {
-        display: none;
+        display: none;              /* ซ่อน */
     }
 
-    /* เพิ่มพื้นหลังเบลอ ถ้าต้องการ */
+    /* ป้องกันการเลื่อนหน้าจอเมื่อเปิด modal */
     body.modal-open {
-        overflow: hidden;
+        overflow: hidden;           /* ซ่อน scrollbar */
     }
 
-        /* ตัวอย่างการกำหนดขนาดเฉพาะสำหรับแต่ละ panel */
+    /* กำหนดขนาดเฉพาะสำหรับ panel "เกี่ยวกับ" */
     #aboutPanel {
-        width: 500px;       /* ขนาดกว้าง */
-        max-width: 90%;     /* กว้างสุดไม่เกิน 90% ของหน้าจอ */
-        height: auto;       /* ความสูงอัตโนมัติ */
-        max-height: 70vh;   /* สูงสุด 70% ของ viewport height */
-        overflow-y: auto;   /* ถ้ามากกว่าสูงสุดให้เลื่อนในกล่อง */
+        width: 500px;               /* ความกว้างคงที่ */
+        max-width: 90%;             /* ความกว้างสูงสุด 90% ของหน้าจอ */
+        height: auto;               /* ความสูงตามเนื้อหา */
+        max-height: 70vh;           /* ความสูงสูงสุด 70% ของหน้าจอ */
+        overflow-y: auto;           /* เลื่อนได้เมื่อเนื้อหาเกิน */
     }
 
+    /* กำหนดขนาดเฉพาะสำหรับ panel "ลิงก์" */
     #linksPanel {
-        width: 400px;
-        max-width: 90%;
-        height: 400px;
-        overflow-y: auto;
+        width: 400px;               /* ความกว้างคงที่ */
+        max-width: 90%;             /* ความกว้างสูงสุด */
+        height: 400px;              /* ความสูงคงที่ */
+        overflow-y: auto;           /* เลื่อนได้เมื่อเนื้อหาเกิน */
     }
 
+    /* กำหนดขนาดเฉพาะสำหรับ panel "คำถามที่พบบ่อย" */
     #faqPanel {
-        width: 450px;
-        max-width: 90%;
-        height: auto;
-        max-height: 60vh;
-        overflow-y: auto;
+        width: 450px;               /* ความกว้างคงที่ */
+        max-width: 90%;             /* ความกว้างสูงสุด */
+        height: auto;               /* ความสูงตามเนื้อหา */
+        max-height: 60vh;           /* ความสูงสูงสุด 60% ของหน้าจอ */
+        overflow-y: auto;           /* เลื่อนได้เมื่อเนื้อหาเกิน */
     }
 
+    /* กำหนดขนาดเฉพาะสำหรับ panel "โปรเจค" */
     #projectsPanel {
-        width: 600px;
-        max-width: 95%;
-        height: 500px;
-        overflow-y: auto;
+        width: 600px;               /* ความกว้างคงที่ */
+        max-width: 95%;             /* ความกว้างสูงสุด 95% ของหน้าจอ */
+        height: 500px;              /* ความสูงคงที่ */
+        overflow-y: auto;           /* เลื่อนได้เมื่อเนื้อหาเกิน */
     }
 
+    /* กำหนดขนาดเฉพาะสำหรับ panel "ติดต่อ" */
     #contactPanel {
-        width: 350px;
-        max-width: 90%;
-        height: auto;
-        max-height: 50vh;
-        overflow-y: auto;
+        width: 350px;               /* ความกว้างคงที่ */
+        max-width: 90%;             /* ความกว้างสูงสุด */
+        height: auto;               /* ความสูงตามเนื้อหา */
+        max-height: 50vh;           /* ความสูงสูงสุด 50% ของหน้าจอ */
+        overflow-y: auto;           /* เลื่อนได้เมื่อเนื้อหาเกิน */
     }
 
+} /* จบ media query สำหรับหน้าจอขนาดใหญ่ */
 
-}
-
-@media screen and (min-width: 1205px) and (max-width: 1439px) {
+/* Media Query สำหรับหน้าจอขนาดกลาง (Desktop ขนาดเล็ก) 1205px - 1439px */
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+    /* จัดกึ่งกลางหน้าจอแนวตั้งและแนวนอน */
     body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
+        display: flex;              /* ใช้ flexbox */
+        justify-content: center;    /* จัดกึ่งกลางแนวนอน */
+        align-items: center;        /* จัดกึ่งกลางแนวตั้ง */
+        height: 100vh;              /* ความสูงเต็มหน้าจอ */
     }
 
+    /* กล่องหลักที่ปรับขนาดให้เข้ากับหน้าจอ */
     .container {
-        width: 95%;       /* ปรับให้กว้างพอดีหน้าจอ */
-        max-width: 1200px;
-        height: 600px;
-        border-radius: 20px;
-        padding: 20px;
-        margin: 25px;
-        background-color: #fea591;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-direction: column;
+        width: 95%;                 /* ความกว้าง 95% ของหน้าจอ */
+        max-width: 1200px;          /* ความกว้างสูงสุด */
+        height: 600px;              /* ความสูงคงที่ */
+        border-radius: 20px;        /* มุมโค้งมน */
+        padding: 20px;              /* ระยะห่างด้านใน */
+        margin: 25px;               /* ระยะห่างด้านนอก */
+        background-color: #fea591;  /* สีพื้นหลังโทนส้ม */
+        display: flex;              /* ใช้ flexbox */
+        justify-content: space-around;  /* กระจายเนื้อหาให้เท่ากัน */
+        align-items: center;        /* จัดแนวตั้งกึ่งกลาง */
+        flex-direction: column;     /* เรียงแนวตั้ง */
     }
 
+    /* wrapper สำหรับปุ่มและ tooltip */
     .button-wrapper {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        position: relative;         /* ตำแหน่งสัมพัทธ์สำหรับ tooltip */
+        display: flex;              /* ใช้ flexbox */
+        flex-direction: column;     /* เรียงแนวตั้ง */
+        align-items: center;        /* จัดกึ่งกลางแนวนอน */
     }
 
+    /* ข้อความ tooltip ที่แสดงเมื่อ hover (ปรับขนาดให้เหมาะสม) */
     .text {
-        visibility: hidden;
-        opacity: 0;
-        transition: visibility 0.2s, opacity 0.2s;
-        position: absolute;
-        bottom: 110%;
-        background: #f0917b;
-        color: white;
-        padding: 8px 12px;
-        border-radius: 10px;
-        white-space: nowrap;
-        z-index: 10;
-        font-size: 16px;
+        visibility: hidden;         /* ซ่อนโดยค่าเริ่มต้น */
+        opacity: 0;                 /* ความโปร่งใส 0% */
+        transition: visibility 0.2s, opacity 0.2s;  /* เอฟเฟกต์การเปลี่ยน */
+        position: absolute;         /* ตำแหน่งสัมบูรณ์ */
+        bottom: 110%;               /* วางเหนือปุ่ม 110% */
+        background: #f0917b;        /* สีพื้นหลังโทนส้มเข้ม */
+        color: white;               /* สีตัวอักษรขาว */
+        padding: 8px 12px;          /* ระยะห่างด้านใน */
+        border-radius: 10px;        /* มุมโค้งมน */
+        white-space: nowrap;        /* ไม่ให้ตัดบรรทัด */
+        z-index: 10;                /* อยู่ด้านบนสุด */
+        font-size: 16px;            /* ขนาดตัวอักษร */
     }
 
+    /* แสดง tooltip เมื่อ hover ที่ button-wrapper */
     .button-wrapper:hover .text {
-        visibility: visible;
-        opacity: 1;
+        visibility: visible;        /* แสดงออกมา */
+        opacity: 1;                 /* ความโปร่งใส 100% */
     }
 
+    /* สไตล์สำหรับปุ่มหลัก (ขนาดเล็กลงเล็กน้อย) */
     .button {
-        width: 90px;   /* ลดขนาดเล็กน้อย */
-        height: 90px;
-        border-radius: 20px;
-        background: #fea591;
-        z-index: 3;
-        transition: background 0.3s, transform 0.3s;
-        border: 2px solid #fea591;
+        width: 90px;                /* ความกว้าง (ลดจาก 100px) */
+        height: 90px;               /* ความสูง (ลดจาก 100px) */
+        border-radius: 20px;        /* มุมโค้งมน */
+        background: #fea591;        /* สีพื้นหลังเหมือนกล่องหลัก */
+        z-index: 3;                 /* ลำดับชั้น */
+        transition: background 0.3s, transform 0.3s;  /* เอฟเฟกต์การเปลี่ยน */
+        border: 2px solid #fea591;  /* ขอบสีเดียวกับพื้นหลัง */
     }
 
+    /* เอฟเฟกต์เมื่อ hover ปุ่ม */
     .button:hover {
-        transform: translateY(-2px);
+        transform: translateY(-2px);  /* เลื่อนขึ้น 2px */
     }
 
+    /* รูปภาพในปุ่ม (ขนาดเล็กลงตามปุ่ม) */
     .button img {
-        width: 70px;
-        height: 70px;
+        width: 70px;                /* ความกว้างรูป (ลดจาก 80px) */
+        height: 70px;               /* ความสูงรูป (ลดจาก 80px) */
     }
 
+    /* กล่องบรรจุปุ่มลิงก์ทั้งหมด */
     .link-button {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        position: relative;
-        bottom: 50px;
-        gap: 40px;    /* ช่องว่างเล็กน้อย */
+        display: flex;              /* ใช้ flexbox */
+        justify-content: space-around;  /* กระจายปุ่มให้เท่ากัน */
+        align-items: center;        /* จัดแนวตั้งกึ่งกลาง */
+        position: relative;         /* ตำแหน่งสัมพัทธ์ */
+        bottom: 50px;               /* เลื่อนขึ้น 50px (ลดจาก 60px) */
+        gap: 40px;                  /* ระยะห่างระหว่างปุ่ม (ลดจาก 50px) */
     }
 
+    /* รูปโปรไฟล์ (ปรับขนาดให้เหมาะสม) */
     .profile {
-        position: relative;
-        left: 12px;
-        top: 12px;
-        border-radius: 200px;
-        width: 320px;
-        height: auto;
+        position: relative;         /* ตำแหน่งสัมพัทธ์ */
+        left: 12px;                 /* เลื่อนขวา 12px (ลดจาก 15px) */
+        top: 12px;                  /* เลื่อนลง 12px (ลดจาก 15px) */
+        border-radius: 200px;       /* ทำให้เป็นวงกลม */
+        width: 320px;               /* ความกว้างคงที่ */
+        height: auto;               /* ความสูงตามสัดส่วน */
     }
 
+    /* ข้อความหัวเรื่อง (ปรับขนาดและตำแหน่ง) */
     .title {
-        position: relative;
-        left: 180px;
-        bottom: 230px;
-        font-size: 56px;
-        text-shadow: 3px 3px black;
+        position: relative;         /* ตำแหน่งสัมพัทธ์ */
+        left: 180px;                /* เลื่อนขวา 180px (ลดจาก 200px) */
+        bottom: 230px;              /* เลื่อนขึ้น 230px (ลดจาก 250px) */
+        font-size: 56px;            /* ขนาดตัวอักษร (ลดจาก 62px) */
+        color: white;               /* สีตัวอักษรขาว */
+        text-shadow: 3px 3px black; /* เงาตัวอักษรสีดำ */
     }
 
+    /* เงาวงกลมด้านหลังรูปโปรไฟล์ (ปรับขนาดให้เข้ากับรูป) */
     .shadow {
-        border-radius: 200px;
-        position: relative;
-        right: 280px;
-        width: 320px;
-        height: 320px;
-        background-color: #fe8266;
+        border-radius: 200px;       /* ทำให้เป็นวงกลม */
+        position: relative;         /* ตำแหน่งสัมพัทธ์ */
+        right: 280px;               /* เลื่อนซ้าย 280px (ลดจาก 300px) */
+        width: 320px;               /* ความกว้าง (ลดจาก 350px) */
+        height: 320px;              /* ความสูง (ลดจาก 350px) */
+        background-color: #fe8266;  /* สีพื้นหลังโทนส้มเข้ม */
     }
 
-    /* กล่องเนื้อหาที่แสดงซ้อน (panel) ใช้เหมือนเดิม */
+    /* กล่องเนื้อหาแบบ popup (ใช้สไตล์เดียวกับหน้าจอใหญ่) */
     .panel {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 90%;
-        max-width: 500px;
-        background-color: #fff;
-        padding: 30px;
-        border-radius: 15px;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-        z-index: 999;
-        display: none;
+        position: fixed;            /* ตำแหน่งคงที่ตามหน้าจอ */
+        top: 50%;                   /* ตำแหน่งแนวตั้ง 50% */
+        left: 50%;                  /* ตำแหน่งแนวนอน 50% */
+        transform: translate(-50%, -50%);  /* เลื่อนให้อยู่กึ่งกลางจริงๆ */
+        width: 90%;                 /* ความกว้าง 90% ของหน้าจอ */
+        max-width: 500px;           /* ความกว้างสูงสุด */
+        background-color: #fff;     /* สีพื้นหลังขาว */
+        padding: 30px;              /* ระยะห่างด้านใน */
+        border-radius: 15px;        /* มุมโค้งมน */
+        box-shadow: 0 8px 24px rgba(0,0,0,0.3);  /* เงาโค้ง */
+        z-index: 999;               /* อยู่ด้านบนสุด */
+        display: none;              /* ซ่อนโดยค่าเริ่มต้น */
     }
 
-    /* ปุ่มปิด */
+    /* ปุ่มปิด modal */
     .close-btn {
-        margin-top: 20px;
-        padding: 10px 15px;
-        background-color: #ff6b81;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
+        margin-top: 20px;           /* ระยะห่างด้านบน */
+        padding: 10px 15px;         /* ระยะห่างด้านใน */
+        background-color: #ff6b81;  /* สีพื้นหลังชมพู */
+        color: white;               /* สีตัวอักษรขาว */
+        border: none;               /* ไม่มีขอบ */
+        border-radius: 8px;         /* มุมโค้งมน */
+        cursor: pointer;            /* แสดงรูปมือเมื่อชี้ */
     }
 
-    /* class ที่ใช้เปิด/ปิดกล่อง */
+    /* class สำหรับแสดง panel */
     .panel.active {
-        display: block;
+        display: block;             /* แสดงออกมา */
     }
 
+    /* class สำหรับซ่อน element */
     .hidden {
-        display: none;
+        display: none;              /* ซ่อน */
     }
 
+    /* ป้องกันการเลื่อนหน้าจอเมื่อเปิด modal */
     body.modal-open {
-        overflow: hidden;
+        overflow: hidden;           /* ซ่อน scrollbar */
     }
 
-    /* ขนาดเฉพาะแต่ละ panel */
+    /* ขนาดเฉพาะแต่ละ panel (ใช้เหมือนหน้าจอใหญ่) */
     #aboutPanel {
-        width: 500px;
-        max-width: 90%;
-        max-height: 70vh;
-        overflow-y: auto;
+        width: 500px;               /* ความกว้างคงที่ */
+        max-width: 90%;             /* ความกว้างสูงสุด */
+        max-height: 70vh;           /* ความสูงสูงสุด 70% ของหน้าจอ */
+        overflow-y: auto;           /* เลื่อนได้เมื่อเนื้อหาเกิน */
     }
 
     #linksPanel {
-        width: 400px;
-        max-width: 90%;
-        height: 400px;
-        overflow-y: auto;
+        width: 400px;               /* ความกว้างคงที่ */
+        max-width: 90%;             /* ความกว้างสูงสุด */
+        height: 400px;              /* ความสูงคงที่ */
+        overflow-y: auto;           /* เลื่อนได้เมื่อเนื้อหาเกิน */
     }
 
     #faqPanel {
-        width: 450px;
-        max-width: 90%;
-        max-height: 60vh;
-        overflow-y: auto;
+        width: 450px;               /* ความกว้างคงที่ */
+        max-width: 90%;             /* ความกว้างสูงสุด */
+        max-height: 60vh;           /* ความสูงสูงสุด 60% ของหน้าจอ */
+        overflow-y: auto;           /* เลื่อนได้เมื่อเนื้อหาเกิน */
     }
 
     #projectsPanel {
-        width: 600px;
-        max-width: 95%;
-        height: 500px;
-        overflow-y: auto;
+        width: 600px;               /* ความกว้างคงที่ */
+        max-width: 95%;             /* ความกว้างสูงสุด */
+        height: 500px;              /* ความสูงคงที่ */
+        overflow-y: auto;           /* เลื่อนได้เมื่อเนื้อหาเกิน */
     }
 
     #contactPanel {
-        width: 350px;
-        max-width: 90%;
-        max-height: 50vh;
-        overflow-y: auto;
+        width: 350px;               /* ความกว้างคงที่ */
+        max-width: 90%;             /* ความกว้างสูงสุด */
+        max-height: 50vh;           /* ความสูงสูงสุด 50% ของหน้าจอ */
+        overflow-y: auto;           /* เลื่อนได้เมื่อเนื้อหาเกิน */
     }
-}
+} /* จบ media query สำหรับหน้าจอขนาดกลาง */
 
-/* มือถือ 320px - 767px */
+/* Media Query สำหรับมือถือ (Mobile) 320px - 767px */
 @media screen and (min-width: 320px) and (max-width: 767px) {
+    /* จัดเลย์เอาต์แนวตั้งเริ่มจากบน */
     body {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start; /* ให้เนื้อหาเริ่มจากบน */
-        padding: 20px 10px;
-        background-color: #f5e7eb;
-        min-height: 100vh;
+        display: flex;              /* ใช้ flexbox */
+        justify-content: center;    /* จัดกึ่งกลางแนวนอน */
+        align-items: flex-start;    /* เริ่มจากด้านบน (ไม่ใช่กึ่งกลาง) */
+        padding: 20px 10px;         /* ระยะห่างด้านใน (บน-ล่าง 20px, ซ้าย-ขวา 10px) */
+        background-color: #f5e7eb;  /* สีพื้นหลังโทนชมพูอ่อน */
+        min-height: 100vh;          /* ความสูงขั้นต่ำเต็มหน้าจอ */
     }
 
+    /* กล่องหลักสำหรับมือถือ */
     .container {
-        width: 95%;
-        max-width: 400px;
-        height: auto; /* สูงตามเนื้อหา */
-        border-radius: 20px;
-        padding: 15px;
-        margin: 10px 0;
-        background-color: #fea591;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        width: 95%;                 /* ความกว้าง 95% ของหน้าจอ */
+        max-width: 400px;           /* ความกว้างสูงสุด */
+        height: auto;               /* ความสูงตามเนื้อหา (ไม่คงที่) */
+        border-radius: 20px;        /* มุมโค้งมน */
+        padding: 15px;              /* ระยะห่างด้านใน (ลดลง) */
+        margin: 10px 0;             /* ระยะห่างด้านนอก (บน-ล่าง เท่านั้น) */
+        background-color: #fea591;  /* สีพื้นหลังโทนส้ม */
+        display: flex;              /* ใช้ flexbox */
+        flex-direction: column;     /* เรียงแนวตั้ง */
+        align-items: center;        /* จัดกึ่งกลางแนวนอน */
     }
 
+    /* wrapper สำหรับปุ่ม (เปลี่ยนเป็นแนวนอน) */
     .button-wrapper {
-        position: relative;
-        display: flex;
-        flex-direction: row; /* เรียงแนวนอน */
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 15px;
-        gap: 20px;
-        flex-wrap: wrap; /* ถ้าปุ่มเยอะเกินจะขึ้นบรรทัดใหม่ */
-        width: 100%;
+        position: relative;         /* ตำแหน่งสัมพัทธ์สำหรับ tooltip */
+        display: flex;              /* ใช้ flexbox */
+        flex-direction: row;        /* เรียงแนวนอน (เปลี่ยนจากแนวตั้ง) */
+        justify-content: center;    /* จัดกึ่งกลางแนวนอน */
+        align-items: center;        /* จัดกึ่งกลางแนวตั้ง */
+        margin-bottom: 15px;        /* ระยะห่างด้านล่าง */
+        gap: 20px;                  /* ระยะห่างระหว่างปุ่ม */
+        flex-wrap: wrap;            /* ให้ปุ่มขึ้นบรรทัดใหม่ถ้าเกิน */
+        width: 100%;                /* ความกว้างเต็ม */
     }
 
+    /* สไตล์สำหรับปุ่มหลัก (ขนาดเล็กสำหรับมือถือ) */
     .button {
-        width: 70px;
-        height: 70px;
-        border-radius: 20px;
-        background: #fea591;
-        transition: background 0.3s, transform 0.3s;
-        flex-shrink: 0;
-        border: 2px solid #fea591;
+        width: 70px;                /* ความกว้าง (เล็กลง) */
+        height: 70px;               /* ความสูง (เล็กลง) */
+        border-radius: 20px;        /* มุมโค้งมน */
+        background: #fea591;        /* สีพื้นหลังเหมือนกล่องหลัก */
+        transition: background 0.3s, transform 0.3s;  /* เอฟเฟกต์การเปลี่ยน */
+        flex-shrink: 0;             /* ไม่ให้หดขนาด */
+        border: 2px solid #fea591;  /* ขอบสีเดียวกับพื้นหลัง */
     }
 
+    /* เอฟเฟกต์เมื่อ hover ปุ่ม */
     .button:hover {
-        transform: translateY(-2px);
+        transform: translateY(-2px);  /* เลื่อนขึ้น 2px */
     }
 
+    /* รูปภาพในปุ่ม (ขนาดเล็กสำหรับมือถือ) */
     .button img {
-        width: 55px;
-        height: 55px;
+        width: 55px;                /* ความกว้างรูป (เล็กลง) */
+        height: 55px;               /* ความสูงรูป (เล็กลง) */
     }
 
+    /* ข้อความ tooltip สำหรับมือถือ */
     .text {
-        visibility: hidden;
-        opacity: 0;
-        transition: visibility 0.2s, opacity 0.2s;
-        position: absolute;
-        bottom: 110%;
-        background: #f0917b;
-        color: white;
-        padding: 5px 8px;
-        border-radius: 10px;
-        white-space: nowrap;
-        z-index: 10;
-        font-size: 12px;
+        visibility: hidden;         /* ซ่อนโดยค่าเริ่มต้น */
+        opacity: 0;                 /* ความโปร่งใส 0% */
+        transition: visibility 0.2s, opacity 0.2s;  /* เอฟเฟกต์การเปลี่ยน */
+        position: absolute;         /* ตำแหน่งสัมบูรณ์ */
+        bottom: 110%;               /* วางเหนือปุ่ม 110% */
+        background: #f0917b;        /* สีพื้นหลังโทนส้มเข้ม */
+        color: white;               /* สีตัวอักษรขาว */
+        padding: 5px 8px;           /* ระยะห่างด้านใน (ลดลง) */
+        border-radius: 10px;        /* มุมโค้งมน */
+        white-space: nowrap;        /* ไม่ให้ตัดบรรทัด */
+        z-index: 10;                /* อยู่ด้านบนสุด */
+        font-size: 12px;            /* ขนาดตัวอักษรเล็ก */
     }
 
+    /* แสดง tooltip เมื่อ hover ที่ button-wrapper */
     .button-wrapper:hover .text {
-        visibility: visible;
-        opacity: 1;
+        visibility: visible;        /* แสดงออกมา */
+        opacity: 1;                 /* ความโปร่งใส 100% */
     }
 
+    /* รูปโปรไฟล์สำหรับมือถือ */
     .profile {
-        width: 200px;
-        height: auto;
-        border-radius: 200px;
-        margin-bottom: 20px;
+        width: 200px;               /* ความกว้างคงที่ (เล็กลง) */
+        height: auto;               /* ความสูงตามสัดส่วน */
+        border-radius: 200px;       /* ทำให้เป็นวงกลม */
+        margin-bottom: 20px;        /* ระยะห่างด้านล่าง */
     }
 
+    /* ข้อความหัวเรื่องสำหรับมือถือ */
     .title {
-        font-size: 32px;
-        text-align: center;
-        margin-bottom: 25px;
-        text-shadow: 3px 3px black;
-        position: static;
-        right: auto;
-        left: 0;
-        top: auto;
+        font-size: 32px;            /* ขนาดตัวอักษร (เล็กลง) */
+        text-align: center;         /* จัดกึ่งกลาง */
+        margin-bottom: 25px;        /* ระยะห่างด้านล่าง */
+        color: white;               /* สีตัวอักษรขาว */
+        text-shadow: 3px 3px black; /* เงาตัวอักษรสีดำ */
+        position: static;           /* ตำแหน่งปกติ (ไม่ใช้ absolute) */
+        right: auto;                /* ยกเลิกการเลื่อน */
+        left: 0;                    /* ยกเลิกการเลื่อน */
+        top: auto;                  /* ยกเลิกการเลื่อน */
     }
 
+    /* เงาวงกลมสำหรับมือถือ */
     .shadow {
-        width: 200px;
-        height: 200px;
-        border-radius: 200px;
-        background-color: #fe8266;
-        margin-bottom: 15px;
+        width: 200px;               /* ความกว้าง (เล็กลง) */
+        height: 200px;              /* ความสูง (เล็กลง) */
+        border-radius: 200px;       /* ทำให้เป็นวงกลม */
+        background-color: #fe8266;  /* สีพื้นหลังโทนส้มเข้ม */
+        margin-bottom: 15px;        /* ระยะห่างด้านล่าง */
     }
 
-    /* กล่อง panel */
+    /* กล่องเนื้อหาแบบ popup สำหรับมือถือ */
     .panel {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 90%;
-        max-width: 500px;
-        background-color: #fff;
-        padding: 30px;
-        border-radius: 15px;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-        z-index: 999;
-        display: none;
+        position: fixed;            /* ตำแหน่งคงที่ตามหน้าจอ */
+        top: 50%;                   /* ตำแหน่งแนวตั้ง 50% */
+        left: 50%;                  /* ตำแหน่งแนวนอน 50% */
+        transform: translate(-50%, -50%);  /* เลื่อนให้อยู่กึ่งกลางจริงๆ */
+        width: 90%;                 /* ความกว้าง 90% ของหน้าจอ */
+        max-width: 500px;           /* ความกว้างสูงสุด */
+        height: 70%;                /*ความสูง 70% ของหน้าจอ */
+        background-color: #fff;     /* สีพื้นหลังขาว */
+        padding: 30px;              /* ระยะห่างด้านใน */
+        border-radius: 15px;        /* มุมโค้งมน */
+        box-shadow: 0 8px 24px rgba(0,0,0,0.3);  /* เงาโค้ง */
+        z-index: 999;               /* อยู่ด้านบนสุด */
+        display: none;              /* ซ่อนโดยค่าเริ่มต้น */
+        overflow: auto;
     }
 
-    /* ปุ่มปิด */
+    /* ปุ่มปิด modal */
     .close-btn {
-        margin-top: 20px;
-        padding: 10px 15px;
-        background-color: #ff6b81;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
+        margin-top: 20px;           /* ระยะห่างด้านบน */
+        padding: 10px 15px;         /* ระยะห่างด้านใน */
+        background-color: #ff6b81;  /* สีพื้นหลังชมพู */
+        color: white;               /* สีตัวอักษรขาว */
+        border: none;               /* ไม่มีขอบ */
+        border-radius: 8px;         /* มุมโค้งมน */
+        cursor: pointer;            /* แสดงรูปมือเมื่อชี้ */
     }
 
+    /* การกำหนดสถานะแสดง/ซ่อน panel */
     .panel {
-    display: none;
-    /* ...styles อื่นๆ... */
+        display: none;              /* ซ่อนโดยค่าเริ่มต้น */
     }
+    
+    /* class สำหรับแสดง panel */
     .panel.active {
-        display: block;
+        display: block;             /* แสดงออกมา */
     }
+    
+    /* class สำหรับซ่อน element */
     .hidden {
-        display: none;
+        display: none;              /* ซ่อน */
     }
 
-}
+} /* จบ media query สำหรับมือถือ */
 
-
-/* แท็บเล็ต 768px - 1023px */
+/* Media Query สำหรับแท็บเล็ต (Tablet) 768px - 1023px */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 
+    /* จัดกึ่งกลางหน้าจอแนวตั้งและแนวนอน */
     body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        padding: 20px;
-        background-color: #f5e7eb;
+        display: flex;              /* ใช้ flexbox */
+        justify-content: center;    /* จัดกึ่งกลางแนวนอน */
+        align-items: center;        /* จัดกึ่งกลางแนวตั้ง */
+        height: 100vh;              /* ความสูงเต็มหน้าจอ */
+        padding: 20px;              /* ระยะห่างด้านใน */
+        background-color: #f5e7eb;  /* สีพื้นหลังโทนชมพูอ่อน */
     }
 
+    /* กล่องหลักสำหรับแท็บเล็ต */
     .container {
-        width: 90%;
-        max-width: 800px;
-        height: 550px;
-        border-radius: 20px;
-        padding: 20px;
-        background-color: #fea591;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
+        width: 90%;                 /* ความกว้าง 90% ของหน้าจอ */
+        max-width: 800px;           /* ความกว้างสูงสุด */
+        height: 550px;              /* ความสูงคงที่ (ลดจาก 600px) */
+        border-radius: 20px;        /* มุมโค้งมน */
+        padding: 20px;              /* ระยะห่างด้านใน */
+        background-color: #fea591;  /* สีพื้นหลังโทนส้ม */
+        display: flex;              /* ใช้ flexbox */
+        flex-direction: column;     /* เรียงแนวตั้ง */
+        align-items: center;        /* จัดกึ่งกลางแนวนอน */
+        justify-content: space-around;  /* กระจายเนื้อหาให้เท่ากัน */
     }
 
+    /* กล่องบรรจุปุ่มลิงก์ทั้งหมด (เรียงแนวนอน) */
     .link-button{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-direction: row;
-        gap: 20px;
+        display: flex;              /* ใช้ flexbox */
+        justify-content: space-around;  /* กระจายปุ่มให้เท่ากัน */
+        align-items: center;        /* จัดแนวตั้งกึ่งกลาง */
+        flex-direction: row;        /* เรียงแนวนอน */
+        gap: 20px;                  /* ระยะห่างระหว่างปุ่ม */
     }
 
-
+    /* wrapper สำหรับปุ่ม (เรียงแนวนอนแบบ wrap) */
     .button-wrapper {
-        position: relative;
-        display: flex;
-        flex-direction: row; /* เรียงแนวนอน */
-        justify-content: center;
-        align-items: center;
-        gap: 30px;
-        flex-wrap: wrap;
-        width: 100%;
-        margin-bottom: 20px;
+        position: relative;         /* ตำแหน่งสัมพัทธ์สำหรับ tooltip */
+        display: flex;              /* ใช้ flexbox */
+        flex-direction: row;        /* เรียงแนวนอน */
+        justify-content: center;    /* จัดกึ่งกลางแนวนอน */
+        align-items: center;        /* จัดกึ่งกลางแนวตั้ง */
+        gap: 30px;                  /* ระยะห่างระหว่างปุ่ม */
+        flex-wrap: wrap;            /* ให้ปุ่มขึ้นบรรทัดใหม่ถ้าเกิน */
+        width: 100%;                /* ความกว้างเต็ม */
+        margin-bottom: 20px;        /* ระยะห่างด้านล่าง */
     }
 
+    /* สไตล์สำหรับปุ่มหลัก (ขนาดกลางสำหรับแท็บเล็ต) */
     .button {
-        width: 80px;
-        height: 80px;
-        border-radius: 20px;
-        background: #fea591;
-        transition: background 0.3s, transform 0.3s;
-        flex-shrink: 0;
-        border: 2px solid #fea591;
+        width: 80px;                /* ความกว้าง */
+        height: 80px;               /* ความสูง */
+        border-radius: 20px;        /* มุมโค้งมน */
+        background: #fea591;        /* สีพื้นหลังเหมือนกล่องหลัก */
+        transition: background 0.3s, transform 0.3s;  /* เอฟเฟกต์การเปลี่ยน */
+        flex-shrink: 0;             /* ไม่ให้หดขนาด */
+        border: 2px solid #fea591;  /* ขอบสีเดียวกับพื้นหลัง */
     }
 
+    /* เอฟเฟกต์เมื่อ hover ปุ่ม */
     .button:hover {
-        transform: translateY(-2px);
+        transform: translateY(-2px);  /* เลื่อนขึ้น 2px */
     }
 
+    /* รูปภาพในปุ่ม (ขนาดกลางสำหรับแท็บเล็ต) */
     .button img {
-        width: 65px;
-        height: 65px;
+        width: 65px;                /* ความกว้างรูป */
+        height: 65px;               /* ความสูงรูป */
     }
 
+    /* ข้อความ tooltip สำหรับแท็บเล็ต */
     .text {
-        visibility: hidden;
-        opacity: 0;
-        transition: visibility 0.2s, opacity 0.2s;
-        position: absolute;
-        bottom: 110%;
-        background: #f0917b;
-        color: white;
-        padding: 6px 10px;
-        border-radius: 10px;
-        white-space: nowrap;
-        z-index: 10;
-        font-size: 14px;
+        visibility: hidden;         /* ซ่อนโดยค่าเริ่มต้น */
+        opacity: 0;                 /* ความโปร่งใส 0% */
+        transition: visibility 0.2s, opacity 0.2s;  /* เอฟเฟกต์การเปลี่ยน */
+        position: absolute;         /* ตำแหน่งสัมบูรณ์ */
+        bottom: 110%;               /* วางเหนือปุ่ม 110% */
+        background: #f0917b;        /* สีพื้นหลังโทนส้มเข้ม */
+        color: white;               /* สีตัวอักษรขาว */
+        padding: 6px 10px;          /* ระยะห่างด้านใน */
+        border-radius: 10px;        /* มุมโค้งมน */
+        white-space: nowrap;        /* ไม่ให้ตัดบรรทัด */
+        z-index: 10;                /* อยู่ด้านบนสุด */
+        font-size: 14px;            /* ขนาดตัวอักษรกลาง */
     }
 
+    /* แสดง tooltip เมื่อ hover ที่ button-wrapper */
     .button-wrapper:hover .text {
-        visibility: visible;
-        opacity: 1;
+        visibility: visible;        /* แสดงออกมา */
+        opacity: 1;                 /* ความโปร่งใส 100% */
     }
 
+    /* รูปโปรไฟล์สำหรับแท็บเล็ต */
     .profile {
-        width: 250px;
-        height: auto;
-        border-radius: 200px;
-        margin-bottom: 25px;
+        width: 250px;               /* ความกว้างคงที่ */
+        height: auto;               /* ความสูงตามสัดส่วน */
+        border-radius: 200px;       /* ทำให้เป็นวงกลม */
+        margin-bottom: 25px;        /* ระยะห่างด้านล่าง */
     }
 
+    /* ข้อความหัวเรื่องสำหรับแท็บเล็ต */
     .title {
-        font-size: 44px;
-        text-align: center;
-        margin-bottom: 25px;
-        box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.3);
-        position: static;
-        left: auto;
-        bottom: auto;
+        font-size: 44px;            /* ขนาดตัวอักษรกลาง */
+        text-align: center;         /* จัดกึ่งกลาง */
+        margin-bottom: 25px;        /* ระยะห่างด้านล่าง */
+        color: white;               /* สีตัวอักษรขาว */
+        text-shadow: 3px 3px black; /* เงาตัวอักษรสีดำ */
+        position: static;           /* ตำแหน่งปกติ (ไม่ใช้ absolute) */
+        left: auto;                 /* ยกเลิกการเลื่อน */
+        bottom: auto;               /* ยกเลิกการเลื่อน */
     }
 
+    /* เงาวงกลมสำหรับแท็บเล็ต */
     .shadow {
-        width: 250px;
-        height: 250px;
-        border-radius: 200px;
-        background-color: #fe8266;
-        margin-bottom: 20px;
+        width: 250px;               /* ความกว้าง */
+        height: 250px;              /* ความสูง */
+        border-radius: 200px;       /* ทำให้เป็นวงกลม */
+        background-color: #fe8266;  /* สีพื้นหลังโทนส้มเข้ม */
+        margin-bottom: 20px;        /* ระยะห่างด้านล่าง */
     }
 
+    /* กล่องเนื้อหาแบบ popup สำหรับแท็บเล็ต */
     .panel {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 90%;
-        max-width: 500px;
-        background-color: #fff;
-        padding: 30px;
-        border-radius: 15px;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.3);
-        z-index: 999;
-        display: none;
+        position: fixed;            /* ตำแหน่งคงที่ตามหน้าจอ */
+        top: 50%;                   /* ตำแหน่งแนวตั้ง 50% */
+        left: 50%;                  /* ตำแหน่งแนวนอน 50% */
+        transform: translate(-50%, -50%);  /* เลื่อนให้อยู่กึ่งกลางจริงๆ */
+        width: 90%;                 /* ความกว้าง 90% ของหน้าจอ */
+        max-width: 500px;           /* ความกว้างสูงสุด */
+        height: 70%;                /*ความสูง 70% ของหน้าจอ */
+        background-color: #fff;     /* สีพื้นหลังขาว */
+        padding: 30px;              /* ระยะห่างด้านใน */
+        border-radius: 15px;        /* มุมโค้งมน */
+        box-shadow: 0 8px 24px rgba(0,0,0,0.3);  /* เงาโค้ง */
+        z-index: 999;               /* อยู่ด้านบนสุด */
+        display: none;              /* ซ่อนโดยค่าเริ่มต้น */
+        overflow: auto;
     }
 
-    /* ปุ่มปิด */
+    /* ปุ่มปิด modal */
     .close-btn {
-        margin-top: 20px;
-        padding: 10px 15px;
-        background-color: #ff6b81;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
+        margin-top: 20px;           /* ระยะห่างด้านบน */
+        padding: 10px 15px;         /* ระยะห่างด้านใน */
+        background-color: #ff6b81;  /* สีพื้นหลังชมพู */
+        color: white;               /* สีตัวอักษรขาว */
+        border: none;               /* ไม่มีขอบ */
+        border-radius: 8px;         /* มุมโค้งมน */
+        cursor: pointer;            /* แสดงรูปมือเมื่อชี้ */
     }
 
+    /* การกำหนดสถานะแสดง/ซ่อน panel */
     .panel {
-    display: none;
-    /* ...styles อื่นๆ... */
+        display: none;              /* ซ่อนโดยค่าเริ่มต้น */
+        /* ...styles อื่นๆ... */
     }
+    
+    /* class สำหรับแสดง panel */
     .panel.active {
-        display: block;
+        display: block;             /* แสดงออกมา */
     }
+    
+    /* class สำหรับซ่อน element */
     .hidden {
-        display: none;
+        display: none;              /* ซ่อน */
     }
 
-}
+} /* จบ media query สำหรับแท็บเล็ต */
