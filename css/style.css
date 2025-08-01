@@ -26,14 +26,14 @@ body{
     }
 
     .buttonsong {
-        width: 50px;
-        height: 50px;
-        background-color: #f5e7eb;
-        border: 1px solid #f5e7eb;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: xx-large;
+        width: 50px;                            /* ความกว้าง 50px */
+        height: 50px;                           /* ความสูง 20px */
+        background-color: #f5e7eb;            /* สีพื้นหลัง */
+        border: 1px solid #f5e7eb;            /* ขนาดและสีของเส้นขอบ */
+        display: flex;                          /* รูปแบบหน้าเจอ Flex */
+        justify-content: center;                /* ตั้งอยู่ตรงกลางแนวนอน */
+        align-items: center;                    /* ตั้งอยู่ตรงกลางแนวตั้ง */
+        font-size: xx-large;                    /* ขนาดของFont */
         
         position: fixed; /* ทำให้ติดคงที่บนจอ */
         top: 10px;        /* ระยะห่างจากด้านบน */
@@ -286,6 +286,23 @@ body{
         height: 100vh;              /* ความสูงเต็มหน้าจอ */
     }
 
+    .buttonsong {
+        width: 50px;            /* ความกว้าง 50px */
+        height: 50px;           /* ความสูง 50px */
+        background-color: #f5e7eb;      /* สีพื้นหลัง */
+        border: 1px solid #f5e7eb;      /* ขนาดและสีของเส้นขอบ */
+        display: flex;          /* รูปแบบหน้าเจอ Flex */
+        justify-content: center;        /* ตั้งอยู่ตรงกลางแนวนอน */
+        align-items: center;            /* ตั้งอยู่ตรงกลางแนวตั้ง */
+        font-size: xx-large;            /* ขนาดของFont */
+        
+        position: fixed; /* ทำให้ติดคงที่บนจอ */
+        top: 10px;        /* ระยะห่างจากด้านบน */
+        left: 10px;       /* ระยะห่างจากด้านซ้าย */
+        z-index: 1000;    /* ให้แสดงอยู่บนสุดในกรณีมี element ซ้อนกัน */
+    }
+
+
     /* กล่องหลักที่ปรับขนาดให้เข้ากับหน้าจอ */
     .container {
         width: 95%;                 /* ความกว้าง 95% ของหน้าจอ */
@@ -527,6 +544,22 @@ body{
         min-height: 100vh;          /* ความสูงขั้นต่ำเต็มหน้าจอ */
     }
 
+    .buttonsong {
+        width: 15px;                        /* ความกว้าง 15px */
+        height: 15px;                       /* ความสูง 15px */
+        background-color: #f5e7eb;        /* สีพื้นหลัง */
+        border: 1px solid #f5e7eb;        /* ขนาดและสีของเส้นขอบ */
+        display: flex;                      /* รูปแบบหน้าเจอ Flex */
+        justify-content: center;            /* ตั้งอยู่ตรงกลางแนวนอน */
+        align-items: center;                /* ตั้งอยู่ตรงกลางแนวตั้ง */
+        font-size: xx-large;                /* ขนาดของFont */
+        
+        position: fixed; /* ทำให้ติดคงที่บนจอ */
+        top: 10px;        /* ระยะห่างจากด้านบน */
+        left: 10px;       /* ระยะห่างจากด้านซ้าย */
+        z-index: 1000;    /* ให้แสดงอยู่บนสุดในกรณีมี element ซ้อนกัน */
+    }
+
     /* กล่องหลักสำหรับมือถือ */
     .container {
         width: 95%;                 /* ความกว้าง 95% ของหน้าจอ */
@@ -731,6 +764,23 @@ body{
         padding: 20px;              /* ระยะห่างด้านใน */
         background-color: #f5e7eb;  /* สีพื้นหลังโทนชมพูอ่อน */
     }
+
+    .buttonsong {
+        width: 20px;                /* ความกว้าง 20px */
+        height: 20px;               /* ความสูง 20px */
+        background-color: #f5e7eb;      /* สีพื้นหลัง */
+        border: 1px solid #f5e7eb;      /* ขนาดและสีของเส้นขอบ */
+        display: flex;              /* รูปแบบหน้าเจอ Flex */
+        justify-content: center;    /* ตั้งอยู่ตรงกลางแนวนอน */
+        align-items: center;        /* ตั้งอยู่ตรงกลางแนวตั้ง */
+        font-size: xx-large;        /* ขนาดของFont */
+        
+        position: fixed; /* ทำให้ติดคงที่บนจอ */
+        top: 10px;        /* ระยะห่างจากด้านบน */
+        left: 10px;       /* ระยะห่างจากด้านซ้าย */
+        z-index: 1000;    /* ให้แสดงอยู่บนสุดในกรณีมี element ซ้อนกัน */
+    }
+
 
     /* กล่องหลักสำหรับแท็บเล็ต */
     .container {
