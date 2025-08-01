@@ -8,6 +8,12 @@
     <title>Simpleport V1</title> <!-- หัวข้อที่แสดงบนแท็บของเบราว์เซอร์ -->
 </head>
 <body>
+
+    <!-- ปุ่ม toggle เพลง -->
+    <button id="musicToggle" class="buttonsong">🔇</button>
+
+    <!-- แท็กเพลง -->
+    <audio id="bgMusic" src="audio/10℃.mp3"  autoplay loop></audio>
     <!-- เนื้อหาหลักของหน้าเว็บ -->
     <div class="container"> <!-- กล่องหลักที่บรรจุเนื้อหาทั้งหมด -->
         
@@ -73,10 +79,40 @@
             <div id="linksPanel" class="panel hidden"> <!-- กล่องสำหรับแสดงลิงก์ต่างๆ -->
                 <h2>My Links</h2> <!-- หัวข้อย่อย -->
                 <!-- 📝 พื้นที่สำหรับใส่ลิงก์ Facebook, Instagram, GitHub ฯลฯ -->
-                <p>💡 ใส่ลิงก์ของคุณที่นี่ เช่น Facebook, IG, YouTube เป็นต้น</p> <!-- คำแนะนำสำหรับผู้ใช้ -->
+                <div class="icon-web">
+                    <div>
+                        <button class="button" onclick="window.open('https://www.youtube.com/', '_blank')">
+                            <img src="img/twitter.png" alt="" width="50px" height="50px">
+                        </button>
+                    </div>
+                    <div>
+                        <button class="button" onclick="window.open('https://www.youtube.com/', '_blank')">
+                            <img src="img/youtube.png" alt="" width="50px" height="50px">
+                        </button>
+                    </div>
+                    <div>
+                        <button class="button" onclick="window.open('https://www.youtube.com/', '_blank')">
+                            <img src="img/facebook.png" alt="" width="50px" height="50px">
+                        </button>
+                    </div>
+                    <div>
+                        <button class="button" onclick="window.open('https://www.youtube.com/', '_blank')">
+                            <img src="img/instagram.png" alt="" width="50px" height="50px">
+                        </button>
+                    </div>
+                    <div>
+                        <button class="button" onclick="window.open('https://www.youtube.com/', '_blank')">
+                            <img src="img/discord.png" alt="" width="50px" height="50px">
+                        </button>
+                    </div>
+                    <div>
+                        <button class="button" onclick="window.open('https://www.youtube.com/', '_blank')">
+                            <img src="img/line.png" alt="" width="50px" height="50px">
+                        </button>
+                    </div>
+                </div>
                 <button id="closeLinks" class="close-btn">ปิด</button> <!-- ปุ่มปิด panel -->
-            </div>
-
+            </div> <!-- จบ link-button container -->
             <!-- 🔵 Panel (กล่องเนื้อหา) ที่ 3: คำถามที่พบบ่อย -->
             <div id="faqPanel" class="panel hidden"> <!-- กล่องสำหรับ FAQ -->
                 <h2>FAQ</h2> <!-- หัวข้อย่อย -->
@@ -103,7 +139,31 @@
             <div id="projectsPanel" class="panel hidden"> <!-- กล่องสำหรับแสดงผลงาน -->
                 <h2>Projects</h2> <!-- หัวข้อย่อย -->
                 <!-- 📝 พื้นที่สำหรับใส่รายการผลงาน รูปภาพ หรือลิงก์ -->
-                <p>💡 ใส่โปรเจคที่เคยทำ เช่น เว็บขายของ เว็บกาแฟ เว็บพอร์ต ฯลฯ</p> <!-- คำแนะนำ -->
+                 <div class="project">
+                    <h3 class="projectname"><u>Project1</u></h3>     <!--  ชื่อProject  -->
+                    <p class="projectcontent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, in!</p>       <!-- รายละเอียดของอProject -->
+                    <button class="button" onclick="window.open('https://www.youtube.com/', '_blank')">click me</button>    <!-- ปุ่มเพื่อกดไปหาProject -->
+                 </div>
+                 <div class="project">
+                    <h3 class="projectname"><u>Project1</u></h3>     <!--  ชื่อProject  -->
+                    <p class="projectcontent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, in!</p>       <!-- รายละเอียดของอProject -->
+                    <button class="button" onclick="window.open('https://www.youtube.com/', '_blank')">click me</button>    <!-- ปุ่มเพื่อกดไปหาProject -->
+                 </div>
+                 <div class="project">
+                    <h3 class="projectname"><u>Project1</u></h3>     <!--  ชื่อProject  -->
+                    <p class="projectcontent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, in!</p>       <!-- รายละเอียดของอProject -->
+                    <button class="button" onclick="window.open('https://www.youtube.com/', '_blank')">click me</button>    <!-- ปุ่มเพื่อกดไปหาProject -->
+                 </div>
+                 <div class="project">
+                    <h3 class="projectname"><u>Project1</u></h3>     <!--  ชื่อProject  -->
+                    <p class="projectcontent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, in!</p>       <!-- รายละเอียดของอProject -->
+                    <button class="button" onclick="window.open('https://www.youtube.com/', '_blank')">click me</button>    <!-- ปุ่มเพื่อกดไปหาProject -->
+                 </div>
+                 <div class="project">
+                    <h3 class="projectname"><u>Project1</u></h3>     <!--  ชื่อProject  -->
+                    <p class="projectcontent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, in!</p>       <!-- รายละเอียดของอProject -->
+                    <button class="button" onclick="window.open('https://www.youtube.com/', '_blank')">click me</button>    <!-- ปุ่มเพื่อกดไปหาProject -->
+                 </div>
                 <button id="closeProjects" class="close-btn">ปิด</button> <!-- ปุ่มปิด panel -->
             </div>
 
@@ -111,13 +171,14 @@
             <div id="contactPanel" class="panel hidden"> <!-- กล่องสำหรับข้อมูลการติดต่อ -->
                 <h2>Contact</h2> <!-- หัวข้อย่อย -->
                 <!-- 📝 พื้นที่สำหรับใส่ช่องทางติดต่อต่างๆ -->
-                <p>💡 ใส่ช่องทางติดต่อ เช่น อีเมล, เบอร์โทร, ไลน์ หรือฟอร์มติดต่อ</p> <!-- คำแนะนำ -->
+                <p>ติดต่อเราหากมีคำถาม ปัญหา หรืออยากให้เราช่วยแก้ไขไฟล์สามารถติดต่อมาได้ เรายินดีให้ความช่วยเหลือค่ะ <br>
+                    ช่องทางติดต่อ <br>
+                    – อีเมล: yourname@email.com <br>
+                    – LINE: @yourlineid <br>
+                    ตอบกลับภายใน 24 ชม.</p> <!-- คำแนะนำ -->
                 <button id="closeContact" class="close-btn">ปิด</button> <!-- ปุ่มปิด panel -->
             </div>
-            
-        </div> <!-- จบ link-button container -->
     </div> <!-- จบ container หลัก -->
-    
     <!-- เชื่อมโยงไฟล์ JavaScript สำหรับควบคุมการทำงานของปุ่มและ panel -->
     <script src="js/script.js"></script> <!-- ไฟล์ JS ที่ทำให้ปุ่มทำงานได้ -->
 </body>

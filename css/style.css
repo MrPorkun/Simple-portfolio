@@ -25,6 +25,23 @@ body{
         height: 100vh;              /* ความสูงเต็มหน้าจอ */
     }
 
+    .buttonsong {
+        width: 50px;
+        height: 50px;
+        background-color: #f5e7eb;
+        border: 1px solid #f5e7eb;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: xx-large;
+        
+        position: fixed; /* ทำให้ติดคงที่บนจอ */
+        top: 10px;        /* ระยะห่างจากด้านบน */
+        left: 10px;       /* ระยะห่างจากด้านซ้าย */
+        z-index: 1000;    /* ให้แสดงอยู่บนสุดในกรณีมี element ซ้อนกัน */
+    }
+
+
     /* กล่องหลักที่บรรจุเนื้อหาทั้งหมด */
     .container{
         width: 1200px;              /* ความกว้างคงที่ */
@@ -179,6 +196,41 @@ body{
         margin-bottom: 5px;               /* ระยะห่างด้านล่าง */
     }
 
+    .icon-web {
+        display: grid;                                  /* ตั้งรูปแบบหน้าจอเป็น Grid */
+        grid-template-rows: repeat(2,100px);            /* จำนวนแถวแนวนอนและขนาดของกล่อง */
+        grid-template-columns: repeat(3,100px);         /* จำนวนแถวแนวตั้งและขนาดของกล่อง */
+        justify-content: center;                        /* ตั้งให้อยู่ตรงกลาง */
+        gap: 20px;                                      /* ระยะห่างอยู่ที่ 20px */
+        margin-top: 20px;                               /* ระยะด้านบน 20px  */
+    }
+
+    .project{
+        background: #ffb3a2;                /* สีพื้นหลัง */
+        padding: 25px;                        /* ระยะห่างภายใน */
+        margin: 10px;                         /* ระยะห่างภายนอก */
+    }
+
+    .projectname{
+        display: flex;                          /* รูปแบบหน้า Flex */
+        justify-content: center;                /* อยู่ตรงการในแนวนอน */
+        background: #fe8266;                  /* สีพื้นหลังของชื่อProject */
+
+    }
+
+    .projectcontent{
+        margin-top: 10px;                       /* ระยะด้านบน */
+        margin-bottom: 10px;                    /* ระยะห่างด้านล่าง */
+    }
+    
+    .project .button{
+        width: 100px;                           /* ความกว้าง 100px */
+        height: 50px;                           /* ความสูง 50px */
+        border-radius: 5px;                     /* ความโค้งของขอบ 5px */
+        background-color: #ff6b81;            /* สีพื้นหลัง */
+    }
+
+
     /* กำหนดขนาดเฉพาะสำหรับ panel "เกี่ยวกับ" */
     #aboutPanel {
         width: 500px;               /* ความกว้างคงที่ */
@@ -215,10 +267,10 @@ body{
 
     /* กำหนดขนาดเฉพาะสำหรับ panel "ติดต่อ" */
     #contactPanel {
-        width: 350px;               /* ความกว้างคงที่ */
+        width: 500px;               /* ความกว้างคงที่ */
         max-width: 90%;             /* ความกว้างสูงสุด */
-        height: auto;               /* ความสูงตามเนื้อหา */
-        max-height: 50vh;           /* ความสูงสูงสุด 50% ของหน้าจอ */
+        height: 300px;               /* ความสูงตามเนื้อหา */
+        max-height: 70vh;           /* ความสูงสูงสุด 50% ของหน้าจอ */
         overflow-y: auto;           /* เลื่อนได้เมื่อเนื้อหาเกิน */
     }
 
@@ -355,6 +407,49 @@ body{
         box-shadow: 0 8px 24px rgba(0,0,0,0.3);  /* เงาโค้ง */
         z-index: 999;               /* อยู่ด้านบนสุด */
         display: none;              /* ซ่อนโดยค่าเริ่มต้น */
+    }
+
+    .anwser li{
+        background-color: #ffb3a2;  /* สีพื้นหลังของคำตอบ*/
+    }
+
+    .anwser h2{
+        background-color: #fe8266;      /* สีพื้นหลังของคำถาม */
+        margin-top: 5px;                  /* ระยะห่างด้านบน */
+        margin-bottom: 5px;               /* ระยะห่างด้านล่าง */
+    }
+
+    .icon-web {
+        display: grid;                                  /* ตั้งรูปแบบหน้าจอเป็น Grid */
+        grid-template-rows: repeat(2,100px);            /* จำนวนแถวแนวนอนและขนาดของกล่อง */
+        grid-template-columns: repeat(3,100px);         /* จำนวนแถวแนวตั้งและขนาดของกล่อง */
+        justify-content: center;                        /* ตั้งให้อยู่ตรงกลาง */
+        gap: 20px;                                      /* ระยะห่างอยู่ที่ 20px */
+    }
+
+    .project{
+        background: #ffb3a2;                /* สีพื้นหลัง */
+        padding: 25px;                        /* ระยะห่างภายใน */
+        margin: 10px;                         /* ระยะห่างภายนอก */
+    }
+
+    .projectname{
+        display: flex;                          /* รูปแบบหน้า Flex */
+        justify-content: center;                /* อยู่ตรงการในแนวนอน */
+        background: #fe8266;                  /* สีพื้นหลังของชื่อProject */
+
+    }
+
+    .projectcontent{
+        margin-top: 10px;                       /* ระยะด้านบน */
+        margin-bottom: 10px;                    /* ระยะห่างด้านล่าง */
+    }
+    
+    .project .button{
+        width: 100px;                           /* ความกว้าง 100px */
+        height: 50px;                           /* ความสูง 50px */
+        border-radius: 5px;                     /* ความโค้งของขอบ 5px */
+        background-color: #ff6b81;            /* สีพื้นหลัง */
     }
 
     /* ปุ่มปิด modal */
@@ -551,6 +646,51 @@ body{
         overflow: auto;
     }
 
+    .anwser li{
+        background-color: #ffb3a2;  /* สีพื้นหลังของคำตอบ*/
+    }
+
+    .anwser h2{
+        background-color: #fe8266;      /* สีพื้นหลังของคำถาม */
+        margin-top: 5px;                  /* ระยะห่างด้านบน */
+        margin-bottom: 5px;               /* ระยะห่างด้านล่าง */
+    }
+
+    .icon-web {
+        display: grid;                                  /* ตั้งรูปแบบหน้าจอเป็น Grid */
+        grid-template-rows: repeat(2,50px);            /* จำนวนแถวแนวนอนและขนาดของกล่อง */
+        grid-template-columns: repeat(3,50px);         /* จำนวนแถวแนวตั้งและขนาดของกล่อง */
+        justify-content: center;                        /* ตั้งให้อยู่ตรงกลาง */
+        gap: 40px;                                      /* ระยะห่างอยู่ที่ 40px */
+        margin-top: 10px;                               /* ระยะห่างด้านบน */
+        margin-bottom: 10px;                            /* ระยะห่างด้านล่าง */
+    }
+
+    .project{
+        background: #ffb3a2;                /* สีพื้นหลัง */
+        padding: 25px;                        /* ระยะห่างภายใน */
+        margin: 10px;                         /* ระยะห่างภายนอก */
+    }
+
+    .projectname{
+        display: flex;                          /* รูปแบบหน้า Flex */
+        justify-content: center;                /* อยู่ตรงการในแนวนอน */
+        background: #fe8266;                  /* สีพื้นหลังของชื่อProject */
+
+    }
+
+    .projectcontent{
+        margin-top: 10px;                       /* ระยะด้านบน */
+        margin-bottom: 10px;                    /* ระยะห่างด้านล่าง */
+    }
+    
+    .project .button{
+        width: 100px;                           /* ความกว้าง 100px */
+        height: 50px;                           /* ความสูง 50px */
+        border-radius: 5px;                     /* ความโค้งของขอบ 5px */
+        background-color: #ff6b81;            /* สีพื้นหลัง */
+    }
+
     /* ปุ่มปิด modal */
     .close-btn {
         margin-top: 20px;           /* ระยะห่างด้านบน */
@@ -717,6 +857,49 @@ body{
         z-index: 999;               /* อยู่ด้านบนสุด */
         display: none;              /* ซ่อนโดยค่าเริ่มต้น */
         overflow: auto;
+    }
+
+    .anwser li{
+        background-color: #ffb3a2;  /* สีพื้นหลังของคำตอบ*/
+    }
+
+    .anwser h2{
+        background-color: #fe8266;      /* สีพื้นหลังของคำถาม */
+        margin-top: 5px;                  /* ระยะห่างด้านบน */
+        margin-bottom: 5px;               /* ระยะห่างด้านล่าง */
+    }
+
+    .icon-web {
+        display: grid;                                  /* ตั้งรูปแบบหน้าจอเป็น Grid */
+        grid-template-rows: repeat(2,100px);            /* จำนวนแถวแนวนอนและขนาดของกล่อง */
+        grid-template-columns: repeat(3,100px);         /* จำนวนแถวแนวตั้งและขนาดของกล่อง */
+        justify-content: center;                        /* ตั้งให้อยู่ตรงกลาง */
+        gap: 20px;                                      /* ระยะห่างอยู่ที่ 20px */
+    }
+
+    .project{
+        background: #ffb3a2;                /* สีพื้นหลัง */
+        padding: 25px;                        /* ระยะห่างภายใน */
+        margin: 10px;                         /* ระยะห่างภายนอก */
+    }
+
+    .projectname{
+        display: flex;                          /* รูปแบบหน้า Flex */
+        justify-content: center;                /* อยู่ตรงการในแนวนอน */
+        background: #fe8266;                  /* สีพื้นหลังของชื่อProject */
+
+    }
+
+    .projectcontent{
+        margin-top: 10px;                       /* ระยะด้านบน */
+        margin-bottom: 10px;                    /* ระยะห่างด้านล่าง */
+    }
+    
+    .project .button{
+        width: 100px;                           /* ความกว้าง 100px */
+        height: 50px;                           /* ความสูง 50px */
+        border-radius: 5px;                     /* ความโค้งของขอบ 5px */
+        background-color: #ff6b81;            /* สีพื้นหลัง */
     }
 
     /* ปุ่มปิด modal */
