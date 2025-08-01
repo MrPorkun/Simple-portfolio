@@ -169,6 +169,16 @@ body{
         overflow: hidden;           /* ซ่อน scrollbar */
     }
 
+    .anwser li{
+        background-color: #ffb3a2;  /* สีพื้นหลังของคำตอบ*/
+    }
+
+    .anwser h2{
+        background-color: #fe8266;      /* สีพื้นหลังของคำถาม */
+        margin-top: 5px;                  /* ระยะห่างด้านบน */
+        margin-bottom: 5px;               /* ระยะห่างด้านล่าง */
+    }
+
     /* กำหนดขนาดเฉพาะสำหรับ panel "เกี่ยวกับ" */
     #aboutPanel {
         width: 500px;               /* ความกว้างคงที่ */
