@@ -402,8 +402,8 @@ body {
     border-radius: 200px; /* ทำให้เป็นวงกลม */
     position: relative; /* ตำแหน่งสัมพัทธ์ */
     right: 280px; /* เลื่อนซ้าย 280px (ลดจาก 300px) */
-    width: 320px; /* ความกว้าง (ลดจาก 350px) */
-    height: 320px; /* ความสูง (ลดจาก 350px) */
+    width: 340px; /* ความกว้าง (ลดจาก 350px) */
+    height: 340px; /* ความสูง (ลดจาก 350px) */
     background-color: #fe8266; /* สีพื้นหลังโทนส้มเข้ม */
   }
 
@@ -423,11 +423,11 @@ body {
     display: none; /* ซ่อนโดยค่าเริ่มต้น */
   }
 
-  .anwser li {
+  .answer li {
     background-color: #ffb3a2; /* สีพื้นหลังของคำตอบ*/
   }
 
-  .anwser h2 {
+  .answer h2 {
     background-color: #fe8266; /* สีพื้นหลังของคำถาม */
     margin-top: 5px; /* ระยะห่างด้านบน */
     margin-bottom: 5px; /* ระยะห่างด้านล่าง */
@@ -632,6 +632,9 @@ body {
 
   /* รูปโปรไฟล์สำหรับมือถือ */
   .profile {
+    position: relative;   /* ตำแหน่งอิสระ */
+    top: 5px;  /* ลงมาจากด้านบน 5px */
+    left: 10px;   /* ขยับไปทางขวา 10px */
     width: 200px; /* ความกว้างคงที่ (เล็กลง) */
     height: auto; /* ความสูงตามสัดส่วน */
     border-radius: 200px; /* ทำให้เป็นวงกลม */
@@ -653,8 +656,8 @@ body {
 
   /* เงาวงกลมสำหรับมือถือ */
   .shadow {
-    width: 200px; /* ความกว้าง (เล็กลง) */
-    height: 200px; /* ความสูง (เล็กลง) */
+    width: 220px; /* ความกว้าง (เล็กลง) */
+    height: 210px; /* ความสูง (เล็กลง) */
     border-radius: 200px; /* ทำให้เป็นวงกลม */
     background-color: #fe8266; /* สีพื้นหลังโทนส้มเข้ม */
     margin-bottom: 15px; /* ระยะห่างด้านล่าง */
@@ -678,11 +681,11 @@ body {
     overflow: auto;
   }
 
-  .anwser li {
+  .answer li {
     background-color: #ffb3a2; /* สีพื้นหลังของคำตอบ*/
   }
 
-  .anwser h2 {
+  .answer h2 {
     background-color: #fe8266; /* สีพื้นหลังของคำถาม */
     margin-top: 5px; /* ระยะห่างด้านบน */
     margin-bottom: 5px; /* ระยะห่างด้านล่าง */
@@ -859,6 +862,9 @@ body {
 
   /* รูปโปรไฟล์สำหรับแท็บเล็ต */
   .profile {
+    position: relative;   /* ตำแหน่งอิสระ */
+    top: 10px;    /* ลงมาจากด้านบน 10px */
+    left: 10px;   /* ขยับไปทางขวา 10px */
     width: 250px; /* ความกว้างคงที่ */
     height: auto; /* ความสูงตามสัดส่วน */
     border-radius: 200px; /* ทำให้เป็นวงกลม */
@@ -879,8 +885,8 @@ body {
 
   /* เงาวงกลมสำหรับแท็บเล็ต */
   .shadow {
-    width: 250px; /* ความกว้าง */
-    height: 250px; /* ความสูง */
+    width: 270px; /* ความกว้าง */
+    height: 270px; /* ความสูง */
     border-radius: 200px; /* ทำให้เป็นวงกลม */
     background-color: #fe8266; /* สีพื้นหลังโทนส้มเข้ม */
     margin-bottom: 20px; /* ระยะห่างด้านล่าง */
@@ -904,11 +910,11 @@ body {
     overflow: auto;
   }
 
-  .anwser li {
+  .answer li {
     background-color: #ffb3a2; /* สีพื้นหลังของคำตอบ*/
   }
 
-  .anwser h2 {
+  .answer h2 {
     background-color: #fe8266; /* สีพื้นหลังของคำถาม */
     margin-top: 5px; /* ระยะห่างด้านบน */
     margin-bottom: 5px; /* ระยะห่างด้านล่าง */
