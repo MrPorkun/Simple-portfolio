@@ -9,9 +9,26 @@
   font-family: "Noto-Sans-Thai", cursive; /* กำหนดฟอนต์หลัก */
 }
 
+:root{
+    --colors-based: #fea591;
+    --shadows: #fe8266;
+    --color-button: #ff6b81;
+    --answer: #ffb3a2;
+    --title-answer: #fe8266;
+    --background: #f5e7eb;
+    --title-shadow: black;
+    --background-panel: #f5e7eb;
+    --font-color: white;
+    --project-name: #fe8266;
+    --project-content: #ffb3a2;
+    --project-button: #ff6b81;
+    --text-bacground: #f0917b;
+}
+
+
 /* สไตล์สำหรับ body หลัก */
 body {
-  background-color: #f5e7eb; /* สีพื้นหลังโทนชมพูอ่อน */
+  background-color: var(--background); /* สีพื้นหลังโทนชมพูอ่อน */
 }
 
 /* Media Query สำหรับหน้าจอขนาดใหญ่ (Desktop) 1440px ขึ้นไป */
@@ -27,8 +44,8 @@ body {
   .buttonsong {
     width: 50px; /* ความกว้าง 50px */
     height: 50px; /* ความสูง 20px */
-    background-color: #f5e7eb; /* สีพื้นหลัง */
-    border: 1px solid #f5e7eb; /* ขนาดและสีของเส้นขอบ */
+    background-color: var(--background); /* สีพื้นหลัง */
+    border: 1px solid var(--background); /* ขนาดและสีของเส้นขอบ */
     display: flex; /* รูปแบบหน้าเจอ Flex */
     justify-content: center; /* ตั้งอยู่ตรงกลางแนวนอน */
     align-items: center; /* ตั้งอยู่ตรงกลางแนวตั้ง */
@@ -47,7 +64,7 @@ body {
     border-radius: 20px; /* มุมโค้งมน */
     padding: 20px; /* ระยะห่างด้านใน */
     margin: 25px; /* ระยะห่างด้านนอก */
-    background-color: #fea591; /* สีพื้นหลังโทนส้ม */
+    background-color: var(--colors-based); /* สีพื้นหลังโทนส้ม */
     display: flex; /* ใช้ flexbox */
     justify-content: space-around; /* กระจายเนื้อหาให้เท่ากัน */
     align-items: center; /* จัดแนวตั้งกึ่งกลาง */
@@ -69,8 +86,8 @@ body {
     transition: visibility 0.2s, opacity 0.2s; /* เอฟเฟกต์การเปลี่ยน */
     position: absolute; /* ตำแหน่งสัมบูรณ์ */
     bottom: 110%; /* วางเหนือปุ่ม 110% */
-    background: #f0917b; /* สีพื้นหลังโทนส้มเข้ม */
-    color: white; /* สีตัวอักษรขาว */
+    background: var(--text-bacground); /* สีพื้นหลังโทนส้มเข้ม */
+    color: var(--font-color); /* สีตัวอักษรขาว */
     padding: 8px 12px; /* ระยะห่างด้านใน */
     border-radius: 10px; /* มุมโค้งมน */
     white-space: nowrap; /* ไม่ให้ตัดบรรทัด */
@@ -88,9 +105,9 @@ body {
     width: 100px; /* ความกว้าง */
     height: 100px; /* ความสูง */
     border-radius: 20px; /* มุมโค้งมน */
-    background: #fea591; /* สีพื้นหลังเหมือนกล่องหลัก */
+    background: var(--colors-based); /* สีพื้นหลังเหมือนกล่องหลัก */
     z-index: 3; /* ลำดับชั้น */
-    border: 2px solid #fea591; /* ขอบสีเดียวกับพื้นหลัง */
+    border: 2px solid var(--colors-based); /* ขอบสีเดียวกับพื้นหลัง */
   }
 
   /* เอฟเฟกต์เมื่อ hover ปุ่ม */
@@ -128,8 +145,8 @@ body {
     left: 200px; /* เลื่อนขวา 200px */
     bottom: 250px; /* เลื่อนขึ้น 250px */
     font-size: 62px; /* ขนาดตัวอักษร */
-    color: white; /* สีตัวอักษรขาว */
-    text-shadow: 5px 5px black; /* เงาตัวอักษรสีดำ */
+    color: var(--font-color); /* สีตัวอักษรขาว */
+    text-shadow: 5px 5px var(--title-shadow); /* เงาตัวอักษรสีดำ */
   }
 
   /* เงาวงกลมด้านหลังรูปโปรไฟล์ */
@@ -139,7 +156,7 @@ body {
     right: 300px; /* เลื่อนซ้าย 300px */
     width: 350px; /* ความกว้าง */
     height: 350px; /* ความสูง */
-    background-color: #fe8266; /* สีพื้นหลังโทนส้มเข้ม */
+    background-color: var(--shadows); /* สีพื้นหลังโทนส้มเข้ม */
   }
 
   /* กล่องเนื้อหาแบบ popup (modal) ที่แสดงซ้อนทับหน้าจอ */
@@ -150,7 +167,7 @@ body {
     transform: translate(-50%, -50%); /* เลื่อนให้อยู่กึ่งกลางจริงๆ */
     width: 90%; /* ความกว้าง 90% ของหน้าจอ */
     max-width: 500px; /* ความกว้างสูงสุด */
-    background-color: #fff; /* สีพื้นหลังขาว */
+    background-color: var(--background-panel); /* สีพื้นหลังขาว */
     padding: 30px; /* ระยะห่างด้านใน */
     border-radius: 15px; /* มุมโค้งมน */
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* เงาโค้ง */
@@ -162,8 +179,8 @@ body {
   .close-btn {
     margin-top: 20px; /* ระยะห่างด้านบน */
     padding: 10px 15px; /* ระยะห่างด้านใน */
-    background-color: #ff6b81; /* สีพื้นหลังชมพู */
-    color: white; /* สีตัวอักษรขาว */
+    background-color: var(--color-button); /* สีพื้นหลังชมพู */
+    color: var(--font-color); /* สีตัวอักษรขาว */
     border: none; /* ไม่มีขอบ */
     border-radius: 8px; /* มุมโค้งมน */
     cursor: pointer; /* แสดงรูปมือเมื่อชี้ */
@@ -185,11 +202,11 @@ body {
   }
 
   .answer li {
-    background-color: #ffb3a2; /* สีพื้นหลังของคำตอบ*/
+    background-color: var(--answer); /* สีพื้นหลังของคำตอบ*/
   }
 
   .answer h2 {
-    background-color: #fe8266; /* สีพื้นหลังของคำถาม */
+    background-color: var(--title-answer); /* สีพื้นหลังของคำถาม */
     margin-top: 5px; /* ระยะห่างด้านบน */
     margin-bottom: 5px; /* ระยะห่างด้านล่าง */
   }
@@ -207,7 +224,7 @@ body {
   }
 
   .project {
-    background: #ffb3a2; /* สีพื้นหลัง */
+    background: var(--project-content); /* สีพื้นหลัง */
     padding: 25px; /* ระยะห่างภายใน */
     margin: 10px; /* ระยะห่างภายนอก */
   }
@@ -215,7 +232,7 @@ body {
   .projectname {
     display: flex; /* รูปแบบหน้า Flex */
     justify-content: center; /* อยู่ตรงการในแนวนอน */
-    background: #fe8266; /* สีพื้นหลังของชื่อProject */
+    background:   var(--project-name); /* สีพื้นหลังของชื่อProject */
   }
 
   .projectcontent {
@@ -227,7 +244,7 @@ body {
     width: 100px; /* ความกว้าง 100px */
     height: 50px; /* ความสูง 50px */
     border-radius: 5px; /* ความโค้งของขอบ 5px */
-    background-color: #ff6b81; /* สีพื้นหลัง */
+    background-color: var(--project-button); /* สีพื้นหลัง */
   }
 
   /* กำหนดขนาดเฉพาะสำหรับ panel "เกี่ยวกับ" */
@@ -287,8 +304,8 @@ body {
   .buttonsong {
     width: 50px; /* ความกว้าง 50px */
     height: 50px; /* ความสูง 50px */
-    background-color: #f5e7eb; /* สีพื้นหลัง */
-    border: 1px solid #f5e7eb; /* ขนาดและสีของเส้นขอบ */
+    background-color: var(--background); /* สีพื้นหลัง */
+    border: 1px solid var(--background); /* ขนาดและสีของเส้นขอบ */
     display: flex; /* รูปแบบหน้าเจอ Flex */
     justify-content: center; /* ตั้งอยู่ตรงกลางแนวนอน */
     align-items: center; /* ตั้งอยู่ตรงกลางแนวตั้ง */
@@ -308,7 +325,7 @@ body {
     border-radius: 20px; /* มุมโค้งมน */
     padding: 20px; /* ระยะห่างด้านใน */
     margin: 25px; /* ระยะห่างด้านนอก */
-    background-color: #fea591; /* สีพื้นหลังโทนส้ม */
+    background-color: var(--colors-based); /* สีพื้นหลังโทนส้ม */
     display: flex; /* ใช้ flexbox */
     justify-content: space-around; /* กระจายเนื้อหาให้เท่ากัน */
     align-items: center; /* จัดแนวตั้งกึ่งกลาง */
@@ -330,8 +347,8 @@ body {
     transition: visibility 0.2s, opacity 0.2s; /* เอฟเฟกต์การเปลี่ยน */
     position: absolute; /* ตำแหน่งสัมบูรณ์ */
     bottom: 110%; /* วางเหนือปุ่ม 110% */
-    background: #f0917b; /* สีพื้นหลังโทนส้มเข้ม */
-    color: white; /* สีตัวอักษรขาว */
+    background: var(--text-bacground); /* สีพื้นหลังโทนส้มเข้ม */
+    color: var(--font-color); /* สีตัวอักษรขาว */
     padding: 8px 12px; /* ระยะห่างด้านใน */
     border-radius: 10px; /* มุมโค้งมน */
     white-space: nowrap; /* ไม่ให้ตัดบรรทัด */
@@ -350,10 +367,10 @@ body {
     width: 90px; /* ความกว้าง (ลดจาก 100px) */
     height: 90px; /* ความสูง (ลดจาก 100px) */
     border-radius: 20px; /* มุมโค้งมน */
-    background: #fea591; /* สีพื้นหลังเหมือนกล่องหลัก */
+    background: var(--colors-based); /* สีพื้นหลังเหมือนกล่องหลัก */
     z-index: 3; /* ลำดับชั้น */
     transition: background 0.3s, transform 0.3s; /* เอฟเฟกต์การเปลี่ยน */
-    border: 2px solid #fea591; /* ขอบสีเดียวกับพื้นหลัง */
+    border: 2px solid var(--colors-based); /* ขอบสีเดียวกับพื้นหลัง */
   }
 
   /* เอฟเฟกต์เมื่อ hover ปุ่ม */
@@ -393,8 +410,8 @@ body {
     left: 180px; /* เลื่อนขวา 180px (ลดจาก 200px) */
     bottom: 230px; /* เลื่อนขึ้น 230px (ลดจาก 250px) */
     font-size: 56px; /* ขนาดตัวอักษร (ลดจาก 62px) */
-    color: white; /* สีตัวอักษรขาว */
-    text-shadow: 3px 3px black; /* เงาตัวอักษรสีดำ */
+    color: var(--font-color); /* สีตัวอักษรขาว */
+    text-shadow: 3px 3px var(--title-shadow); /* เงาตัวอักษรสีดำ */
   }
 
   /* เงาวงกลมด้านหลังรูปโปรไฟล์ (ปรับขนาดให้เข้ากับรูป) */
@@ -404,7 +421,7 @@ body {
     right: 280px; /* เลื่อนซ้าย 280px (ลดจาก 300px) */
     width: 340px; /* ความกว้าง (ลดจาก 350px) */
     height: 340px; /* ความสูง (ลดจาก 350px) */
-    background-color: #fe8266; /* สีพื้นหลังโทนส้มเข้ม */
+    background-color: var(--shadows); /* สีพื้นหลังโทนส้มเข้ม */
   }
 
   /* กล่องเนื้อหาแบบ popup (ใช้สไตล์เดียวกับหน้าจอใหญ่) */
@@ -415,7 +432,7 @@ body {
     transform: translate(-50%, -50%); /* เลื่อนให้อยู่กึ่งกลางจริงๆ */
     width: 90%; /* ความกว้าง 90% ของหน้าจอ */
     max-width: 500px; /* ความกว้างสูงสุด */
-    background-color: #fff; /* สีพื้นหลังขาว */
+    background-color: var(--background-panel); /* สีพื้นหลังขาว */
     padding: 30px; /* ระยะห่างด้านใน */
     border-radius: 15px; /* มุมโค้งมน */
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* เงาโค้ง */
@@ -424,11 +441,11 @@ body {
   }
 
   .answer li {
-    background-color: #ffb3a2; /* สีพื้นหลังของคำตอบ*/
+    background-color: var(--answer); /* สีพื้นหลังของคำตอบ*/
   }
 
   .answer h2 {
-    background-color: #fe8266; /* สีพื้นหลังของคำถาม */
+    background-color: var(--title-answer); /* สีพื้นหลังของคำถาม */
     margin-top: 5px; /* ระยะห่างด้านบน */
     margin-bottom: 5px; /* ระยะห่างด้านล่าง */
   }
@@ -436,16 +453,13 @@ body {
   .icon-web {
     display: grid; /* ตั้งรูปแบบหน้าจอเป็น Grid */
     grid-template-rows: repeat(2, 100px); /* จำนวนแถวแนวนอนและขนาดของกล่อง */
-    grid-template-columns: repeat(
-      3,
-      100px
-    ); /* จำนวนแถวแนวตั้งและขนาดของกล่อง */
+    grid-template-columns: repeat(3,100px); /* จำนวนแถวแนวตั้งและขนาดของกล่อง */
     justify-content: center; /* ตั้งให้อยู่ตรงกลาง */
     gap: 20px; /* ระยะห่างอยู่ที่ 20px */
   }
 
   .project {
-    background: #ffb3a2; /* สีพื้นหลัง */
+    background: var(--project-content); /* สีพื้นหลัง */
     padding: 25px; /* ระยะห่างภายใน */
     margin: 10px; /* ระยะห่างภายนอก */
   }
@@ -453,7 +467,7 @@ body {
   .projectname {
     display: flex; /* รูปแบบหน้า Flex */
     justify-content: center; /* อยู่ตรงการในแนวนอน */
-    background: #fe8266; /* สีพื้นหลังของชื่อProject */
+    background: var(--project-name); /* สีพื้นหลังของชื่อProject */
   }
 
   .projectcontent {
@@ -465,15 +479,15 @@ body {
     width: 100px; /* ความกว้าง 100px */
     height: 50px; /* ความสูง 50px */
     border-radius: 5px; /* ความโค้งของขอบ 5px */
-    background-color: #ff6b81; /* สีพื้นหลัง */
+    background-color: var(--project-button); /* สีพื้นหลัง */
   }
 
   /* ปุ่มปิด modal */
   .close-btn {
     margin-top: 20px; /* ระยะห่างด้านบน */
     padding: 10px 15px; /* ระยะห่างด้านใน */
-    background-color: #ff6b81; /* สีพื้นหลังชมพู */
-    color: white; /* สีตัวอักษรขาว */
+    background-color: var(--color-button); /* สีพื้นหลังชมพู */
+    color: var(--font-color); /* สีตัวอักษรขาว */
     border: none; /* ไม่มีขอบ */
     border-radius: 8px; /* มุมโค้งมน */
     cursor: pointer; /* แสดงรูปมือเมื่อชี้ */
@@ -539,15 +553,15 @@ body {
     justify-content: center; /* จัดกึ่งกลางแนวนอน */
     align-items: flex-start; /* เริ่มจากด้านบน (ไม่ใช่กึ่งกลาง) */
     padding: 20px 10px; /* ระยะห่างด้านใน (บน-ล่าง 20px, ซ้าย-ขวา 10px) */
-    background-color: #f5e7eb; /* สีพื้นหลังโทนชมพูอ่อน */
+    background-color: var(--background); /* สีพื้นหลังโทนชมพูอ่อน */
     min-height: 100vh; /* ความสูงขั้นต่ำเต็มหน้าจอ */
   }
 
   .buttonsong {
     width: 15px; /* ความกว้าง 15px */
     height: 15px; /* ความสูง 15px */
-    background-color: #f5e7eb; /* สีพื้นหลัง */
-    border: 1px solid #f5e7eb; /* ขนาดและสีของเส้นขอบ */
+    background-color: var(--background); /* สีพื้นหลัง */
+    border: 1px solid var(--background); /* ขนาดและสีของเส้นขอบ */
     display: flex; /* รูปแบบหน้าเจอ Flex */
     justify-content: center; /* ตั้งอยู่ตรงกลางแนวนอน */
     align-items: center; /* ตั้งอยู่ตรงกลางแนวตั้ง */
@@ -567,7 +581,7 @@ body {
     border-radius: 20px; /* มุมโค้งมน */
     padding: 15px; /* ระยะห่างด้านใน (ลดลง) */
     margin: 10px 0; /* ระยะห่างด้านนอก (บน-ล่าง เท่านั้น) */
-    background-color: #fea591; /* สีพื้นหลังโทนส้ม */
+    background-color: var(--colors-based); /* สีพื้นหลังโทนส้ม */
     display: flex; /* ใช้ flexbox */
     flex-direction: column; /* เรียงแนวตั้ง */
     align-items: center; /* จัดกึ่งกลางแนวนอน */
@@ -591,10 +605,10 @@ body {
     width: 70px; /* ความกว้าง (เล็กลง) */
     height: 70px; /* ความสูง (เล็กลง) */
     border-radius: 20px; /* มุมโค้งมน */
-    background: #fea591; /* สีพื้นหลังเหมือนกล่องหลัก */
+    background: var(--colors-based); /* สีพื้นหลังเหมือนกล่องหลัก */
     transition: background 0.3s, transform 0.3s; /* เอฟเฟกต์การเปลี่ยน */
     flex-shrink: 0; /* ไม่ให้หดขนาด */
-    border: 2px solid #fea591; /* ขอบสีเดียวกับพื้นหลัง */
+    border: 2px solid var(--colors-based); /* ขอบสีเดียวกับพื้นหลัง */
   }
 
   /* เอฟเฟกต์เมื่อ hover ปุ่ม */
@@ -615,8 +629,8 @@ body {
     transition: visibility 0.2s, opacity 0.2s; /* เอฟเฟกต์การเปลี่ยน */
     position: absolute; /* ตำแหน่งสัมบูรณ์ */
     bottom: 110%; /* วางเหนือปุ่ม 110% */
-    background: #f0917b; /* สีพื้นหลังโทนส้มเข้ม */
-    color: white; /* สีตัวอักษรขาว */
+    background: var(--text-bacground); /* สีพื้นหลังโทนส้มเข้ม */
+    color: var(--font-color); /* สีตัวอักษรขาว */
     padding: 5px 8px; /* ระยะห่างด้านใน (ลดลง) */
     border-radius: 10px; /* มุมโค้งมน */
     white-space: nowrap; /* ไม่ให้ตัดบรรทัด */
@@ -646,8 +660,8 @@ body {
     font-size: 32px; /* ขนาดตัวอักษร (เล็กลง) */
     text-align: center; /* จัดกึ่งกลาง */
     margin-bottom: 25px; /* ระยะห่างด้านล่าง */
-    color: white; /* สีตัวอักษรขาว */
-    text-shadow: 3px 3px black; /* เงาตัวอักษรสีดำ */
+    color: var(--font-color); /* สีตัวอักษรขาว */
+    text-shadow: 3px 3px var(--title-shadow); /* เงาตัวอักษรสีดำ */
     position: static; /* ตำแหน่งปกติ (ไม่ใช้ absolute) */
     right: auto; /* ยกเลิกการเลื่อน */
     left: 0; /* ยกเลิกการเลื่อน */
@@ -659,7 +673,7 @@ body {
     width: 220px; /* ความกว้าง (เล็กลง) */
     height: 210px; /* ความสูง (เล็กลง) */
     border-radius: 200px; /* ทำให้เป็นวงกลม */
-    background-color: #fe8266; /* สีพื้นหลังโทนส้มเข้ม */
+    background-color: var(--shadows); /* สีพื้นหลังโทนส้มเข้ม */
     margin-bottom: 15px; /* ระยะห่างด้านล่าง */
   }
 
@@ -672,7 +686,7 @@ body {
     width: 90%; /* ความกว้าง 90% ของหน้าจอ */
     max-width: 500px; /* ความกว้างสูงสุด */
     height: 70%; /*ความสูง 70% ของหน้าจอ */
-    background-color: #fff; /* สีพื้นหลังขาว */
+    background-color: var(--background-panel); /* สีพื้นหลังขาว */
     padding: 30px; /* ระยะห่างด้านใน */
     border-radius: 15px; /* มุมโค้งมน */
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* เงาโค้ง */
@@ -682,13 +696,17 @@ body {
   }
 
   .answer li {
-    background-color: #ffb3a2; /* สีพื้นหลังของคำตอบ*/
+    background-color: var(--answer); /* สีพื้นหลังของคำตอบ*/
   }
 
   .answer h2 {
-    background-color: #fe8266; /* สีพื้นหลังของคำถาม */
+    background-color: var(--title-answer); /* สีพื้นหลังของคำถาม */
     margin-top: 5px; /* ระยะห่างด้านบน */
     margin-bottom: 5px; /* ระยะห่างด้านล่าง */
+  }
+
+  .link-panel{
+    height: 40% !important; /* หน้าต่างของ link มีความสูง 40% ของหน้าจอ */
   }
 
   .icon-web {
@@ -702,7 +720,7 @@ body {
   }
 
   .project {
-    background: #ffb3a2; /* สีพื้นหลัง */
+    background: var(--project-content); /* สีพื้นหลัง */
     padding: 25px; /* ระยะห่างภายใน */
     margin: 10px; /* ระยะห่างภายนอก */
   }
@@ -710,7 +728,7 @@ body {
   .projectname {
     display: flex; /* รูปแบบหน้า Flex */
     justify-content: center; /* อยู่ตรงการในแนวนอน */
-    background: #fe8266; /* สีพื้นหลังของชื่อProject */
+    background: var(--project-name); /* สีพื้นหลังของชื่อProject */
   }
 
   .projectcontent {
@@ -722,15 +740,17 @@ body {
     width: 100px; /* ความกว้าง 100px */
     height: 50px; /* ความสูง 50px */
     border-radius: 5px; /* ความโค้งของขอบ 5px */
-    background-color: #ff6b81; /* สีพื้นหลัง */
+    background-color: var(--project-button); /* สีพื้นหลัง */
   }
 
   /* ปุ่มปิด modal */
   .close-btn {
+    position: relative;   /*  ตำแหน่งยืดหยุ่น  */
+    top: 15px;    /* ลงมาจากด้านบน 15px  */
     margin-top: 20px; /* ระยะห่างด้านบน */
     padding: 10px 15px; /* ระยะห่างด้านใน */
-    background-color: #ff6b81; /* สีพื้นหลังชมพู */
-    color: white; /* สีตัวอักษรขาว */
+    background-color: var(--color-button); /* สีพื้นหลังชมพู */
+    color: var(--font-color); /* สีตัวอักษรขาว */
     border: none; /* ไม่มีขอบ */
     border-radius: 8px; /* มุมโค้งมน */
     cursor: pointer; /* แสดงรูปมือเมื่อชี้ */
@@ -761,14 +781,14 @@ body {
     align-items: center; /* จัดกึ่งกลางแนวตั้ง */
     height: 100vh; /* ความสูงเต็มหน้าจอ */
     padding: 20px; /* ระยะห่างด้านใน */
-    background-color: #f5e7eb; /* สีพื้นหลังโทนชมพูอ่อน */
+    background-color: var(--background); /* สีพื้นหลังโทนชมพูอ่อน */
   }
 
   .buttonsong {
     width: 20px; /* ความกว้าง 20px */
     height: 20px; /* ความสูง 20px */
-    background-color: #f5e7eb; /* สีพื้นหลัง */
-    border: 1px solid #f5e7eb; /* ขนาดและสีของเส้นขอบ */
+    background-color: var(--background); /* สีพื้นหลัง */
+    border: 1px solid var(--background); /* ขนาดและสีของเส้นขอบ */
     display: flex; /* รูปแบบหน้าเจอ Flex */
     justify-content: center; /* ตั้งอยู่ตรงกลางแนวนอน */
     align-items: center; /* ตั้งอยู่ตรงกลางแนวตั้ง */
@@ -787,11 +807,15 @@ body {
     height: 550px; /* ความสูงคงที่ (ลดจาก 600px) */
     border-radius: 20px; /* มุมโค้งมน */
     padding: 20px; /* ระยะห่างด้านใน */
-    background-color: #fea591; /* สีพื้นหลังโทนส้ม */
+    background-color: var(--colors-based); /* สีพื้นหลังโทนส้ม */
     display: flex; /* ใช้ flexbox */
     flex-direction: column; /* เรียงแนวตั้ง */
     align-items: center; /* จัดกึ่งกลางแนวนอน */
     justify-content: space-around; /* กระจายเนื้อหาให้เท่ากัน */
+  }
+
+  .link-panel{
+    height:  50% !important; /* หน้าต่างของ link มีความสูง 50% ของหน้าจอ */
   }
 
   /* กล่องบรรจุปุ่มลิงก์ทั้งหมด (เรียงแนวนอน) */
@@ -821,10 +845,10 @@ body {
     width: 80px; /* ความกว้าง */
     height: 80px; /* ความสูง */
     border-radius: 20px; /* มุมโค้งมน */
-    background: #fea591; /* สีพื้นหลังเหมือนกล่องหลัก */
+    background: var(--colors-based); /* สีพื้นหลังเหมือนกล่องหลัก */
     transition: background 0.3s, transform 0.3s; /* เอฟเฟกต์การเปลี่ยน */
     flex-shrink: 0; /* ไม่ให้หดขนาด */
-    border: 2px solid #fea591; /* ขอบสีเดียวกับพื้นหลัง */
+    border: 2px solid var(--colors-based); /* ขอบสีเดียวกับพื้นหลัง */
   }
 
   /* เอฟเฟกต์เมื่อ hover ปุ่ม */
@@ -845,8 +869,8 @@ body {
     transition: visibility 0.2s, opacity 0.2s; /* เอฟเฟกต์การเปลี่ยน */
     position: absolute; /* ตำแหน่งสัมบูรณ์ */
     bottom: 110%; /* วางเหนือปุ่ม 110% */
-    background: #f0917b; /* สีพื้นหลังโทนส้มเข้ม */
-    color: white; /* สีตัวอักษรขาว */
+    background: var(--text-bacground); /* สีพื้นหลังโทนส้มเข้ม */
+    color: var(--font-color); /* สีตัวอักษรขาว */
     padding: 6px 10px; /* ระยะห่างด้านใน */
     border-radius: 10px; /* มุมโค้งมน */
     white-space: nowrap; /* ไม่ให้ตัดบรรทัด */
@@ -876,8 +900,8 @@ body {
     font-size: 44px; /* ขนาดตัวอักษรกลาง */
     text-align: center; /* จัดกึ่งกลาง */
     margin-bottom: 25px; /* ระยะห่างด้านล่าง */
-    color: white; /* สีตัวอักษรขาว */
-    text-shadow: 3px 3px black; /* เงาตัวอักษรสีดำ */
+    color: var(--font-color); /* สีตัวอักษรขาว */
+    text-shadow: 3px 3px var(--title-shadow); /* เงาตัวอักษรสีดำ */
     position: static; /* ตำแหน่งปกติ (ไม่ใช้ absolute) */
     left: auto; /* ยกเลิกการเลื่อน */
     bottom: auto; /* ยกเลิกการเลื่อน */
@@ -888,7 +912,7 @@ body {
     width: 270px; /* ความกว้าง */
     height: 270px; /* ความสูง */
     border-radius: 200px; /* ทำให้เป็นวงกลม */
-    background-color: #fe8266; /* สีพื้นหลังโทนส้มเข้ม */
+    background-color: var(--shadows); /* สีพื้นหลังโทนส้มเข้ม */
     margin-bottom: 20px; /* ระยะห่างด้านล่าง */
   }
 
@@ -900,8 +924,8 @@ body {
     transform: translate(-50%, -50%); /* เลื่อนให้อยู่กึ่งกลางจริงๆ */
     width: 90%; /* ความกว้าง 90% ของหน้าจอ */
     max-width: 500px; /* ความกว้างสูงสุด */
-    height: 70%; /*ความสูง 70% ของหน้าจอ */
-    background-color: #fff; /* สีพื้นหลังขาว */
+    height: 70%; /*ความสูง 50% ของหน้าจอ */
+    background-color: var(--background-panel); /* สีพื้นหลังขาว */
     padding: 30px; /* ระยะห่างด้านใน */
     border-radius: 15px; /* มุมโค้งมน */
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* เงาโค้ง */
@@ -911,11 +935,11 @@ body {
   }
 
   .answer li {
-    background-color: #ffb3a2; /* สีพื้นหลังของคำตอบ*/
+    background-color: var(--answer); /* สีพื้นหลังของคำตอบ*/
   }
 
   .answer h2 {
-    background-color: #fe8266; /* สีพื้นหลังของคำถาม */
+    background-color: var(--title-answer); /* สีพื้นหลังของคำถาม */
     margin-top: 5px; /* ระยะห่างด้านบน */
     margin-bottom: 5px; /* ระยะห่างด้านล่าง */
   }
@@ -923,16 +947,13 @@ body {
   .icon-web {
     display: grid; /* ตั้งรูปแบบหน้าจอเป็น Grid */
     grid-template-rows: repeat(2, 100px); /* จำนวนแถวแนวนอนและขนาดของกล่อง */
-    grid-template-columns: repeat(
-      3,
-      100px
-    ); /* จำนวนแถวแนวตั้งและขนาดของกล่อง */
+    grid-template-columns: repeat(3,100px); /* จำนวนแถวแนวตั้งและขนาดของกล่อง */
     justify-content: center; /* ตั้งให้อยู่ตรงกลาง */
     gap: 20px; /* ระยะห่างอยู่ที่ 20px */
   }
 
   .project {
-    background: #ffb3a2; /* สีพื้นหลัง */
+    background: var(--project-content); /* สีพื้นหลัง */
     padding: 25px; /* ระยะห่างภายใน */
     margin: 10px; /* ระยะห่างภายนอก */
   }
@@ -940,7 +961,7 @@ body {
   .projectname {
     display: flex; /* รูปแบบหน้า Flex */
     justify-content: center; /* อยู่ตรงการในแนวนอน */
-    background: #fe8266; /* สีพื้นหลังของชื่อProject */
+    background: var(--project-name); /* สีพื้นหลังของชื่อProject */
   }
 
   .projectcontent {
@@ -952,15 +973,15 @@ body {
     width: 100px; /* ความกว้าง 100px */
     height: 50px; /* ความสูง 50px */
     border-radius: 5px; /* ความโค้งของขอบ 5px */
-    background-color: #ff6b81; /* สีพื้นหลัง */
+    background-color: var(--project-button); /* สีพื้นหลัง */
   }
 
   /* ปุ่มปิด modal */
   .close-btn {
     margin-top: 20px; /* ระยะห่างด้านบน */
     padding: 10px 15px; /* ระยะห่างด้านใน */
-    background-color: #ff6b81; /* สีพื้นหลังชมพู */
-    color: white; /* สีตัวอักษรขาว */
+    background-color: var(--color-button); /* สีพื้นหลังชมพู */
+    color: var(--font-color); /* สีตัวอักษรขาว */
     border: none; /* ไม่มีขอบ */
     border-radius: 8px; /* มุมโค้งมน */
     cursor: pointer; /* แสดงรูปมือเมื่อชี้ */
