@@ -9,23 +9,6 @@
   font-family: "Noto-Sans-Thai", cursive; /* กำหนดฟอนต์หลัก */
 }
 
-:root{
-    --colors-based: #fea591;
-    --shadows: #fe8266;
-    --color-button: #ff6b81;
-    --answer: #ffb3a2;
-    --title-answer: #fe8266;
-    --background: #f5e7eb;
-    --title-shadow: black;
-    --background-panel: #f5e7eb;
-    --font-color: white;
-    --project-name: #fe8266;
-    --project-content: #ffb3a2;
-    --project-button: #ff6b81;
-    --text-bacground: #f0917b;
-}
-
-
 /* สไตล์สำหรับ body หลัก */
 body {
   background-color: var(--background); /* สีพื้นหลังโทนชมพูอ่อน */
@@ -59,11 +42,11 @@ body {
 
   /* กล่องหลักที่บรรจุเนื้อหาทั้งหมด */
   .container {
-    width: 1200px; /* ความกว้างคงที่ */
-    height: 600px; /* ความสูงคงที่ */
+    width: var(--width-container-1440); /* ความกว้างคงที่ */
+    height:var(--height-container-1440); /* ความสูงคงที่ */
     border-radius: 20px; /* มุมโค้งมน */
-    padding: 20px; /* ระยะห่างด้านใน */
-    margin: 25px; /* ระยะห่างด้านนอก */
+    padding: var(--padding-container-1440); /* ระยะห่างด้านใน */
+    margin: var(--margin-container-1440); /* ระยะห่างด้านนอก */
     background-color: var(--colors-based); /* สีพื้นหลังโทนส้ม */
     display: flex; /* ใช้ flexbox */
     justify-content: space-around; /* กระจายเนื้อหาให้เท่ากัน */
@@ -102,8 +85,8 @@ body {
 
   /* สไตล์สำหรับปุ่มหลัก */
   .button {
-    width: 100px; /* ความกว้าง */
-    height: 100px; /* ความสูง */
+    width: var(--width-button-1440); /* ความกว้าง */
+    height: var(--height-button-1440); /* ความสูง */
     border-radius: 20px; /* มุมโค้งมน */
     background: var(--colors-based); /* สีพื้นหลังเหมือนกล่องหลัก */
     z-index: 3; /* ลำดับชั้น */
@@ -117,8 +100,8 @@ body {
 
   /* รูปภาพในปุ่ม */
   .button img {
-    width: 80px; /* ความกว้างรูป */
-    height: 80px; /* ความสูงรูป */
+    width: var(--width-imgbutton-1440); /* ความกว้างรูป */
+    height: var(--height-imgbutton-1440); /* ความสูงรูป */
   }
 
   /* กล่องบรรจุปุ่มลิงก์ทั้งหมด */
@@ -128,7 +111,7 @@ body {
     align-items: center; /* จัดแนวตั้งกึ่งกลาง */
     position: relative; /* ตำแหน่งสัมพัทธ์ */
     bottom: 60px; /* เลื่อนขึ้น 60px */
-    gap: 50px; /* ระยะห่างระหว่างปุ่ม */
+    gap: var(--gap-button-1440); /* ระยะห่างระหว่างปุ่ม */
   }
 
   /* รูปโปรไฟล์ */
@@ -144,7 +127,7 @@ body {
     position: relative; /* ตำแหน่งสัมพัทธ์ */
     left: 200px; /* เลื่อนขวา 200px */
     bottom: 250px; /* เลื่อนขึ้น 250px */
-    font-size: 62px; /* ขนาดตัวอักษร */
+    font-size: var(--title-1440); /* ขนาดตัวอักษร */
     color: var(--font-color); /* สีตัวอักษรขาว */
     text-shadow: 5px 5px var(--title-shadow); /* เงาตัวอักษรสีดำ */
   }
@@ -154,8 +137,8 @@ body {
     border-radius: 200px; /* ทำให้เป็นวงกลม */
     position: relative; /* ตำแหน่งสัมพัทธ์ */
     right: 300px; /* เลื่อนซ้าย 300px */
-    width: 350px; /* ความกว้าง */
-    height: 350px; /* ความสูง */
+    width: var(--width-shadow-1440); /* ความกว้าง */
+    height: var(--height-shadow-1440); /* ความสูง */
     background-color: var(--shadows); /* สีพื้นหลังโทนส้มเข้ม */
   }
 
@@ -165,8 +148,8 @@ body {
     top: 50%; /* ตำแหน่งแนวตั้ง 50% */
     left: 50%; /* ตำแหน่งแนวนอน 50% */
     transform: translate(-50%, -50%); /* เลื่อนให้อยู่กึ่งกลางจริงๆ */
-    width: 90%; /* ความกว้าง 90% ของหน้าจอ */
-    max-width: 500px; /* ความกว้างสูงสุด */
+    width: var(--width-panel-1440); /* ความกว้าง 90% ของหน้าจอ */
+    max-width: var(--max-width-panel-1440); /* ความกว้างสูงสุด */
     background-color: var(--background-panel); /* สีพื้นหลังขาว */
     padding: 30px; /* ระยะห่างด้านใน */
     border-radius: 15px; /* มุมโค้งมน */
@@ -177,8 +160,8 @@ body {
 
   /* ปุ่มปิด modal */
   .close-btn {
-    margin-top: 20px; /* ระยะห่างด้านบน */
-    padding: 10px 15px; /* ระยะห่างด้านใน */
+    margin-top: var(--marigntop-closepanel-1440); /* ระยะห่างด้านบน */
+    padding: var(--padding-closepanel-1440); /* ระยะห่างด้านใน */
     background-color: var(--color-button); /* สีพื้นหลังชมพู */
     color: var(--font-color); /* สีตัวอักษรขาว */
     border: none; /* ไม่มีขอบ */
@@ -214,10 +197,7 @@ body {
   .icon-web {
     display: grid; /* ตั้งรูปแบบหน้าจอเป็น Grid */
     grid-template-rows: repeat(2, 100px); /* จำนวนแถวแนวนอนและขนาดของกล่อง */
-    grid-template-columns: repeat(
-      3,
-      100px
-    ); /* จำนวนแถวแนวตั้งและขนาดของกล่อง */
+    grid-template-columns: repeat(3,100px); /* จำนวนแถวแนวตั้งและขนาดของกล่อง */
     justify-content: center; /* ตั้งให้อยู่ตรงกลาง */
     gap: 20px; /* ระยะห่างอยู่ที่ 20px */
     margin-top: 20px; /* ระยะด้านบน 20px  */
@@ -249,44 +229,44 @@ body {
 
   /* กำหนดขนาดเฉพาะสำหรับ panel "เกี่ยวกับ" */
   #aboutPanel {
-    width: 500px; /* ความกว้างคงที่ */
-    max-width: 90%; /* ความกว้างสูงสุด 90% ของหน้าจอ */
-    height: auto; /* ความสูงตามเนื้อหา */
-    max-height: 70vh; /* ความสูงสูงสุด 70% ของหน้าจอ */
+    width: var(--width-aboutme-1440); /* ความกว้างคงที่ */
+    max-width:  var(--max-width-aboutme-1440); /* ความกว้างสูงสุด 90% ของหน้าจอ */
+    height: var(--height-aboutme-1440); /* ความสูงตามเนื้อหา */
+    max-height: var(--max-height-aboutme-1440);/* ความสูงสูงสุด 70% ของหน้าจอ */
     overflow-y: auto; /* เลื่อนได้เมื่อเนื้อหาเกิน */
   }
 
   /* กำหนดขนาดเฉพาะสำหรับ panel "ลิงก์" */
   #linksPanel {
-    width: 400px; /* ความกว้างคงที่ */
-    max-width: 90%; /* ความกว้างสูงสุด */
-    height: 400px; /* ความสูงคงที่ */
+    width: var(--width-link-1440); /* ความกว้างคงที่ */
+    max-width: var(--max-width-link-1440); /* ความกว้างสูงสุด */
+    height: var(--height-link-1440); /* ความสูงคงที่ */
     overflow-y: auto; /* เลื่อนได้เมื่อเนื้อหาเกิน */
   }
 
   /* กำหนดขนาดเฉพาะสำหรับ panel "คำถามที่พบบ่อย" */
   #faqPanel {
-    width: 450px; /* ความกว้างคงที่ */
-    max-width: 90%; /* ความกว้างสูงสุด */
-    height: auto; /* ความสูงตามเนื้อหา */
-    max-height: 60vh; /* ความสูงสูงสุด 60% ของหน้าจอ */
+    width: var(--width-faq-1440); /* ความกว้างคงที่ */
+    max-width: var(--max-width-faq-1440); /* ความกว้างสูงสุด */
+    height: var(--height-faq-1440); /* ความสูงตามเนื้อหา */
+    max-height: var(--max-height-faq-1440); /* ความสูงสูงสุด 60% ของหน้าจอ */
     overflow-y: auto; /* เลื่อนได้เมื่อเนื้อหาเกิน */
   }
 
   /* กำหนดขนาดเฉพาะสำหรับ panel "โปรเจค" */
   #projectsPanel {
-    width: 600px; /* ความกว้างคงที่ */
-    max-width: 95%; /* ความกว้างสูงสุด 95% ของหน้าจอ */
-    height: 500px; /* ความสูงคงที่ */
+    width: var(--width-project-1440); /* ความกว้างคงที่ */
+    max-width: var(--width-project-1440); /* ความกว้างสูงสุด 95% ของหน้าจอ */
+    height: var(--height-project-1440); /* ความสูงคงที่ */
     overflow-y: auto; /* เลื่อนได้เมื่อเนื้อหาเกิน */
   }
 
   /* กำหนดขนาดเฉพาะสำหรับ panel "ติดต่อ" */
   #contactPanel {
-    width: 500px; /* ความกว้างคงที่ */
-    max-width: 90%; /* ความกว้างสูงสุด */
-    height: 300px; /* ความสูงตามเนื้อหา */
-    max-height: 70vh; /* ความสูงสูงสุด 50% ของหน้าจอ */
+    width: var(--width-contact-1440); /* ความกว้างคงที่ */
+    max-width: var(--max-width-contact-1440); /* ความกว้างสูงสุด */
+    height: var(--height-contact-1440); /* ความสูงตามเนื้อหา */
+    max-height: var(--max-height-contact-1440); /* ความสูงสูงสุด 50% ของหน้าจอ */
     overflow-y: auto; /* เลื่อนได้เมื่อเนื้อหาเกิน */
   }
 } /* จบ media query สำหรับหน้าจอขนาดใหญ่ */
@@ -298,12 +278,12 @@ body {
     display: flex; /* ใช้ flexbox */
     justify-content: center; /* จัดกึ่งกลางแนวนอน */
     align-items: center; /* จัดกึ่งกลางแนวตั้ง */
-    height: 100vh; /* ความสูงเต็มหน้าจอ */
+    height: var(--body-height-1024); /* ความสูงเต็มหน้าจอ */
   }
 
   .buttonsong {
-    width: 50px; /* ความกว้าง 50px */
-    height: 50px; /* ความสูง 50px */
+    width: var(--height-buttonsong-1024); /* ความกว้าง 50px */
+    height: var(--widht-buttonsong-1024); /* ความสูง 50px */
     background-color: var(--background); /* สีพื้นหลัง */
     border: 1px solid var(--background); /* ขนาดและสีของเส้นขอบ */
     display: flex; /* รูปแบบหน้าเจอ Flex */
@@ -319,12 +299,12 @@ body {
 
   /* กล่องหลักที่ปรับขนาดให้เข้ากับหน้าจอ */
   .container {
-    width: 95%; /* ความกว้าง 95% ของหน้าจอ */
-    max-width: 1200px; /* ความกว้างสูงสุด */
-    height: 600px; /* ความสูงคงที่ */
-    border-radius: 20px; /* มุมโค้งมน */
-    padding: 20px; /* ระยะห่างด้านใน */
-    margin: 25px; /* ระยะห่างด้านนอก */
+    width: var(--width-container-1024); /* ความกว้าง 95% ของหน้าจอ */
+    max-width: var(--max-width-container-1024); /* ความกว้างสูงสุด */
+    height: var(--height-container-1024); /* ความสูงคงที่ */
+    border-radius: var(--border-radius-container-1024); /* มุมโค้งมน */
+    padding: var(--padding-container-1024); /* ระยะห่างด้านใน */
+    margin: var(--margin-container-1024); /* ระยะห่างด้านนอก */
     background-color: var(--colors-based); /* สีพื้นหลังโทนส้ม */
     display: flex; /* ใช้ flexbox */
     justify-content: space-around; /* กระจายเนื้อหาให้เท่ากัน */
@@ -346,14 +326,14 @@ body {
     opacity: 0; /* ความโปร่งใส 0% */
     transition: visibility 0.2s, opacity 0.2s; /* เอฟเฟกต์การเปลี่ยน */
     position: absolute; /* ตำแหน่งสัมบูรณ์ */
-    bottom: 110%; /* วางเหนือปุ่ม 110% */
+    bottom: var(--bottom-text-1024); /* วางเหนือปุ่ม 110% */
     background: var(--text-bacground); /* สีพื้นหลังโทนส้มเข้ม */
     color: var(--font-color); /* สีตัวอักษรขาว */
-    padding: 8px 12px; /* ระยะห่างด้านใน */
-    border-radius: 10px; /* มุมโค้งมน */
+    padding: var(--padding-text-1024); /* ระยะห่างด้านใน */
+    border-radius: var(--border-radius-text-1024); /* มุมโค้งมน */
     white-space: nowrap; /* ไม่ให้ตัดบรรทัด */
     z-index: 10; /* อยู่ด้านบนสุด */
-    font-size: 16px; /* ขนาดตัวอักษร */
+    font-size: var(--font-size-text-1024); /* ขนาดตัวอักษร */
   }
 
   /* แสดง tooltip เมื่อ hover ที่ button-wrapper */
@@ -364,9 +344,9 @@ body {
 
   /* สไตล์สำหรับปุ่มหลัก (ขนาดเล็กลงเล็กน้อย) */
   .button {
-    width: 90px; /* ความกว้าง (ลดจาก 100px) */
-    height: 90px; /* ความสูง (ลดจาก 100px) */
-    border-radius: 20px; /* มุมโค้งมน */
+    width: var(--width-button-1024); /* ความกว้าง (ลดจาก 100px) */
+    height: var(--height-button-1024); /* ความสูง (ลดจาก 100px) */
+    border-radius: var(--border-radius-button-1024); /* มุมโค้งมน */
     background: var(--colors-based); /* สีพื้นหลังเหมือนกล่องหลัก */
     z-index: 3; /* ลำดับชั้น */
     transition: background 0.3s, transform 0.3s; /* เอฟเฟกต์การเปลี่ยน */
@@ -380,8 +360,8 @@ body {
 
   /* รูปภาพในปุ่ม (ขนาดเล็กลงตามปุ่ม) */
   .button img {
-    width: 70px; /* ความกว้างรูป (ลดจาก 80px) */
-    height: 70px; /* ความสูงรูป (ลดจาก 80px) */
+    width: var(--width-imgbutton-1024); /* ความกว้างรูป 70px */
+    height: var(--height-imgbutton-1024); /* ความสูงรูป 70px */
   }
 
   /* กล่องบรรจุปุ่มลิงก์ทั้งหมด */
@@ -390,8 +370,8 @@ body {
     justify-content: space-around; /* กระจายปุ่มให้เท่ากัน */
     align-items: center; /* จัดแนวตั้งกึ่งกลาง */
     position: relative; /* ตำแหน่งสัมพัทธ์ */
-    bottom: 50px; /* เลื่อนขึ้น 50px (ลดจาก 60px) */
-    gap: 40px; /* ระยะห่างระหว่างปุ่ม (ลดจาก 50px) */
+    bottom: 50px; /* เลื่อนขึ้น 50px  */
+    gap: 40px; /* ระยะห่างระหว่างปุ่ม 40px */
   }
 
   /* รูปโปรไฟล์ (ปรับขนาดให้เหมาะสม) */

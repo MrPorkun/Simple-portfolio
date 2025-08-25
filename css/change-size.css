@@ -1,0 +1,103 @@
+
+/* สำหรับขนาดหน้าจอ 1440px ขึ้นไป */
+:root{
+    /* ปรับความสูงและความกว้างของ container */
+    --width-container-1440: 1200px;
+    --height-container-1440: 600px;
+    
+    /* ปรับระยะห่างภายในและภายนอกของ container */
+    --padding-container-1440: 20px;
+    --margin-container-1440: 25;
+
+    /* ปรับความสูงและความกว้างของ Button */
+    --width-button-1440: 100px;
+    --height-button-1440: 100px;
+
+    /* ปรับขนาดรูปภาพของ Button */
+    --width-imgbutton-1440: 80px;
+    --height-imgbutton-1440:  80px;
+
+    /* ปรับระยะห่างระหว่า Button */
+    --gap-button-1440: 50px;
+
+    /* ปรับขนาดข้อความของ Title */
+    --title-1440:  62px;
+
+    /* ปรับขนาดของ Shadow */
+    --width-shadow-1440: 350px;
+    --height-shadow-1440:  350px;
+
+    /* ปรับขนาดความกว้างของ panel */
+    --width-panel-1440:  90%;
+    --max-width-panel-1440:  500px;
+
+    /* ปรับระยะห่างภายในและภายนอกปุ่มปิดของ panel */
+    --padding-closepanel-1440: 10px 15px ;
+    --margintop-closepanel-1440:  20px;
+
+    /* ปรับขนาดของPanel About-me */
+    --width-aboutme-1440:   500px;
+    --max-width-aboitme-1440:   90%;
+    --height-aboutme-1440:  auto;
+    --max-height-aboutme-1440:  70vh;
+
+    /* ปรับขนาดของPanel Link */
+    --width-link-1440:  400px;
+    --max-width-link-1440:  90%;
+    --height-link-1440: 400px;
+
+    /* ปรับขนาดของPanel FAQ */
+    --width-faq-1440:   450px;
+    --max-width-faq-1440:   90%;
+    --height-faq-1440:  auto;
+    --max-height-faq-1440:  60vh;
+
+    /* ปรับขนาดของPanel Project */
+    --width-project-1440:   600px;
+    --max-width-project-1440:   95%;
+    --height-project-1440:  500px;
+
+    /* ปรับขนาดของProject Contact */
+    --width-contact-1440:   500px;
+    --max-width-contact-1440:   90%;
+    --height-contact-1440:  300px;
+    --max-height-contact-1440:  70vh;
+
+}
+
+
+    /* สำหรับขนาดหน้าจอ 1024-1439px */
+:root{
+
+    /* ปรับขนาดความสูงของ body */
+    --body-height-1024: 100vh;
+
+    /* ปรับขนาดความสูงและความกว้างของ buttonsong */
+    --height-buttonsong-1024:   50px;
+    --width-buttonsong-1024:    50px;
+
+    /* ปรับขนาดความสูงและความกว้างของ Container */
+    --width-container-1024: 95%;
+    --max-width-container-1024: 1200px;
+    --height-container-1024:  600px;
+
+    /* ปรับความโค้งของมุม Container */
+    --border-radius-container-1024: 20px;
+    --margin-container-1024: 25px;
+    --padding-container-1024: 20px;
+
+    /* ปรับตำแหน่ง,ระยะห่างภายใน,ความโค้งของมุม,ขนาดของตัวอักษรของ text */
+    --bottom-text-1024: 110%;
+    --padding-text-1024: 8px 12px;
+    --border-radius-text-1024: 10px;
+    --font-size-text-1024: 16px;
+
+    /* ปรับความกว้าง,ความสูง,ความโค้งของมุม ของ Button */
+    --width-button-1024:  90px;
+    --height-button-1024:  90px;
+    --border-radius-button-1024:  20px;
+
+    /* ปรับความกว้างของรูปใน button */
+    --width-imgbutton-1024:  70px;
+    --height-imgbutton-1024:  70px;
+}
