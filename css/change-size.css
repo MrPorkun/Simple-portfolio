@@ -1,103 +1,339 @@
-
+/* ============================= */
 /* สำหรับขนาดหน้าจอ 1440px ขึ้นไป */
-:root{
-    /* ปรับความสูงและความกว้างของ container */
-    --width-container-1440: 1200px;
-    --height-container-1440: 600px;
-    
-    /* ปรับระยะห่างภายในและภายนอกของ container */
-    --padding-container-1440: 20px;
-    --margin-container-1440: 25;
+/* ============================= */
+:root {
+  /* ปรับความสูงและความกว้างของ container */
+  --width-container-1440: 1200px;
+  --height-container-1440: 600px;
 
-    /* ปรับความสูงและความกว้างของ Button */
-    --width-button-1440: 100px;
-    --height-button-1440: 100px;
+  /* ปรับระยะห่างภายในและภายนอกของ container */
+  --padding-container-1440: 20px;
+  --margin-container-1440: 25;
 
-    /* ปรับขนาดรูปภาพของ Button */
-    --width-imgbutton-1440: 80px;
-    --height-imgbutton-1440:  80px;
+  /* ปรับความสูงและความกว้างของ Button */
+  --width-button-1440: 100px;
+  --height-button-1440: 100px;
 
-    /* ปรับระยะห่างระหว่า Button */
-    --gap-button-1440: 50px;
+  /* ปรับขนาดรูปภาพของ Button */
+  --width-imgbutton-1440: 80px;
+  --height-imgbutton-1440: 80px;
 
-    /* ปรับขนาดข้อความของ Title */
-    --title-1440:  62px;
+  /* ปรับระยะห่างระหว่า Button */
+  --gap-button-1440: 50px;
 
-    /* ปรับขนาดของ Shadow */
-    --width-shadow-1440: 350px;
-    --height-shadow-1440:  350px;
+  /* ปรับขนาดข้อความของ Title */
+  --title-1440: 62px;
 
-    /* ปรับขนาดความกว้างของ panel */
-    --width-panel-1440:  90%;
-    --max-width-panel-1440:  500px;
+  /* ปรับขนาดของ Shadow */
+  --width-shadow-1440: 350px;
+  --height-shadow-1440: 350px;
 
-    /* ปรับระยะห่างภายในและภายนอกปุ่มปิดของ panel */
-    --padding-closepanel-1440: 10px 15px ;
-    --margintop-closepanel-1440:  20px;
+  /* ปรับขนาดความกว้างของ panel */
+  --width-panel-1440: 90%;
+  --max-width-panel-1440: 500px;
 
-    /* ปรับขนาดของPanel About-me */
-    --width-aboutme-1440:   500px;
-    --max-width-aboitme-1440:   90%;
-    --height-aboutme-1440:  auto;
-    --max-height-aboutme-1440:  70vh;
+  /* ปรับระยะห่างภายในและภายนอกปุ่มปิดของ panel */
+  --padding-closepanel-1440: 10px 15px;
+  --margintop-closepanel-1440: 20px;
 
-    /* ปรับขนาดของPanel Link */
-    --width-link-1440:  400px;
-    --max-width-link-1440:  90%;
-    --height-link-1440: 400px;
+  /* ปรับขนาดของ Panel About-me */
+  --width-aboutme-1440: 500px;
+  --max-width-aboitme-1440: 90%;
+  --height-aboutme-1440: auto;
+  --max-height-aboutme-1440: 70vh;
 
-    /* ปรับขนาดของPanel FAQ */
-    --width-faq-1440:   450px;
-    --max-width-faq-1440:   90%;
-    --height-faq-1440:  auto;
-    --max-height-faq-1440:  60vh;
+  /* ปรับขนาดของ Panel Link */
+  --width-link-1440: 400px;
+  --max-width-link-1440: 90%;
+  --height-link-1440: 400px;
 
-    /* ปรับขนาดของPanel Project */
-    --width-project-1440:   600px;
-    --max-width-project-1440:   95%;
-    --height-project-1440:  500px;
+  /* ปรับขนาดของ Panel FAQ */
+  --width-faq-1440: 450px;
+  --max-width-faq-1440: 90%;
+  --height-faq-1440: auto;
+  --max-height-faq-1440: 60vh;
 
-    /* ปรับขนาดของProject Contact */
-    --width-contact-1440:   500px;
-    --max-width-contact-1440:   90%;
-    --height-contact-1440:  300px;
-    --max-height-contact-1440:  70vh;
+  /* ปรับขนาดของ Panel Project */
+  --width-project-1440: 600px;
+  --max-width-project-1440: 95%;
+  --height-project-1440: 500px;
 
+  /* ปรับขนาดของ Project Contact */
+  --width-contact-1440: 500px;
+  --max-width-contact-1440: 90%;
+  --height-contact-1440: 300px;
+  --max-height-contact-1440: 70vh;
 }
 
+/* ============================= */
+/* สำหรับขนาดหน้าจอ 1024px - 1439px */
+/* ============================= */
+:root {
+  /* ปรับขนาดความสูงของ body */
+  --body-height-1024: 100vh;
 
-    /* สำหรับขนาดหน้าจอ 1024-1439px */
-:root{
+  /* ปรับขนาดความสูงและความกว้างของ buttonsong */
+  --height-buttonsong-1024: 50px;
+  --width-buttonsong-1024: 50px;
 
-    /* ปรับขนาดความสูงของ body */
-    --body-height-1024: 100vh;
+  /* ปรับขนาดความสูงและความกว้างของ Container */
+  --width-container-1024: 95%;
+  --max-width-container-1024: 1200px;
+  --height-container-1024: 600px;
 
-    /* ปรับขนาดความสูงและความกว้างของ buttonsong */
-    --height-buttonsong-1024:   50px;
-    --width-buttonsong-1024:    50px;
+  /* ปรับความโค้งของมุม Container */
+  --border-radius-container-1024: 20px;
+  --margin-container-1024: 25px;
+  --padding-container-1024: 20px;
 
-    /* ปรับขนาดความสูงและความกว้างของ Container */
-    --width-container-1024: 95%;
-    --max-width-container-1024: 1200px;
-    --height-container-1024:  600px;
+  /* ปรับตำแหน่ง, ระยะห่างภายใน, ความโค้งของมุม, ขนาดของตัวอักษรของ text */
+  --bottom-text-1024: 110%;
+  --padding-text-1024: 8px 12px;
+  --border-radius-text-1024: 10px;
+  --font-size-text-1024: 16px;
 
-    /* ปรับความโค้งของมุม Container */
-    --border-radius-container-1024: 20px;
-    --margin-container-1024: 25px;
-    --padding-container-1024: 20px;
+  /* ปรับความกว้าง, ความสูง, ความโค้งของมุม ของ Button */
+  --width-button-1024: 90px;
+  --height-button-1024: 90px;
+  --border-radius-button-1024: 20px;
 
-    /* ปรับตำแหน่ง,ระยะห่างภายใน,ความโค้งของมุม,ขนาดของตัวอักษรของ text */
-    --bottom-text-1024: 110%;
-    --padding-text-1024: 8px 12px;
-    --border-radius-text-1024: 10px;
-    --font-size-text-1024: 16px;
+  /* ปรับความกว้างของรูปใน button */
+  --width-imgbutton-1024: 70px;
+  --height-imgbutton-1024: 70px;
 
-    /* ปรับความกว้าง,ความสูง,ความโค้งของมุม ของ Button */
-    --width-button-1024:  90px;
-    --height-button-1024:  90px;
-    --border-radius-button-1024:  20px;
+  /* ปรับขนาดความกว้าง, ความสูง, ความโค้งของมุม ของ Profile */
+  --width-profile-1024: 320px;
+  --height-profile-1024: auto;
+  --border-radius-profile-1024: 200px;
 
-    /* ปรับความกว้างของรูปใน button */
-    --width-imgbutton-1024:  70px;
-    --height-imgbutton-1024:  70px;
+  /* ปรับขนาดของ Font ของ Title */
+  --font-size-title-1024: 56px;
+
+  /* ปรับ Width, Height, Border-radius, ของ Shadow */
+  --border-radius-shadow-1024: 200px;
+  --width-shadow-1024: 340px;
+  --height-shadow-1024: 340px;
+
+  /* ปรับ Width, Max-width, padding, border-radius, ของpanel */
+  --width-panel-1024: 90%;
+  --max-width-panel-1024: 500px;
+  --padding-panel-1024: 30px;
+  --border-radius-panel-1024: 15px;
+
+  /* ปรับ margin ของAnswer */
+  --margin-top-answer-1024: 5px;
+  --margin-bottom-answer-1024: 5px;
+
+  /* ปรับ grid-template columns/rows, gap ของ icon-web */
+  --grid-template-rows-icnonweb-1024: repeat(2, 100px);
+  --grid-template-columns-iconweb-1024: repeat(3, 100px);
+  --gap-iconweb-1024: 20px;
+
+  /* ปรับ padding, margin ของ Project */
+  --padding-project-1024: 25px;
+  --margin-project-1024: 10px;
+
+  /* ปรับ margin ของ Projectcontent */
+  --margin-top-projectcontent-1024: 10px;
+  --margin-bottom-projectcontent-1024: 10px;
+
+  /* ปรับ Width, Height, border-radius ของProject button */
+  --width-projectbutton-1024: 100px;
+  --height-projectbutton-1024: 50px;
+  --border-radius-projectbutton-1024: 5px;
+
+  /* ปรับ margin, padding, border-radius ของ Close-btn */
+  --margin-top-close-btn-1024: 20px;
+  --padding-close-btn-1024: 10px 15px;
+  --border-radius-close-btn-1024: 8px;
+}
+
+/* ============================= */
+/* สำหรับขนาดหน้าจอ 320 - 767 px */
+/* ============================= */
+:root {
+  /* ปรับ padding, min-height ของ Body */
+  --padding-body-320: 20px 10px;
+  --min-height-320: 100vh;
+
+  /* ปรับ width, height, font-size ของ Buttonsong */
+  --width-buttonsong-320: 15px;
+  --height-buttonsong-320: 15px;
+  --font-size-container-320: xx-large;
+
+  /* ปรับ width, max-width, height, border-radius, padding, margin ของContainer */
+  --width-container-320: 95%;
+  --max-width-container-320: 400px;
+  --height-container-320: auto;
+  --border-radius-continer-320: 20px;
+  --padding-container-320: 15px;
+  --margin-container-320: 10px 0;
+
+  /* ปรับ margin-bottom, gap, width ของButton-wrapper */
+  --margin-bottom-buttonwrapper-320: 15px;
+  --gap-buttonwrapper-320: 20px;
+  --width-buttonwrapper-320: 100%;
+
+  /* ปรับ width, height, border-radius ของButton */
+  --width-button-320: 70px;
+  --height-button-320: 70px;
+  --border-radius-button-320: 20px;
+
+  /* ปรับ width, height ของbutton-img */
+  --width-buttonimg-320: 55px;
+  --height-buttonimg-320: 55px;
+
+  /* ปรับ padding, border-radius, font-size ของ text  */
+  --padding-text-320: 5px 8px;
+  --border-radius-text-320: 10px;
+  --font-size-text-320: 12px;
+
+  /* ปรับ width, height, border-radius, margin-bottom ของ Profile */
+  --width-profile-320: 200px;
+  --height-profile-320: auto;
+  --border-radius-profile-320: 200px;
+  --margin-bottom-profile-320: 20px;
+
+  /* ปรับ font-size, margin-bottom ของ title */
+  --font-size-title-320: 32px;
+  --margin-bottom-title-320: 25px;
+
+  /* ปรับ width, height, border-radius, margin-bottom ของ Shadow */
+  --width-shadow-320: 220px;
+  --height-shadow-320: 210px;
+  --border-radius-shadow-320: 200px;
+  --margin-bottom-shadow-320: 15px;
+
+  /* ปรับ width, max-width, height, padding, border-radius ของ Panel */
+  --width-panel-320: 90%;
+  --max-width-panel-320: 500px;
+  --height-panel-320: 70%;
+  --padding-panel-320: 30px;
+  --border-radius-panel-320: 15px
+
+  /* ปรับ margin-top, margin-bottom ของ answer-h2 */
+  --margin-top-answerh2-320: 5px;
+  --margin-bottom-answerh2-320: 5px;
+
+  /* ปรับ height ของlink-panel */
+  --height-linkpanel-320: 40% !important;
+
+  /* ปรับ Grid rows / columns, gap, margin top / bottom ของ Icon-web */
+  --grid-row-iconweb-320: repeat(2, 50px);
+  --grid-columns-iconweb-320: repeat(3, 50px);
+  --gap-iconweb-320: 40px;
+  --margin-top-iconweb-320: 10px;
+  --margin-bottom-iconweb-320: 10px;
+
+  /* ปรับ Padding, Margin ของ Project */
+  --padding-project-320: 25px;
+  --margin-project-320: 10px;
+
+  /* ปรับ Margin top / bottom ของ Project-content */
+  --margin-top-projectcontent-320: 10px;
+  --margin-bottom-projectcontent-320: 10px;
+
+  /* ปรับ Width, Height, Border-radius ของ Project-button */
+  --width-projectbutton-320: 100px;
+  --height-projectbutton-320: 50px;
+  --border-radius-projectbutton-320: 5px;
+
+  /* ปรับ Margin top, Padding, Border-raidus ของ Close-btn */
+  --margin-top-closebtn-320: 20px;
+  --padding-closebtn-320: 10px 15px;
+  --border-radius-closebtn-320: 8px;
+}
+
+/* ============================= */
+/* สำหรับขนาดหน้าจอ 468-1023 px */
+/* ============================= */
+:root {
+  
+  /* ปรับ Height, Padding ของ Body  */
+  --height-body-768: 100vh;
+  --padding-body-768: 20px;
+
+  /* ปรับ Width, Height ของ  Buttonsong  */
+  --width-buttonsong-768: 20px;
+  --height-buttonsoung-768: 20px;
+
+  /* ปรับ Width, Max-width, Height, Border-radius, Padding ของ Container */
+  --width-container-768: 90%;
+  --max-width-container-768: 800px;
+  --height-container-768: 550px;
+  --border-radius-container-768: 20px;
+  --padding-container-768: 20px;
+
+  /* ปรับ Height ของ link-panel */
+  --height-linkpanel-768: 50% !important;
+
+  /* ปรับ Gap ของ link-button  */
+  --gap-linkbutton-768: 20px;
+
+  /* ปรับ Width, Gap, Margin-bottom ของ button-wrapper */
+  --width-buttonwrapper-768: 100%;
+  --gap-buttonwrapper-768: 30px;
+  --margin-bottom-buttonwrapper-768: 20px;
+
+  /* ปรับ Width, Height, Border-radius ของ Button */
+  --width-button-768: 80px;
+  --height-button-768: 80px;
+  --border-radius-button-768: 20px;
+
+  /* ปรับ  Width, Height ของ button-img */
+  --width-buttonimg-768: 65px;
+  --height-buttonimg-768: 65px;
+
+  /* ปรับ Padding, Border-radius ของ text */
+  --padding-text-768: 6px 10px;
+  --border-radius-text-768: 10px;
+
+  /* ปรับ Width, Height, Border-radius, Margin-bottom ของ Profile */
+  --width-profile-768: 250px;
+  --height-profile-768: auto;
+  --border-radius-profile-768: 200px;
+  --margin-bottom-profile-768: 25px;
+
+  /* ปรับ Font-size, Margin-bottom ของ title */
+  --font-size-title-768: 44px;
+  --margin-bottom-title-768: 25px;
+
+  /* ปรับ Width, Height, Border-radiusm Margin-bottom ของ shadow */
+  --width-shadow-768: 270px;
+  --height-shadow-768: 270px; 
+  --border-radius-shadow-768: 200px;
+  --margin-bottom-shadow-768: 20px;
+
+  /* ปรับ Width, Max-width, Height, Padding, Border-radius ของ panel */
+  --width-panel-768: 90%;
+  --max-width-panel-768: 500px;
+  --height-panel-768: 70%;
+  --padding-panel-768: 30px;
+  --border-radius-768: 15px;
+
+  /* ปรับ Margin-top / bottom ของ answer */
+  --margin-top-answer-768: 5px;
+  --margin-bottom-answer-768: 5px;
+
+  /* ปรับ Grid-row / columns, Gap ของ icon-web */
+  --grid-row-iconweb-768: repeat(2, 100px);
+  --grid-columns-iconweb-768: repeat(3, 100px);
+  --gap-iconweb-768: 20px;
+
+  /* ปรับ Padding, Margin ของ Project */
+  --padding-project-768: 20px;
+  --margin-project-768: 10px;
+
+  /* ปรับ Width, Height, Border-radius ของ project-button */
+  --width-projectbutton-768: 100px;
+  --height-projectbutton-768: 50px;
+  --border-radius-projectbutton-768: 5px;
+
+  /* ปรับ Mardin-top, Padding, Border-radius ของ Close-btn */
+  --margin-top-closebtn-768: 20px;
+  --padding-closebtn-768: 10px 15px;
+  --border-radius-closebtn-768: 8px;
+
+  
+
 }

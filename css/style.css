@@ -379,9 +379,9 @@ body {
     position: relative; /* ตำแหน่งสัมพัทธ์ */
     left: 12px; /* เลื่อนขวา 12px (ลดจาก 15px) */
     top: 12px; /* เลื่อนลง 12px (ลดจาก 15px) */
-    border-radius: 200px; /* ทำให้เป็นวงกลม */
-    width: 320px; /* ความกว้างคงที่ */
-    height: auto; /* ความสูงตามสัดส่วน */
+    border-radius: var(--border-radius-profile-1024); /* ทำให้เป็นวงกลม */
+    width: var(width-profile-1024); /* ความกว้างคงที่ */
+    height: var(--height-profile-1024); /* ความสูงตามสัดส่วน */
   }
 
   /* ข้อความหัวเรื่อง (ปรับขนาดและตำแหน่ง) */
@@ -389,18 +389,18 @@ body {
     position: relative; /* ตำแหน่งสัมพัทธ์ */
     left: 180px; /* เลื่อนขวา 180px (ลดจาก 200px) */
     bottom: 230px; /* เลื่อนขึ้น 230px (ลดจาก 250px) */
-    font-size: 56px; /* ขนาดตัวอักษร (ลดจาก 62px) */
+    font-size: var(--font-size-title-1024); /* ขนาดตัวอักษร (ลดจาก 62px) */
     color: var(--font-color); /* สีตัวอักษรขาว */
     text-shadow: 3px 3px var(--title-shadow); /* เงาตัวอักษรสีดำ */
   }
 
   /* เงาวงกลมด้านหลังรูปโปรไฟล์ (ปรับขนาดให้เข้ากับรูป) */
   .shadow {
-    border-radius: 200px; /* ทำให้เป็นวงกลม */
+    border-radius: var(--border-radius-shadow-1024); /* ทำให้เป็นวงกลม */
     position: relative; /* ตำแหน่งสัมพัทธ์ */
     right: 280px; /* เลื่อนซ้าย 280px (ลดจาก 300px) */
-    width: 340px; /* ความกว้าง (ลดจาก 350px) */
-    height: 340px; /* ความสูง (ลดจาก 350px) */
+    width: var(--width-shadow-1024); /* ความกว้าง (ลดจาก 350px) */
+    height: var(--height-shadow-1024); /* ความสูง (ลดจาก 350px) */
     background-color: var(--shadows); /* สีพื้นหลังโทนส้มเข้ม */
   }
 
@@ -410,11 +410,11 @@ body {
     top: 50%; /* ตำแหน่งแนวตั้ง 50% */
     left: 50%; /* ตำแหน่งแนวนอน 50% */
     transform: translate(-50%, -50%); /* เลื่อนให้อยู่กึ่งกลางจริงๆ */
-    width: 90%; /* ความกว้าง 90% ของหน้าจอ */
-    max-width: 500px; /* ความกว้างสูงสุด */
+    width: var(--width-panel-1024); /* ความกว้าง 90% ของหน้าจอ */
+    max-width: var(--max-width-panel-1024); /* ความกว้างสูงสุด */
     background-color: var(--background-panel); /* สีพื้นหลังขาว */
-    padding: 30px; /* ระยะห่างด้านใน */
-    border-radius: 15px; /* มุมโค้งมน */
+    padding: var(--padding-panel-1024); /* ระยะห่างด้านใน */
+    border-radius: var(--border-radius-panel-1024); /* มุมโค้งมน */
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* เงาโค้ง */
     z-index: 999; /* อยู่ด้านบนสุด */
     display: none; /* ซ่อนโดยค่าเริ่มต้น */
@@ -426,22 +426,22 @@ body {
 
   .answer h2 {
     background-color: var(--title-answer); /* สีพื้นหลังของคำถาม */
-    margin-top: 5px; /* ระยะห่างด้านบน */
-    margin-bottom: 5px; /* ระยะห่างด้านล่าง */
+    margin-top: var(--margin-top-answer-1024); /* ระยะห่างด้านบน */
+    margin-bottom: var(--margin-top-answer-1024); /* ระยะห่างด้านล่าง */
   }
 
   .icon-web {
     display: grid; /* ตั้งรูปแบบหน้าจอเป็น Grid */
-    grid-template-rows: repeat(2, 100px); /* จำนวนแถวแนวนอนและขนาดของกล่อง */
-    grid-template-columns: repeat(3,100px); /* จำนวนแถวแนวตั้งและขนาดของกล่อง */
+    grid-template-rows: var(--grid-template-rows-icnonweb-1024); /* จำนวนแถวแนวนอนและขนาดของกล่อง */
+    grid-template-columns: var(--grid-template-columns-iconweb-1024); /* จำนวนแถวแนวตั้งและขนาดของกล่อง */
     justify-content: center; /* ตั้งให้อยู่ตรงกลาง */
-    gap: 20px; /* ระยะห่างอยู่ที่ 20px */
+    gap: var(--gap-iconweb-1024); /* ระยะห่างอยู่ที่ 20px */
   }
 
   .project {
     background: var(--project-content); /* สีพื้นหลัง */
-    padding: 25px; /* ระยะห่างภายใน */
-    margin: 10px; /* ระยะห่างภายนอก */
+    padding: var(--padding-project-1024); /* ระยะห่างภายใน */
+    margin: var(--margin-project-1024); /* ระยะห่างภายนอก */
   }
 
   .projectname {
@@ -451,25 +451,25 @@ body {
   }
 
   .projectcontent {
-    margin-top: 10px; /* ระยะด้านบน */
-    margin-bottom: 10px; /* ระยะห่างด้านล่าง */
+    margin-top: var(--margin-top-projectcontent-1024); /* ระยะด้านบน */
+    margin-bottom: var(--margin-bottom-projectcontent-1024); /* ระยะห่างด้านล่าง */
   }
 
   .project .button {
-    width: 100px; /* ความกว้าง 100px */
-    height: 50px; /* ความสูง 50px */
-    border-radius: 5px; /* ความโค้งของขอบ 5px */
+    width: var(--width-projectbutton-1024); /* ความกว้าง 100px */
+    height: var(--height-projectbutton-1024); /* ความสูง 50px */
+    border-radius: var(--border-radius-projectbutton-1024); /* ความโค้งของขอบ 5px */
     background-color: var(--project-button); /* สีพื้นหลัง */
   }
 
   /* ปุ่มปิด modal */
   .close-btn {
-    margin-top: 20px; /* ระยะห่างด้านบน */
-    padding: 10px 15px; /* ระยะห่างด้านใน */
+    margin-top: var(--margin-top-close-btn-1024); /* ระยะห่างด้านบน */
+    padding: var(--padding-close-btn-1024); /* ระยะห่างด้านใน */
     background-color: var(--color-button); /* สีพื้นหลังชมพู */
     color: var(--font-color); /* สีตัวอักษรขาว */
     border: none; /* ไม่มีขอบ */
-    border-radius: 8px; /* มุมโค้งมน */
+    border-radius: var(--border-radius-close-btn-1024); /* มุมโค้งมน */
     cursor: pointer; /* แสดงรูปมือเมื่อชี้ */
   }
 
@@ -532,20 +532,20 @@ body {
     display: flex; /* ใช้ flexbox */
     justify-content: center; /* จัดกึ่งกลางแนวนอน */
     align-items: flex-start; /* เริ่มจากด้านบน (ไม่ใช่กึ่งกลาง) */
-    padding: 20px 10px; /* ระยะห่างด้านใน (บน-ล่าง 20px, ซ้าย-ขวา 10px) */
+    padding: var(--padding-body-320); /* ระยะห่างด้านใน (บน-ล่าง 20px, ซ้าย-ขวา 10px) */
     background-color: var(--background); /* สีพื้นหลังโทนชมพูอ่อน */
-    min-height: 100vh; /* ความสูงขั้นต่ำเต็มหน้าจอ */
+    min-height: var(--min-height-320); /* ความสูงขั้นต่ำเต็มหน้าจอ */
   }
 
   .buttonsong {
-    width: 15px; /* ความกว้าง 15px */
-    height: 15px; /* ความสูง 15px */
+    width: var(--width-buttonsong-320); /* ความกว้าง 15px */
+    height: var(--height-buttonsong-320); /* ความสูง 15px */
     background-color: var(--background); /* สีพื้นหลัง */
     border: 1px solid var(--background); /* ขนาดและสีของเส้นขอบ */
     display: flex; /* รูปแบบหน้าเจอ Flex */
     justify-content: center; /* ตั้งอยู่ตรงกลางแนวนอน */
     align-items: center; /* ตั้งอยู่ตรงกลางแนวตั้ง */
-    font-size: xx-large; /* ขนาดของFont */
+    font-size: var(--font-size-container-320); /* ขนาดของFont */
 
     position: fixed; /* ทำให้ติดคงที่บนจอ */
     top: 10px; /* ระยะห่างจากด้านบน */
@@ -555,12 +555,12 @@ body {
 
   /* กล่องหลักสำหรับมือถือ */
   .container {
-    width: 95%; /* ความกว้าง 95% ของหน้าจอ */
-    max-width: 400px; /* ความกว้างสูงสุด */
-    height: auto; /* ความสูงตามเนื้อหา (ไม่คงที่) */
-    border-radius: 20px; /* มุมโค้งมน */
-    padding: 15px; /* ระยะห่างด้านใน (ลดลง) */
-    margin: 10px 0; /* ระยะห่างด้านนอก (บน-ล่าง เท่านั้น) */
+    width: var(--width-container-320); /* ความกว้าง 95% ของหน้าจอ */
+    max-width: var(--max-width-container-320); /* ความกว้างสูงสุด */
+    height: var(--height-container-320); /* ความสูงตามเนื้อหา (ไม่คงที่) */
+    border-radius: var(--border-radius-container-320); /* มุมโค้งมน */
+    padding: var(--padding-container-320); /* ระยะห่างด้านใน (ลดลง) */
+    margin: var(--margin-container-320); /* ระยะห่างด้านนอก (บน-ล่าง เท่านั้น) */
     background-color: var(--colors-based); /* สีพื้นหลังโทนส้ม */
     display: flex; /* ใช้ flexbox */
     flex-direction: column; /* เรียงแนวตั้ง */
@@ -574,17 +574,17 @@ body {
     flex-direction: row; /* เรียงแนวนอน (เปลี่ยนจากแนวตั้ง) */
     justify-content: center; /* จัดกึ่งกลางแนวนอน */
     align-items: center; /* จัดกึ่งกลางแนวตั้ง */
-    margin-bottom: 15px; /* ระยะห่างด้านล่าง */
-    gap: 20px; /* ระยะห่างระหว่างปุ่ม */
+    margin-bottom: var(--margin-botton-buttonwrapper-320); /* ระยะห่างด้านล่าง */
+    gap: var(--gap-buttonwrapper-320); /* ระยะห่างระหว่างปุ่ม */
     flex-wrap: wrap; /* ให้ปุ่มขึ้นบรรทัดใหม่ถ้าเกิน */
-    width: 100%; /* ความกว้างเต็ม */
+    width: var(--width-buttonwrapper-320); /* ความกว้างเต็ม */
   }
 
   /* สไตล์สำหรับปุ่มหลัก (ขนาดเล็กสำหรับมือถือ) */
   .button {
-    width: 70px; /* ความกว้าง (เล็กลง) */
-    height: 70px; /* ความสูง (เล็กลง) */
-    border-radius: 20px; /* มุมโค้งมน */
+    width: var(--width-button-320); /* ความกว้าง (เล็กลง) */
+    height: var(--height-button-320); /* ความสูง (เล็กลง) */
+    border-radius: var(--border-raidus-button); /* มุมโค้งมน */
     background: var(--colors-based); /* สีพื้นหลังเหมือนกล่องหลัก */
     transition: background 0.3s, transform 0.3s; /* เอฟเฟกต์การเปลี่ยน */
     flex-shrink: 0; /* ไม่ให้หดขนาด */
@@ -598,8 +598,8 @@ body {
 
   /* รูปภาพในปุ่ม (ขนาดเล็กสำหรับมือถือ) */
   .button img {
-    width: 55px; /* ความกว้างรูป (เล็กลง) */
-    height: 55px; /* ความสูงรูป (เล็กลง) */
+    width: var(--width-buttonimg-320); /* ความกว้างรูป (เล็กลง) */
+    height: var(--height-buttonimg-320); /* ความสูงรูป (เล็กลง) */
   }
 
   /* ข้อความ tooltip สำหรับมือถือ */
@@ -611,11 +611,11 @@ body {
     bottom: 110%; /* วางเหนือปุ่ม 110% */
     background: var(--text-bacground); /* สีพื้นหลังโทนส้มเข้ม */
     color: var(--font-color); /* สีตัวอักษรขาว */
-    padding: 5px 8px; /* ระยะห่างด้านใน (ลดลง) */
-    border-radius: 10px; /* มุมโค้งมน */
+    padding: var(--padding-text-320); /* ระยะห่างด้านใน (ลดลง) */
+    border-radius: var(--border-radius-text-320); /* มุมโค้งมน */
     white-space: nowrap; /* ไม่ให้ตัดบรรทัด */
     z-index: 10; /* อยู่ด้านบนสุด */
-    font-size: 12px; /* ขนาดตัวอักษรเล็ก */
+    font-size: var(--font-size-text-320); /* ขนาดตัวอักษรเล็ก */
   }
 
   /* แสดง tooltip เมื่อ hover ที่ button-wrapper */
@@ -629,17 +629,17 @@ body {
     position: relative;   /* ตำแหน่งอิสระ */
     top: 5px;  /* ลงมาจากด้านบน 5px */
     left: 10px;   /* ขยับไปทางขวา 10px */
-    width: 200px; /* ความกว้างคงที่ (เล็กลง) */
-    height: auto; /* ความสูงตามสัดส่วน */
-    border-radius: 200px; /* ทำให้เป็นวงกลม */
-    margin-bottom: 20px; /* ระยะห่างด้านล่าง */
+    width: var(--width-profile-320); /* ความกว้างคงที่ (เล็กลง) */
+    height: var(--height-profile-320); /* ความสูงตามสัดส่วน */
+    border-radius: var(--border-radius-profile-320); /* ทำให้เป็นวงกลม */
+    margin-bottom: var(--margin-bottom-profile-320); /* ระยะห่างด้านล่าง */
   }
 
   /* ข้อความหัวเรื่องสำหรับมือถือ */
   .title {
-    font-size: 32px; /* ขนาดตัวอักษร (เล็กลง) */
+    font-size: var(--font-size-title-320); /* ขนาดตัวอักษร (เล็กลง) */
     text-align: center; /* จัดกึ่งกลาง */
-    margin-bottom: 25px; /* ระยะห่างด้านล่าง */
+    margin-bottom: var(--margin-bottom-title-320); /* ระยะห่างด้านล่าง */
     color: var(--font-color); /* สีตัวอักษรขาว */
     text-shadow: 3px 3px var(--title-shadow); /* เงาตัวอักษรสีดำ */
     position: static; /* ตำแหน่งปกติ (ไม่ใช้ absolute) */
@@ -663,12 +663,12 @@ body {
     top: 50%; /* ตำแหน่งแนวตั้ง 50% */
     left: 50%; /* ตำแหน่งแนวนอน 50% */
     transform: translate(-50%, -50%); /* เลื่อนให้อยู่กึ่งกลางจริงๆ */
-    width: 90%; /* ความกว้าง 90% ของหน้าจอ */
-    max-width: 500px; /* ความกว้างสูงสุด */
-    height: 70%; /*ความสูง 70% ของหน้าจอ */
+    width: var(--width-panel-320); /* ความกว้าง 90% ของหน้าจอ */
+    max-width: var(--max-width-panel-320); /* ความกว้างสูงสุด */
+    height: var(--height-panel-320); /*ความสูง 70% ของหน้าจอ */
     background-color: var(--background-panel); /* สีพื้นหลังขาว */
-    padding: 30px; /* ระยะห่างด้านใน */
-    border-radius: 15px; /* มุมโค้งมน */
+    padding: var(--padding-panel-320); /* ระยะห่างด้านใน */
+    border-radius: var(--border-radius-panel-320); /* มุมโค้งมน */
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* เงาโค้ง */
     z-index: 999; /* อยู่ด้านบนสุด */
     display: none; /* ซ่อนโดยค่าเริ่มต้น */
@@ -681,28 +681,28 @@ body {
 
   .answer h2 {
     background-color: var(--title-answer); /* สีพื้นหลังของคำถาม */
-    margin-top: 5px; /* ระยะห่างด้านบน */
-    margin-bottom: 5px; /* ระยะห่างด้านล่าง */
+    margin-top: var(--margin-top-answerh2-320); /* ระยะห่างด้านบน */
+    margin-bottom: var(--margin-bottom-answerh2-320); /* ระยะห่างด้านล่าง */
   }
 
   .link-panel{
-    height: 40% !important; /* หน้าต่างของ link มีความสูง 40% ของหน้าจอ */
+    height: var(--height-linkpanel-320); /* หน้าต่างของ link มีความสูง 40% ของหน้าจอ */
   }
 
   .icon-web {
     display: grid; /* ตั้งรูปแบบหน้าจอเป็น Grid */
-    grid-template-rows: repeat(2, 50px); /* จำนวนแถวแนวนอนและขนาดของกล่อง */
-    grid-template-columns: repeat(3, 50px); /* จำนวนแถวแนวตั้งและขนาดของกล่อง */
+    grid-template-rows: var(--grid-row-iconweb-320); /* จำนวนแถวแนวนอนและขนาดของกล่อง */
+    grid-template-columns: var(--grid-columns-iconweb-320); /* จำนวนแถวแนวตั้งและขนาดของกล่อง */
     justify-content: center; /* ตั้งให้อยู่ตรงกลาง */
-    gap: 40px; /* ระยะห่างอยู่ที่ 40px */
-    margin-top: 10px; /* ระยะห่างด้านบน */
-    margin-bottom: 10px; /* ระยะห่างด้านล่าง */
+    gap: var(--gap-iconweb-320); /* ระยะห่างอยู่ที่ 40px */
+    margin-top: var(--margin-top-iconweb-320); /* ระยะห่างด้านบน */
+    margin-bottom: var(--margin-bottom-iconweb-320); /* ระยะห่างด้านล่าง */
   }
 
   .project {
     background: var(--project-content); /* สีพื้นหลัง */
-    padding: 25px; /* ระยะห่างภายใน */
-    margin: 10px; /* ระยะห่างภายนอก */
+    padding: var(--padding-project-320); /* ระยะห่างภายใน */
+    margin: var(--margin-project-320); /* ระยะห่างภายนอก */
   }
 
   .projectname {
@@ -712,14 +712,14 @@ body {
   }
 
   .projectcontent {
-    margin-top: 10px; /* ระยะด้านบน */
-    margin-bottom: 10px; /* ระยะห่างด้านล่าง */
+    margin-top: var(--margin-top-projectcontent-320); /* ระยะด้านบน */
+    margin-bottom: var(--margin-bottom-projectcontent-320); /* ระยะห่างด้านล่าง */
   }
 
   .project .button {
-    width: 100px; /* ความกว้าง 100px */
-    height: 50px; /* ความสูง 50px */
-    border-radius: 5px; /* ความโค้งของขอบ 5px */
+    width: var(--width-projectbutton-320); /* ความกว้าง 100px */
+    height: var(--height-projectbutton-32-); /* ความสูง 50px */
+    border-radius: var(--border-radius-projectbutton-320); /* ความโค้งของขอบ 5px */
     background-color: var(--project-button); /* สีพื้นหลัง */
   }
 
@@ -727,12 +727,12 @@ body {
   .close-btn {
     position: relative;   /*  ตำแหน่งยืดหยุ่น  */
     top: 15px;    /* ลงมาจากด้านบน 15px  */
-    margin-top: 20px; /* ระยะห่างด้านบน */
-    padding: 10px 15px; /* ระยะห่างด้านใน */
+    margin-top: var(--margin-top-closebtn-320); /* ระยะห่างด้านบน */
+    padding: var(--padding-closebtn-320); /* ระยะห่างด้านใน */
     background-color: var(--color-button); /* สีพื้นหลังชมพู */
     color: var(--font-color); /* สีตัวอักษรขาว */
     border: none; /* ไม่มีขอบ */
-    border-radius: 8px; /* มุมโค้งมน */
+    border-radius: var(--border-radius-closebtn-320); /* มุมโค้งมน */
     cursor: pointer; /* แสดงรูปมือเมื่อชี้ */
   }
 
@@ -759,14 +759,14 @@ body {
     display: flex; /* ใช้ flexbox */
     justify-content: center; /* จัดกึ่งกลางแนวนอน */
     align-items: center; /* จัดกึ่งกลางแนวตั้ง */
-    height: 100vh; /* ความสูงเต็มหน้าจอ */
-    padding: 20px; /* ระยะห่างด้านใน */
+    height: var(--height-body-768); /* ความสูงเต็มหน้าจอ */
+    padding: var(padding-body-768); /* ระยะห่างด้านใน */
     background-color: var(--background); /* สีพื้นหลังโทนชมพูอ่อน */
   }
 
   .buttonsong {
-    width: 20px; /* ความกว้าง 20px */
-    height: 20px; /* ความสูง 20px */
+    width: var(--width-buttonsong-768); /* ความกว้าง 20px */
+    height: var(--height-butttonsong-768); /* ความสูง 20px */
     background-color: var(--background); /* สีพื้นหลัง */
     border: 1px solid var(--background); /* ขนาดและสีของเส้นขอบ */
     display: flex; /* รูปแบบหน้าเจอ Flex */
@@ -782,11 +782,11 @@ body {
 
   /* กล่องหลักสำหรับแท็บเล็ต */
   .container {
-    width: 90%; /* ความกว้าง 90% ของหน้าจอ */
-    max-width: 800px; /* ความกว้างสูงสุด */
-    height: 550px; /* ความสูงคงที่ (ลดจาก 600px) */
-    border-radius: 20px; /* มุมโค้งมน */
-    padding: 20px; /* ระยะห่างด้านใน */
+    width: var(--widht-container-768); /* ความกว้าง 90% ของหน้าจอ */
+    max-width: var(--max-widht-container-768); /* ความกว้างสูงสุด */
+    height: var(--height-container-768); /* ความสูงคงที่ (ลดจาก 600px) */
+    border-radius: var(--border-raidus-container-768); /* มุมโค้งมน */
+    padding: var(--padding-container-768); /* ระยะห่างด้านใน */
     background-color: var(--colors-based); /* สีพื้นหลังโทนส้ม */
     display: flex; /* ใช้ flexbox */
     flex-direction: column; /* เรียงแนวตั้ง */
@@ -795,7 +795,7 @@ body {
   }
 
   .link-panel{
-    height:  50% !important; /* หน้าต่างของ link มีความสูง 50% ของหน้าจอ */
+    height:  var(--height-linkpanel-768); /* หน้าต่างของ link มีความสูง 50% ของหน้าจอ */
   }
 
   /* กล่องบรรจุปุ่มลิงก์ทั้งหมด (เรียงแนวนอน) */
@@ -804,7 +804,7 @@ body {
     justify-content: space-around; /* กระจายปุ่มให้เท่ากัน */
     align-items: center; /* จัดแนวตั้งกึ่งกลาง */
     flex-direction: row; /* เรียงแนวนอน */
-    gap: 20px; /* ระยะห่างระหว่างปุ่ม */
+    gap: var(--gap-linkbutton-768); /* ระยะห่างระหว่างปุ่ม */
   }
 
   /* wrapper สำหรับปุ่ม (เรียงแนวนอนแบบ wrap) */
@@ -814,17 +814,17 @@ body {
     flex-direction: row; /* เรียงแนวนอน */
     justify-content: center; /* จัดกึ่งกลางแนวนอน */
     align-items: center; /* จัดกึ่งกลางแนวตั้ง */
-    gap: 30px; /* ระยะห่างระหว่างปุ่ม */
+    gap: var(--gap-buttonwrapper-768); /* ระยะห่างระหว่างปุ่ม */
     flex-wrap: wrap; /* ให้ปุ่มขึ้นบรรทัดใหม่ถ้าเกิน */
-    width: 100%; /* ความกว้างเต็ม */
-    margin-bottom: 20px; /* ระยะห่างด้านล่าง */
+    width: var(--width-buttonwrapper-768); /* ความกว้างเต็ม */
+    margin-bottom: var(--margin-bottom-buttonwrapper-768); /* ระยะห่างด้านล่าง */
   }
 
   /* สไตล์สำหรับปุ่มหลัก (ขนาดกลางสำหรับแท็บเล็ต) */
   .button {
-    width: 80px; /* ความกว้าง */
-    height: 80px; /* ความสูง */
-    border-radius: 20px; /* มุมโค้งมน */
+    width: var(--width-button-768); /* ความกว้าง */
+    height: var(--height-button-768); /* ความสูง */
+    border-radius: var(--border-radius-button-768); /* มุมโค้งมน */
     background: var(--colors-based); /* สีพื้นหลังเหมือนกล่องหลัก */
     transition: background 0.3s, transform 0.3s; /* เอฟเฟกต์การเปลี่ยน */
     flex-shrink: 0; /* ไม่ให้หดขนาด */
@@ -838,8 +838,8 @@ body {
 
   /* รูปภาพในปุ่ม (ขนาดกลางสำหรับแท็บเล็ต) */
   .button img {
-    width: 65px; /* ความกว้างรูป */
-    height: 65px; /* ความสูงรูป */
+    width: var(--widht-buttonimg-768); /* ความกว้างรูป */
+    height: var(--height-buttonimg-768); /* ความสูงรูป */
   }
 
   /* ข้อความ tooltip สำหรับแท็บเล็ต */
@@ -851,8 +851,8 @@ body {
     bottom: 110%; /* วางเหนือปุ่ม 110% */
     background: var(--text-bacground); /* สีพื้นหลังโทนส้มเข้ม */
     color: var(--font-color); /* สีตัวอักษรขาว */
-    padding: 6px 10px; /* ระยะห่างด้านใน */
-    border-radius: 10px; /* มุมโค้งมน */
+    padding: var(--padding-text-768); /* ระยะห่างด้านใน */
+    border-radius: var(--border-radius-text-768); /* มุมโค้งมน */
     white-space: nowrap; /* ไม่ให้ตัดบรรทัด */
     z-index: 10; /* อยู่ด้านบนสุด */
     font-size: 14px; /* ขนาดตัวอักษรกลาง */
@@ -869,17 +869,17 @@ body {
     position: relative;   /* ตำแหน่งอิสระ */
     top: 10px;    /* ลงมาจากด้านบน 10px */
     left: 10px;   /* ขยับไปทางขวา 10px */
-    width: 250px; /* ความกว้างคงที่ */
-    height: auto; /* ความสูงตามสัดส่วน */
-    border-radius: 200px; /* ทำให้เป็นวงกลม */
-    margin-bottom: 25px; /* ระยะห่างด้านล่าง */
+    width: var(--width-profile-768); /* ความกว้างคงที่ */
+    height: var(--height-profile-768); /* ความสูงตามสัดส่วน */
+    border-radius: var(--border-radius-profile-768); /* ทำให้เป็นวงกลม */
+    margin-bottom: var(--margin-bottom-profile-768); /* ระยะห่างด้านล่าง */
   }
 
   /* ข้อความหัวเรื่องสำหรับแท็บเล็ต */
   .title {
-    font-size: 44px; /* ขนาดตัวอักษรกลาง */
+    font-size: var(--font-size-title-768); /* ขนาดตัวอักษรกลาง */
     text-align: center; /* จัดกึ่งกลาง */
-    margin-bottom: 25px; /* ระยะห่างด้านล่าง */
+    margin-bottom: var(-margin-bottom-title-768); /* ระยะห่างด้านล่าง */
     color: var(--font-color); /* สีตัวอักษรขาว */
     text-shadow: 3px 3px var(--title-shadow); /* เงาตัวอักษรสีดำ */
     position: static; /* ตำแหน่งปกติ (ไม่ใช้ absolute) */
@@ -889,11 +889,11 @@ body {
 
   /* เงาวงกลมสำหรับแท็บเล็ต */
   .shadow {
-    width: 270px; /* ความกว้าง */
-    height: 270px; /* ความสูง */
-    border-radius: 200px; /* ทำให้เป็นวงกลม */
+    width: var(--width-shadow-768); /* ความกว้าง */
+    height: var(--height-shadow-768); /* ความสูง */
+    border-radius: var(--border-radius-shadow-768); /* ทำให้เป็นวงกลม */
     background-color: var(--shadows); /* สีพื้นหลังโทนส้มเข้ม */
-    margin-bottom: 20px; /* ระยะห่างด้านล่าง */
+    margin-bottom: var(--margin-bottom-shadow-768); /* ระยะห่างด้านล่าง */
   }
 
   /* กล่องเนื้อหาแบบ popup สำหรับแท็บเล็ต */
@@ -902,12 +902,12 @@ body {
     top: 50%; /* ตำแหน่งแนวตั้ง 50% */
     left: 50%; /* ตำแหน่งแนวนอน 50% */
     transform: translate(-50%, -50%); /* เลื่อนให้อยู่กึ่งกลางจริงๆ */
-    width: 90%; /* ความกว้าง 90% ของหน้าจอ */
-    max-width: 500px; /* ความกว้างสูงสุด */
-    height: 70%; /*ความสูง 50% ของหน้าจอ */
+    width: var(--width-panel-768); /* ความกว้าง 90% ของหน้าจอ */
+    max-width: var(--max-width-panel-768); /* ความกว้างสูงสุด */
+    height: var(--height-panel-768); /*ความสูง 50% ของหน้าจอ */
     background-color: var(--background-panel); /* สีพื้นหลังขาว */
-    padding: 30px; /* ระยะห่างด้านใน */
-    border-radius: 15px; /* มุมโค้งมน */
+    padding: var(--padding-panel-768); /* ระยะห่างด้านใน */
+    border-radius: var(--border-radius-panel-768); /* มุมโค้งมน */
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); /* เงาโค้ง */
     z-index: 999; /* อยู่ด้านบนสุด */
     display: none; /* ซ่อนโดยค่าเริ่มต้น */
@@ -920,22 +920,22 @@ body {
 
   .answer h2 {
     background-color: var(--title-answer); /* สีพื้นหลังของคำถาม */
-    margin-top: 5px; /* ระยะห่างด้านบน */
-    margin-bottom: 5px; /* ระยะห่างด้านล่าง */
+    margin-top: var(--margin-top-answer-768); /* ระยะห่างด้านบน */
+    margin-bottom: var(--margin-bottm-answer-768); /* ระยะห่างด้านล่าง */
   }
 
   .icon-web {
     display: grid; /* ตั้งรูปแบบหน้าจอเป็น Grid */
-    grid-template-rows: repeat(2, 100px); /* จำนวนแถวแนวนอนและขนาดของกล่อง */
-    grid-template-columns: repeat(3,100px); /* จำนวนแถวแนวตั้งและขนาดของกล่อง */
+    grid-template-rows: var(--grid-row-iconweb-768); /* จำนวนแถวแนวนอนและขนาดของกล่อง */
+    grid-template-columns: var(--grid-columns-iconweb-768); /* จำนวนแถวแนวตั้งและขนาดของกล่อง */
     justify-content: center; /* ตั้งให้อยู่ตรงกลาง */
-    gap: 20px; /* ระยะห่างอยู่ที่ 20px */
+    gap: var(--gap-iconweb-768); /* ระยะห่างอยู่ที่ 20px */
   }
 
   .project {
     background: var(--project-content); /* สีพื้นหลัง */
-    padding: 25px; /* ระยะห่างภายใน */
-    margin: 10px; /* ระยะห่างภายนอก */
+    padding: var(--padding-project-768); /* ระยะห่างภายใน */
+    margin: var(--margin-project-768); /* ระยะห่างภายนอก */
   }
 
   .projectname {
@@ -950,20 +950,20 @@ body {
   }
 
   .project .button {
-    width: 100px; /* ความกว้าง 100px */
-    height: 50px; /* ความสูง 50px */
-    border-radius: 5px; /* ความโค้งของขอบ 5px */
+    width: var(--wight-projectbutton-768); /* ความกว้าง 100px */
+    height: var(--height-projectbutton-768); /* ความสูง 50px */
+    border-radius:  var(--border-radius-projectbutton-768); /* ความโค้งของขอบ 5px */
     background-color: var(--project-button); /* สีพื้นหลัง */
   }
 
   /* ปุ่มปิด modal */
   .close-btn {
-    margin-top: 20px; /* ระยะห่างด้านบน */
-    padding: 10px 15px; /* ระยะห่างด้านใน */
+    margin-top: var(--margin-top-closebtn-768); /* ระยะห่างด้านบน */
+    padding: var(--padding-closebtn-768); /* ระยะห่างด้านใน */
     background-color: var(--color-button); /* สีพื้นหลังชมพู */
     color: var(--font-color); /* สีตัวอักษรขาว */
     border: none; /* ไม่มีขอบ */
-    border-radius: 8px; /* มุมโค้งมน */
+    border-radius: var(--border-radius-closebtn-768); /* มุมโค้งมน */
     cursor: pointer; /* แสดงรูปมือเมื่อชี้ */
   }
 
