@@ -120,3 +120,13 @@ toggleBtn.addEventListener("click", () => {
   }
   isPlaying = !isPlaying;
 });
+
+
+const toggles = document.querySelectorAll('.dropdown-toggle');
+
+toggles.forEach(button => {
+  button.addEventListener('click', () => {
+    const content = button.nextElementSibling;
+    content.classList.toggle('active');
+  });
+});

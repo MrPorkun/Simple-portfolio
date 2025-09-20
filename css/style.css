@@ -217,13 +217,11 @@ body {
     margin-top: 20px;
   }
 
-
   /* เวลามี class .active */
   .dropdown-content.active {
     max-height: 200px;        /* ปรับตามความสูงเนื้อหา */
     padding: 12px;
   }
-
 
   .icon-web {
     display: grid; /* ตั้งรูปแบบหน้าจอเป็น Grid */
@@ -233,9 +231,6 @@ body {
     gap: 20px; /* ระยะห่างอยู่ที่ 20px */
     margin-top: 20px; /* ระยะด้านบน 20px  */
   }
-
-
-
 
   /* กำหนดขนาดเฉพาะสำหรับ panel "เกี่ยวกับ" */
   #aboutPanel {
