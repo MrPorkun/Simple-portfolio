@@ -1,12 +1,13 @@
 /* นำเข้าฟอนต์จาก Google Fonts - Noto Sans Thai และ Sriracha */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Sriracha&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 
 /* รีเซ็ต CSS พื้นฐานสำหรับทุก element */
 * {
   padding: 0; /* ลบ padding ทั้งหมด */
   margin: 0; /* ลบ margin ทั้งหมด */
   box-sizing: border-box; /* กำหนดให้ขนาดรวม padding และ border */
-  font-family: "Noto-Sans-Thai", cursive; /* กำหนดฟอนต์หลัก */
+  font-family: "Kanit", sans-serif; /* กำหนดฟอนต์หลัก */
 }
 
 /* สไตล์สำหรับ body หลัก */
@@ -134,12 +135,9 @@ body {
 
   /* เงาวงกลมด้านหลังรูปโปรไฟล์ */
   .shadow {
-    border-radius: 200px; /* ทำให้เป็นวงกลม */
     position: relative; /* ตำแหน่งสัมพัทธ์ */
     right: 300px; /* เลื่อนซ้าย 300px */
-    width: var(--width-shadow-1440); /* ความกว้าง */
-    height: var(--height-shadow-1440); /* ความสูง */
-    background-color: var(--shadows); /* สีพื้นหลังโทนส้มเข้ม */
+    filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
   }
 
   /* กล่องเนื้อหาแบบ popup (modal) ที่แสดงซ้อนทับหน้าจอ */
@@ -184,15 +182,48 @@ body {
     overflow: hidden; /* ซ่อน scrollbar */
   }
 
-  .answer li {
-    background-color: var(--answer); /* สีพื้นหลังของคำตอบ*/
+  .dropdown {
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
   }
 
-  .answer h2 {
-    background-color: var(--title-answer); /* สีพื้นหลังของคำถาม */
-    margin-top: 5px; /* ระยะห่างด้านบน */
-    margin-bottom: 5px; /* ระยะห่างด้านล่าง */
+  /* ปุ่มกด */
+  .dropdown-toggle {
+    width: 100%;
+    padding: 12px;
+    background: #E11D48;     /* สีธีมที่เลือก */
+    color: white;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
   }
+
+  /* เนื้อหา */
+  .dropdown-content {
+    max-height: 0;           /* ซ่อนตอนแรก */
+    overflow-y: auto;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    background: #f9f9f9;
+    padding: 0 12px;          /* ตอนปิดจะไม่มี padding */
+  }
+
+  .dropdown-content .button {
+    width: 100px;
+    height: 50px;
+    position: relative;
+    margin-top: 20px;
+  }
+
+
+  /* เวลามี class .active */
+  .dropdown-content.active {
+    max-height: 200px;        /* ปรับตามความสูงเนื้อหา */
+    padding: 12px;
+  }
+
 
   .icon-web {
     display: grid; /* ตั้งรูปแบบหน้าจอเป็น Grid */
@@ -203,29 +234,8 @@ body {
     margin-top: 20px; /* ระยะด้านบน 20px  */
   }
 
-  .project {
-    background: var(--project-content); /* สีพื้นหลัง */
-    padding: 25px; /* ระยะห่างภายใน */
-    margin: 10px; /* ระยะห่างภายนอก */
-  }
 
-  .projectname {
-    display: flex; /* รูปแบบหน้า Flex */
-    justify-content: center; /* อยู่ตรงการในแนวนอน */
-    background:   var(--project-name); /* สีพื้นหลังของชื่อProject */
-  }
 
-  .projectcontent {
-    margin-top: 10px; /* ระยะด้านบน */
-    margin-bottom: 10px; /* ระยะห่างด้านล่าง */
-  }
-
-  .project .button {
-    width: 100px; /* ความกว้าง 100px */
-    height: 50px; /* ความสูง 50px */
-    border-radius: 5px; /* ความโค้งของขอบ 5px */
-    background-color: var(--project-button); /* สีพื้นหลัง */
-  }
 
   /* กำหนดขนาดเฉพาะสำหรับ panel "เกี่ยวกับ" */
   #aboutPanel {
@@ -244,6 +254,10 @@ body {
     overflow-y: auto; /* เลื่อนได้เมื่อเนื้อหาเกิน */
   }
 
+ .close-btn {
+    margin-top: 20px;
+  }
+
   /* กำหนดขนาดเฉพาะสำหรับ panel "คำถามที่พบบ่อย" */
   #faqPanel {
     width: var(--width-faq-1440); /* ความกว้างคงที่ */
@@ -258,6 +272,7 @@ body {
     width: var(--width-project-1440); /* ความกว้างคงที่ */
     max-width: var(--width-project-1440); /* ความกว้างสูงสุด 95% ของหน้าจอ */
     height: var(--height-project-1440); /* ความสูงคงที่ */
+    max-height: var(--max-height-project-1440);
     overflow-y: auto; /* เลื่อนได้เมื่อเนื้อหาเกิน */
   }
 
@@ -377,11 +392,11 @@ body {
   /* รูปโปรไฟล์ (ปรับขนาดให้เหมาะสม) */
   .profile {
     position: relative; /* ตำแหน่งสัมพัทธ์ */
-    left: 12px; /* เลื่อนขวา 12px (ลดจาก 15px) */
-    top: 12px; /* เลื่อนลง 12px (ลดจาก 15px) */
+    right: 280px; /* เลื่อนซ้าย 280px (ลดจาก 300px) */
     border-radius: var(--border-radius-profile-1024); /* ทำให้เป็นวงกลม */
     width: var(width-profile-1024); /* ความกว้างคงที่ */
     height: var(--height-profile-1024); /* ความสูงตามสัดส่วน */
+    filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
   }
 
   /* ข้อความหัวเรื่อง (ปรับขนาดและตำแหน่ง) */
@@ -392,16 +407,6 @@ body {
     font-size: var(--font-size-title-1024); /* ขนาดตัวอักษร (ลดจาก 62px) */
     color: var(--font-color); /* สีตัวอักษรขาว */
     text-shadow: 3px 3px var(--title-shadow); /* เงาตัวอักษรสีดำ */
-  }
-
-  /* เงาวงกลมด้านหลังรูปโปรไฟล์ (ปรับขนาดให้เข้ากับรูป) */
-  .shadow {
-    border-radius: var(--border-radius-shadow-1024); /* ทำให้เป็นวงกลม */
-    position: relative; /* ตำแหน่งสัมพัทธ์ */
-    right: 280px; /* เลื่อนซ้าย 280px (ลดจาก 300px) */
-    width: var(--width-shadow-1024); /* ความกว้าง (ลดจาก 350px) */
-    height: var(--height-shadow-1024); /* ความสูง (ลดจาก 350px) */
-    background-color: var(--shadows); /* สีพื้นหลังโทนส้มเข้ม */
   }
 
   /* กล่องเนื้อหาแบบ popup (ใช้สไตล์เดียวกับหน้าจอใหญ่) */
@@ -420,14 +425,46 @@ body {
     display: none; /* ซ่อนโดยค่าเริ่มต้น */
   }
 
-  .answer li {
-    background-color: var(--answer); /* สีพื้นหลังของคำตอบ*/
+  .dropdown {
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
   }
 
-  .answer h2 {
-    background-color: var(--title-answer); /* สีพื้นหลังของคำถาม */
-    margin-top: var(--margin-top-answer-1024); /* ระยะห่างด้านบน */
-    margin-bottom: var(--margin-top-answer-1024); /* ระยะห่างด้านล่าง */
+  /* ปุ่มกด */
+  .dropdown-toggle {
+    width: 100%;
+    padding: 12px;
+    background: #E11D48;     /* สีธีมที่เลือก */
+    color: white;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  /* เนื้อหา */
+  .dropdown-content {
+    max-height: 0;           /* ซ่อนตอนแรก */
+    overflow-y: auto;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    background: #f9f9f9;
+    padding: 0 12px;          /* ตอนปิดจะไม่มี padding */
+  }
+
+  .dropdown-content .button {
+    width: 100px;
+    height: 50px;
+    position: relative;
+    margin-top: 20px;
+  }
+
+
+  /* เวลามี class .active */
+  .dropdown-content.active {
+    max-height: 200px;        /* ปรับตามความสูงเนื้อหา */
+    padding: 12px;
   }
 
   .icon-web {
@@ -436,30 +473,6 @@ body {
     grid-template-columns: var(--grid-template-columns-iconweb-1024); /* จำนวนแถวแนวตั้งและขนาดของกล่อง */
     justify-content: center; /* ตั้งให้อยู่ตรงกลาง */
     gap: var(--gap-iconweb-1024); /* ระยะห่างอยู่ที่ 20px */
-  }
-
-  .project {
-    background: var(--project-content); /* สีพื้นหลัง */
-    padding: var(--padding-project-1024); /* ระยะห่างภายใน */
-    margin: var(--margin-project-1024); /* ระยะห่างภายนอก */
-  }
-
-  .projectname {
-    display: flex; /* รูปแบบหน้า Flex */
-    justify-content: center; /* อยู่ตรงการในแนวนอน */
-    background: var(--project-name); /* สีพื้นหลังของชื่อProject */
-  }
-
-  .projectcontent {
-    margin-top: var(--margin-top-projectcontent-1024); /* ระยะด้านบน */
-    margin-bottom: var(--margin-bottom-projectcontent-1024); /* ระยะห่างด้านล่าง */
-  }
-
-  .project .button {
-    width: var(--width-projectbutton-1024); /* ความกว้าง 100px */
-    height: var(--height-projectbutton-1024); /* ความสูง 50px */
-    border-radius: var(--border-radius-projectbutton-1024); /* ความโค้งของขอบ 5px */
-    background-color: var(--project-button); /* สีพื้นหลัง */
   }
 
   /* ปุ่มปิด modal */
@@ -512,7 +525,7 @@ body {
 
   #projectsPanel {
     width: 600px; /* ความกว้างคงที่ */
-    max-width: 95%; /* ความกว้างสูงสุด */
+    max-width: 75%; /* ความกว้างสูงสุด */
     height: 500px; /* ความสูงคงที่ */
     overflow-y: auto; /* เลื่อนได้เมื่อเนื้อหาเกิน */
   }
@@ -534,7 +547,7 @@ body {
     align-items: flex-start; /* เริ่มจากด้านบน (ไม่ใช่กึ่งกลาง) */
     padding: var(--padding-body-320); /* ระยะห่างด้านใน (บน-ล่าง 20px, ซ้าย-ขวา 10px) */
     background-color: var(--background); /* สีพื้นหลังโทนชมพูอ่อน */
-    min-height: var(--min-height-320); /* ความสูงขั้นต่ำเต็มหน้าจอ */
+    max-height: var(--max-height-body-320);
   }
 
   .buttonsong {
@@ -633,6 +646,7 @@ body {
     height: var(--height-profile-320); /* ความสูงตามสัดส่วน */
     border-radius: var(--border-radius-profile-320); /* ทำให้เป็นวงกลม */
     margin-bottom: var(--margin-bottom-profile-320); /* ระยะห่างด้านล่าง */
+    filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
   }
 
   /* ข้อความหัวเรื่องสำหรับมือถือ */
@@ -646,15 +660,6 @@ body {
     right: auto; /* ยกเลิกการเลื่อน */
     left: 0; /* ยกเลิกการเลื่อน */
     top: auto; /* ยกเลิกการเลื่อน */
-  }
-
-  /* เงาวงกลมสำหรับมือถือ */
-  .shadow {
-    width: 220px; /* ความกว้าง (เล็กลง) */
-    height: 210px; /* ความสูง (เล็กลง) */
-    border-radius: 200px; /* ทำให้เป็นวงกลม */
-    background-color: var(--shadows); /* สีพื้นหลังโทนส้มเข้ม */
-    margin-bottom: 15px; /* ระยะห่างด้านล่าง */
   }
 
   /* กล่องเนื้อหาแบบ popup สำหรับมือถือ */
@@ -675,14 +680,46 @@ body {
     overflow: auto;
   }
 
-  .answer li {
-    background-color: var(--answer); /* สีพื้นหลังของคำตอบ*/
+  .dropdown {
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
   }
 
-  .answer h2 {
-    background-color: var(--title-answer); /* สีพื้นหลังของคำถาม */
-    margin-top: var(--margin-top-answerh2-320); /* ระยะห่างด้านบน */
-    margin-bottom: var(--margin-bottom-answerh2-320); /* ระยะห่างด้านล่าง */
+  /* ปุ่มกด */
+  .dropdown-toggle {
+    width: 100%;
+    padding: 12px;
+    background: #E11D48;     /* สีธีมที่เลือก */
+    color: white;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  /* เนื้อหา */
+  .dropdown-content {
+    max-height: 0;           /* ซ่อนตอนแรก */
+    overflow-y: auto;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    background: #f9f9f9;
+    padding: 0 12px;          /* ตอนปิดจะไม่มี padding */
+  }
+
+  .dropdown-content .button {
+    width: 75px;
+    height: 35px;
+    position: relative;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+
+  /* เวลามี class .active */
+  .dropdown-content.active {
+    max-height: 200px;        /* ปรับตามความสูงเนื้อหา */
+    padding: 12px;
   }
 
   .link-panel{
@@ -697,30 +734,12 @@ body {
     gap: var(--gap-iconweb-320); /* ระยะห่างอยู่ที่ 40px */
     margin-top: var(--margin-top-iconweb-320); /* ระยะห่างด้านบน */
     margin-bottom: var(--margin-bottom-iconweb-320); /* ระยะห่างด้านล่าง */
+    position: relative;
+    right: 10px;
   }
 
-  .project {
-    background: var(--project-content); /* สีพื้นหลัง */
-    padding: var(--padding-project-320); /* ระยะห่างภายใน */
-    margin: var(--margin-project-320); /* ระยะห่างภายนอก */
-  }
-
-  .projectname {
-    display: flex; /* รูปแบบหน้า Flex */
-    justify-content: center; /* อยู่ตรงการในแนวนอน */
-    background: var(--project-name); /* สีพื้นหลังของชื่อProject */
-  }
-
-  .projectcontent {
-    margin-top: var(--margin-top-projectcontent-320); /* ระยะด้านบน */
-    margin-bottom: var(--margin-bottom-projectcontent-320); /* ระยะห่างด้านล่าง */
-  }
-
-  .project .button {
-    width: var(--width-projectbutton-320); /* ความกว้าง 100px */
-    height: var(--height-projectbutton-32-); /* ความสูง 50px */
-    border-radius: var(--border-radius-projectbutton-320); /* ความโค้งของขอบ 5px */
-    background-color: var(--project-button); /* สีพื้นหลัง */
+  .icon-web button {
+    border-radius: 20px;
   }
 
   /* ปุ่มปิด modal */
@@ -750,6 +769,49 @@ body {
   .hidden {
     display: none; /* ซ่อน */
   }
+
+    /* ขนาดเฉพาะแต่ละ panel (ใช้เหมือนหน้าจอใหญ่) */
+  #aboutPanel {
+    width: 250px; /* ความกว้างคงที่ */
+    max-width: 90%; /* ความกว้างสูงสุด */
+    height: 300px;
+    max-height: 70vh; /* ความสูงสูงสุด 70% ของหน้าจอ */
+    overflow-y: auto; /* เลื่อนได้เมื่อเนื้อหาเกิน */
+    border-radius: 10px;
+  }
+
+  #linksPanel {
+    width: 300px; /* ความกว้างคงที่ */
+    max-width: 90%; /* ความกว้างสูงสุด */
+    height: 325px; /* ความสูงคงที่ */
+    overflow-y: auto; /* เลื่อนได้เมื่อเนื้อหาเกิน */
+    border-radius: 10px;
+  }
+
+  #faqPanel {
+    width: 250px; /* ความกว้างคงที่ */
+    max-width: 90%; /* ความกว้างสูงสุด */
+    max-height: 60vh; /* ความสูงสูงสุด 60% ของหน้าจอ */
+    overflow-y: auto; /* เลื่อนได้เมื่อเนื้อหาเกิน */
+    border-radius: 10px;
+  }
+
+  #projectsPanel {
+    width: 300px; /* ความกว้างคงที่ */
+    max-width: 75%; /* ความกว้างสูงสุด */
+    height: 500px; /* ความสูงคงที่ */
+    overflow-y: auto; /* เลื่อนได้เมื่อเนื้อหาเกิน */
+    border-radius: 10px;
+  }
+
+  #contactPanel {
+    width: 250px; /* ความกว้างคงที่ */
+    max-width: 90%; /* ความกว้างสูงสุด */
+    max-height: 50vh; /* ความสูงสูงสุด 50% ของหน้าจอ */
+    overflow-y: auto; /* เลื่อนได้เมื่อเนื้อหาเกิน */
+    border-radius: 10px;
+  }
+
 } /* จบ media query สำหรับมือถือ */
 
 /* Media Query สำหรับแท็บเล็ต (Tablet) 768px - 1023px */
@@ -785,7 +847,7 @@ body {
     width: var(--widht-container-768); /* ความกว้าง 90% ของหน้าจอ */
     max-width: var(--max-widht-container-768); /* ความกว้างสูงสุด */
     height: var(--height-container-768); /* ความสูงคงที่ (ลดจาก 600px) */
-    border-radius: var(--border-raidus-container-768); /* มุมโค้งมน */
+    border-radius: var(--border-radius-container-768); /* มุมโค้งมน */
     padding: var(--padding-container-768); /* ระยะห่างด้านใน */
     background-color: var(--colors-based); /* สีพื้นหลังโทนส้ม */
     display: flex; /* ใช้ flexbox */
@@ -873,6 +935,7 @@ body {
     height: var(--height-profile-768); /* ความสูงตามสัดส่วน */
     border-radius: var(--border-radius-profile-768); /* ทำให้เป็นวงกลม */
     margin-bottom: var(--margin-bottom-profile-768); /* ระยะห่างด้านล่าง */
+    filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5));
   }
 
   /* ข้อความหัวเรื่องสำหรับแท็บเล็ต */
@@ -885,15 +948,6 @@ body {
     position: static; /* ตำแหน่งปกติ (ไม่ใช้ absolute) */
     left: auto; /* ยกเลิกการเลื่อน */
     bottom: auto; /* ยกเลิกการเลื่อน */
-  }
-
-  /* เงาวงกลมสำหรับแท็บเล็ต */
-  .shadow {
-    width: var(--width-shadow-768); /* ความกว้าง */
-    height: var(--height-shadow-768); /* ความสูง */
-    border-radius: var(--border-radius-shadow-768); /* ทำให้เป็นวงกลม */
-    background-color: var(--shadows); /* สีพื้นหลังโทนส้มเข้ม */
-    margin-bottom: var(--margin-bottom-shadow-768); /* ระยะห่างด้านล่าง */
   }
 
   /* กล่องเนื้อหาแบบ popup สำหรับแท็บเล็ต */
@@ -914,14 +968,46 @@ body {
     overflow: auto;
   }
 
-  .answer li {
-    background-color: var(--answer); /* สีพื้นหลังของคำตอบ*/
+  .dropdown {
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
   }
 
-  .answer h2 {
-    background-color: var(--title-answer); /* สีพื้นหลังของคำถาม */
-    margin-top: var(--margin-top-answer-768); /* ระยะห่างด้านบน */
-    margin-bottom: var(--margin-bottm-answer-768); /* ระยะห่างด้านล่าง */
+  /* ปุ่มกด */
+  .dropdown-toggle {
+    width: 100%;
+    padding: 12px;
+    background: #E11D48;     /* สีธีมที่เลือก */
+    color: white;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  /* เนื้อหา */
+  .dropdown-content {
+    max-height: 0;           /* ซ่อนตอนแรก */
+    overflow-y: auto;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    background: #f9f9f9;
+    padding: 0 12px;          /* ตอนปิดจะไม่มี padding */
+  }
+
+  .dropdown-content .button {
+    width: 75px;
+    height: 50px;
+    position: relative;
+    margin-top: 20px;
+  }
+
+
+  /* เวลามี class .active */
+  .dropdown-content.active {
+    max-height: 200px;        /* ปรับตามความสูงเนื้อหา */
+    padding: 12px;
   }
 
   .icon-web {
@@ -930,30 +1016,6 @@ body {
     grid-template-columns: var(--grid-columns-iconweb-768); /* จำนวนแถวแนวตั้งและขนาดของกล่อง */
     justify-content: center; /* ตั้งให้อยู่ตรงกลาง */
     gap: var(--gap-iconweb-768); /* ระยะห่างอยู่ที่ 20px */
-  }
-
-  .project {
-    background: var(--project-content); /* สีพื้นหลัง */
-    padding: var(--padding-project-768); /* ระยะห่างภายใน */
-    margin: var(--margin-project-768); /* ระยะห่างภายนอก */
-  }
-
-  .projectname {
-    display: flex; /* รูปแบบหน้า Flex */
-    justify-content: center; /* อยู่ตรงการในแนวนอน */
-    background: var(--project-name); /* สีพื้นหลังของชื่อProject */
-  }
-
-  .projectcontent {
-    margin-top: 10px; /* ระยะด้านบน */
-    margin-bottom: 10px; /* ระยะห่างด้านล่าง */
-  }
-
-  .project .button {
-    width: var(--wight-projectbutton-768); /* ความกว้าง 100px */
-    height: var(--height-projectbutton-768); /* ความสูง 50px */
-    border-radius:  var(--border-radius-projectbutton-768); /* ความโค้งของขอบ 5px */
-    background-color: var(--project-button); /* สีพื้นหลัง */
   }
 
   /* ปุ่มปิด modal */
@@ -982,4 +1044,49 @@ body {
   .hidden {
     display: none; /* ซ่อน */
   }
+
+      /* ขนาดเฉพาะแต่ละ panel (ใช้เหมือนหน้าจอใหญ่) */
+  #aboutPanel {
+    width: 250px; /* ความกว้างคงที่ */
+    max-width: 90%; /* ความกว้างสูงสุด */
+    height: 300px;
+    max-height: 70vh; /* ความสูงสูงสุด 70% ของหน้าจอ */
+    overflow-y: auto; /* เลื่อนได้เมื่อเนื้อหาเกิน */
+    border-radius: 10px;
+  }
+
+  #linksPanel {
+    width: 400px; /* ความกว้างคงที่ */
+    max-width: 90%; /* ความกว้างสูงสุด */
+    height: auto; /* ความสูงคงที่ */
+    overflow-y: auto; /* เลื่อนได้เมื่อเนื้อหาเกิน */
+    border-radius: 10px;
+  }
+
+  #faqPanel {
+    width: 350px; /* ความกว้างคงที่ */
+    max-width: 90%; /* ความกว้างสูงสุด */
+    height: auto;
+    max-height: 60vh; /* ความสูงสูงสุด 60% ของหน้าจอ */
+    overflow-y: auto; /* เลื่อนได้เมื่อเนื้อหาเกิน */
+    border-radius: 10px;
+  }
+
+  #projectsPanel {
+    width: 400px; /* ความกว้างคงที่ */
+    max-width: 95%; /* ความกว้างสูงสุด */
+    height: auto; /* ความสูงคงที่ */
+    max-height: 75%;
+    overflow-y: auto; /* เลื่อนได้เมื่อเนื้อหาเกิน */
+    border-radius: 10px;
+  }
+
+  #contactPanel {
+    width: 300px; /* ความกว้างคงที่ */
+    max-width: 90%; /* ความกว้างสูงสุด */
+    max-height: 50vh; /* ความสูงสูงสุด 50% ของหน้าจอ */
+    overflow-y: auto; /* เลื่อนได้เมื่อเนื้อหาเกิน */
+    border-radius: 10px;
+  }
+
 } /* จบ media query สำหรับแท็บเล็ต */

@@ -124,21 +124,20 @@
             <div id="faqPanel" class="panel hidden"> <!-- กล่องสำหรับ FAQ -->
                 <h2>FAQ</h2> <!-- หัวข้อย่อย -->
                 <!-- 📝 พื้นที่สำหรับใส่คำถาม-คำตอบที่พบบ่อย -->
-                <ul class="answer">
-                    <strong><u><h2>คำถาม</h2></u></strong>   <!-- คำถาม -->
-                    <li>คำตอบ1</li>    <!-- คำตอบ -->
-                    <li>คำตอบ2</li>    <!-- คำตอบ -->
-                </ul>
-                <ul class="answer">
-                    <strong><u><h2>คำถาม</h2></u></strong>   <!-- คำถาม -->
-                    <li>คำตอบ1</li>    <!-- คำตอบ -->
-                    <li>คำตอบ2</li>    <!-- คำตอบ -->
-                </ul>
-                <ul class="answer">
-                    <strong><u><h2>คำถาม</h2></u></strong>   <!-- คำถาม -->
-                    <li>คำตอบ1</li>    <!-- คำตอบ -->
-                    <li>คำตอบ2</li>    <!-- คำตอบ -->
-                </ul>
+                <div class="dropdown">
+                <button class="dropdown-toggle">FAQ 1</button>
+                <div class="dropdown-content">
+                    <p>คำตอบของ FAQ 1</p>
+                </div>
+                </div>
+
+                <div class="dropdown">
+                <button class="dropdown-toggle">FAQ 2</button>
+                <div class="dropdown-content">
+                    <p>คำตอบของ FAQ 2</p>
+                </div>
+                </div>
+
                 <button id="closeFAQ" class="close-btn">ปิด</button> <!-- ปุ่มปิด panel -->
             </div>
 
@@ -146,31 +145,37 @@
             <div id="projectsPanel" class="panel hidden"> <!-- กล่องสำหรับแสดงผลงาน -->
                 <h2>Projects</h2> <!-- หัวข้อย่อย -->
                 <!-- 📝 พื้นที่สำหรับใส่รายการผลงาน รูปภาพ หรือลิงก์ -->
-                 <div class="project">
-                    <h3 class="projectname"><u>Project1</u></h3>     <!--  ชื่อProject  -->
-                    <p class="projectcontent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, in!</p>       <!-- รายละเอียดของอProject -->
+                <div class="dropdown">
+                <button class="dropdown-toggle">Project 1</button>
+                <div class="dropdown-content">
+                    <p>Project content</p>
                     <button class="button" onclick="window.open('https://www.youtube.com/', '_blank')">click me</button>    <!-- ปุ่มเพื่อกดไปหาProject -->
-                 </div>
-                 <div class="project">
-                    <h3 class="projectname"><u>Project1</u></h3>     <!--  ชื่อProject  -->
-                    <p class="projectcontent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, in!</p>       <!-- รายละเอียดของอProject -->
+                </div>
+                </div>
+
+                <div class="dropdown">
+                <button class="dropdown-toggle">Project 1</button>
+                <div class="dropdown-content">
+                    <p>Project content</p>
                     <button class="button" onclick="window.open('https://www.youtube.com/', '_blank')">click me</button>    <!-- ปุ่มเพื่อกดไปหาProject -->
-                 </div>
-                 <div class="project">
-                    <h3 class="projectname"><u>Project1</u></h3>     <!--  ชื่อProject  -->
-                    <p class="projectcontent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, in!</p>       <!-- รายละเอียดของอProject -->
+                </div>
+                </div>
+                
+                <div class="dropdown">
+                <button class="dropdown-toggle">Project 1</button>
+                <div class="dropdown-content">
+                    <p>Project content</p>
                     <button class="button" onclick="window.open('https://www.youtube.com/', '_blank')">click me</button>    <!-- ปุ่มเพื่อกดไปหาProject -->
-                 </div>
-                 <div class="project">
-                    <h3 class="projectname"><u>Project1</u></h3>     <!--  ชื่อProject  -->
-                    <p class="projectcontent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, in!</p>       <!-- รายละเอียดของอProject -->
+                </div>
+                </div>
+                
+                <div class="dropdown">
+                <button class="dropdown-toggle">Project 1</button>
+                <div class="dropdown-content">
+                    <p>Project content</p>
                     <button class="button" onclick="window.open('https://www.youtube.com/', '_blank')">click me</button>    <!-- ปุ่มเพื่อกดไปหาProject -->
-                 </div>
-                 <div class="project">
-                    <h3 class="projectname"><u>Project1</u></h3>     <!--  ชื่อProject  -->
-                    <p class="projectcontent">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, in!</p>       <!-- รายละเอียดของอProject -->
-                    <button class="button" onclick="window.open('https://www.youtube.com/', '_blank')">click me</button>    <!-- ปุ่มเพื่อกดไปหาProject -->
-                 </div>
+                </div>
+                </div>                
                 <button id="closeProjects" class="close-btn">ปิด</button> <!-- ปุ่มปิด panel -->
             </div>
 

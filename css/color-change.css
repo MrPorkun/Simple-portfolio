@@ -1,39 +1,39 @@
 :root {
     /* สีพื้นฐานหลักของธีม (ใช้เป็นโทนหลักทั่วเว็บ) */
-    --colors-based: #fea591;
+    --colors-based: #E11D48;
 
     /* สีเงา ใช้ทำเอฟเฟกต์เงาหรือขอบ */
     --shadows: #fe8266;
 
     /* สีปุ่มหลัก (เช่น ปุ่มกด action) */
-    --color-button: #ff6b81;
+    --color-button: #E11D48 ;
 
     /* สีพื้นหลังหรือตัวเลือกของคำตอบ */
-    --answer: #ffb3a2;
+    --answer: #E11D48;
 
     /* สีหัวข้อของคำตอบ */
-    --title-answer: #fe8266;
+    --title-answer: #9e1e3a;
 
     /* สีพื้นหลังหลักของเว็บ */
-    --background: #f5e7eb;
+    --background: #0F172A;
 
     /* สีเงาของตัวอักษรหัวข้อ */
     --title-shadow: black;
 
     /* สีพื้นหลังของกล่อง/แผงเนื้อหา */
-    --background-panel: #f5e7eb;
+    --background-panel: #F59E0B;
 
     /* สีฟอนต์ (ตัวหนังสือ) */
-    --font-color: white;
+    --font-color: #F8FAFC;
 
     /* สีชื่อโปรเจกต์ */
-    --project-name: #fe8266;
+    --project-name: #9e1e3a;
 
     /* สีเนื้อหาโปรเจกต์ */
-    --project-content: #ffb3a2;
+    --project-content: #E11D48;
 
     /* สีปุ่มในโปรเจกต์ */
-    --project-button: #ff6b81;
+    --project-button: #c01439;
 
     /* สีพื้นหลังข้อความ */
     --text-bacground: #f0917b;

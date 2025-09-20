@@ -24,17 +24,13 @@
   /* ปรับขนาดข้อความของ Title */
   --title-1440: 62px;
 
-  /* ปรับขนาดของ Shadow */
-  --width-shadow-1440: 350px;
-  --height-shadow-1440: 350px;
-
   /* ปรับขนาดความกว้างของ panel */
   --width-panel-1440: 90%;
   --max-width-panel-1440: 500px;
 
   /* ปรับระยะห่างภายในและภายนอกปุ่มปิดของ panel */
   --padding-closepanel-1440: 10px 15px;
-  --margintop-closepanel-1440: 20px;
+  --margintop-closepanel-1440: 50px;
 
   /* ปรับขนาดของ Panel About-me */
   --width-aboutme-1440: 500px;
@@ -56,7 +52,8 @@
   /* ปรับขนาดของ Panel Project */
   --width-project-1440: 600px;
   --max-width-project-1440: 95%;
-  --height-project-1440: 500px;
+  --height-project-1440: auto;
+  --max-height-project-1440: 70vh;
 
   /* ปรับขนาดของ Project Contact */
   --width-contact-1440: 500px;
@@ -154,7 +151,7 @@
 :root {
   /* ปรับ padding, min-height ของ Body */
   --padding-body-320: 20px 10px;
-  --min-height-320: 100vh;
+  --max-height-body-320: 100vh;
 
   /* ปรับ width, height, font-size ของ Buttonsong */
   --width-buttonsong-320: 15px;
@@ -165,7 +162,7 @@
   --width-container-320: 95%;
   --max-width-container-320: 400px;
   --height-container-320: auto;
-  --border-radius-continer-320: 20px;
+  --border-radius-container-320: 20px;
   --padding-container-320: 15px;
   --margin-container-320: 10px 0;
 
