@@ -8,11 +8,14 @@
     /* สีปุ่มหลัก (เช่น ปุ่มกด action) */
     --color-button: #E11D48 ;
 
-    /* สีพื้นหลังหรือตัวเลือกของคำตอบ */
-    --answer: #E11D48;
+    /* สีของ Dropdown FAQ & Project  */
+    --colors-background-dropdown: #E11D48;
 
-    /* สีหัวข้อของคำตอบ */
-    --title-answer: #9e1e3a;
+    /* สีของ Font FAQ & Project  */
+    --colors-font-dropdown: white;
+
+    /* สีของ Dropdown Content FAQ & Project  */
+    --colors-content-dropdown: #f9f9f9;
 
     /* สีพื้นหลังหลักของเว็บ */
     --background: #0F172A;
@@ -26,15 +29,9 @@
     /* สีฟอนต์ (ตัวหนังสือ) */
     --font-color: #F8FAFC;
 
-    /* สีชื่อโปรเจกต์ */
-    --project-name: #9e1e3a;
-
-    /* สีเนื้อหาโปรเจกต์ */
-    --project-content: #E11D48;
-
-    /* สีปุ่มในโปรเจกต์ */
-    --project-button: #c01439;
-
     /* สีพื้นหลังข้อความ */
     --text-bacground: #f0917b;
+
+    /* สีของ Profile  */
+    --profile-filter: drop-shadow(10px 10px 5px rgba(0, 0, 0, 0.5))
 }

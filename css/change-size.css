@@ -2,60 +2,118 @@
 /* สำหรับขนาดหน้าจอ 1440px ขึ้นไป */
 /* ============================= */
 :root {
-  /* ปรับความสูงและความกว้างของ container */
+
+  /* ปรับ Height ของ Body  */
+  --height-body-1440: 100vh;
+
+  /* ปรับ Width, Height, Border, Font-size ของ Button-song */
+  --width-buttonsong-1440: 50px;
+  --height-buttonsong-1440: 50px;
+  --border-buttonsong-1440: 1px solid;
+  --font-size-buttonsong-1440: xx-large;
+
+  /* ปรับ Wight, Height, Padding, Margin, Border-radius ของ container */
   --width-container-1440: 1200px;
   --height-container-1440: 600px;
-
-  /* ปรับระยะห่างภายในและภายนอกของ container */
   --padding-container-1440: 20px;
   --margin-container-1440: 25;
+  --border-radius-container-1440: 20px;
 
-  /* ปรับความสูงและความกว้างของ Button */
+  /* ปรับ Padding, Border-radius ของ text */
+  --padding-text-1440: 8px 12px;
+  --border-radius-text-1440: 10px;
+
+  /* ปรับ Width, Height, Border-radius, Border ของ Button */
   --width-button-1440: 100px;
   --height-button-1440: 100px;
+  --border-radius-button-1440: 20px;
+  --border-button-1440: 2px solid;
 
-  /* ปรับขนาดรูปภาพของ Button */
+  /* ปรับ Widht, Height ของ Button-IMG */
   --width-imgbutton-1440: 80px;
   --height-imgbutton-1440: 80px;
-
-  /* ปรับระยะห่างระหว่า Button */
+  
+  /* ปรับ Gap ของ Link-Button */
   --gap-button-1440: 50px;
 
-  /* ปรับขนาดข้อความของ Title */
-  --title-1440: 62px;
+  /* ปรับ Border-radius ของ Profile  */
+  --border-radius-profile-1440: 200px;
 
-  /* ปรับขนาดความกว้างของ panel */
+  /* ปรับ Font-Size, Text-shadow ของ Title */
+  --font-size-title-1440: 62px;
+  --text-shadow-title-1440: 5px 5px;
+
+  /* ปรับ Width, Max-width, Padding, Border-radius ของ panel */
   --width-panel-1440: 90%;
   --max-width-panel-1440: 500px;
+  --padding-panel-1440: 30px;
+  --border-radius-panel-1440: 15px;
 
-  /* ปรับระยะห่างภายในและภายนอกปุ่มปิดของ panel */
+  /* ปรับ Margin-top, Padding, Border-radius ของ panel */
   --padding-closepanel-1440: 10px 15px;
-  --margintop-closepanel-1440: 50px;
+  --margintop-closepanel-1440: 70px;
+  --border-radius-closepanel-1440: 8px;
+  --box-shadow-panel-1440: 0 8px 24px;
 
-  /* ปรับขนาดของ Panel About-me */
+  /* ปรับ margin, padding, border-radius ของ Close-Pnael-Button */
+  --margin-top-closepanel-1440: 20px;
+  --padding-closepanel-1440: 10px 15px;
+  --border-radius-closepanel-1440: 8px;
+
+
+  /* ปรับ Margin, Border, Border-radius ของ Dropdown */
+  --margin-dropdown-1440: 10px 0;
+  --border-dropdown-1440: 1px solid;
+  --border-radius-dropdown-1440: 8px;
+
+  /* ปรับ Width, Padding, Font-size ของ Dropdown-toggle */
+  --width-dropdown-toggle-1440: 100%;
+  --padding-dropdown-toggle-1440: 12px;
+  --font-size-dropdown-toggle-1440: 16px;
+
+  /* ปรับ Max-height, Padding ของ Dropdown-content */
+  --max-height-dropdown-content-1440: 0;
+  --padding-dropdown-content-1440: 0  12px;
+
+  /* ปรับ Width, Height, Margin-top ของ Dropdown-button */
+  --width-dropdown-button-1440: 100px;
+  --height-dropdown-button-1440: 50px;
+  --margin-top-dropdowm-button-1440: 20px;
+
+  /* ปรับ Max-height, Padding ของ Dropdown-content active */
+  --max-height-dropdown-active-1440: 200px;
+  --padding-dropdown-active-1440: 12px;
+
+  /* ปรับ Grid-tenplate-row / colums, Gap, Margin-top ของ Icon-web */
+  --grid-template-rows-iconweb-1440: repeat(2, 100px);
+  --grid-template-colums-iconweb-1440: repeat(3, 100px);
+  --gap-iconweb-1440: 20px;
+  --margin-top-iconweb-1440: 20px;
+
+  /* ปรับ Width, Max-width, Height, Max-height ของ Panel-About-me */
   --width-aboutme-1440: 500px;
   --max-width-aboitme-1440: 90%;
   --height-aboutme-1440: auto;
   --max-height-aboutme-1440: 70vh;
 
-  /* ปรับขนาดของ Panel Link */
+  /* ปรับ Width, Max-width, Height ของ Panel-Link */
   --width-link-1440: 400px;
   --max-width-link-1440: 90%;
   --height-link-1440: 400px;
 
-  /* ปรับขนาดของ Panel FAQ */
+  /* ปรับ Width, Max-width, height, Max-height ของ Panel-FAQ */
   --width-faq-1440: 450px;
   --max-width-faq-1440: 90%;
   --height-faq-1440: auto;
   --max-height-faq-1440: 60vh;
 
-  /* ปรับขนาดของ Panel Project */
+  /* ปรับ Width, Max-width, height, Max-height ของ Panel-Project */
   --width-project-1440: 600px;
   --max-width-project-1440: 95%;
   --height-project-1440: auto;
   --max-height-project-1440: 70vh;
 
-  /* ปรับขนาดของ Project Contact */
+  /* ปรับ Widht, Max-widht, height, Max-height ของ Panel-Contact */
   --width-contact-1440: 500px;
   --max-width-contact-1440: 90%;
   --height-contact-1440: 300px;
@@ -66,83 +124,113 @@
 /* สำหรับขนาดหน้าจอ 1024px - 1439px */
 /* ============================= */
 :root {
-  /* ปรับขนาดความสูงของ body */
+  /* ปรับ Height ของ body */
   --body-height-1024: 100vh;
 
-  /* ปรับขนาดความสูงและความกว้างของ buttonsong */
+  /* ปรับ Width, Height, Border, Font-size ของ buttonsong */
   --height-buttonsong-1024: 50px;
   --width-buttonsong-1024: 50px;
+  --border-buttonsong-1024: 1px solid;
+  --font-size-buttonsong-1024: xx-large;
 
-  /* ปรับขนาดความสูงและความกว้างของ Container */
+  /* ปรับ Width, Max-width, Height, Border-radius, margin, padding ของ Container */
   --width-container-1024: 95%;
   --max-width-container-1024: 1200px;
   --height-container-1024: 600px;
-
-  /* ปรับความโค้งของมุม Container */
   --border-radius-container-1024: 20px;
   --margin-container-1024: 25px;
   --padding-container-1024: 20px;
 
-  /* ปรับตำแหน่ง, ระยะห่างภายใน, ความโค้งของมุม, ขนาดของตัวอักษรของ text */
-  --bottom-text-1024: 110%;
+  /* ปรับ Padding, Border-radius, Font-size ของ text */
   --padding-text-1024: 8px 12px;
   --border-radius-text-1024: 10px;
   --font-size-text-1024: 16px;
 
-  /* ปรับความกว้าง, ความสูง, ความโค้งของมุม ของ Button */
+  /* ปรับ Width, Height, Border-radius, Border ของ Button */
   --width-button-1024: 90px;
   --height-button-1024: 90px;
   --border-radius-button-1024: 20px;
+  --border-button-1024: 2px solid;
 
-  /* ปรับความกว้างของรูปใน button */
+  /* ปรับ Width, Height ของ button-img */
   --width-imgbutton-1024: 70px;
   --height-imgbutton-1024: 70px;
 
-  /* ปรับขนาดความกว้าง, ความสูง, ความโค้งของมุม ของ Profile */
+  /* ปรับ Gap ของ Link-button  */
+  --gap-linknutton-1024: 40px;
+
+  /* ปรับ Width, Height, Border-radius ของ Profile */
   --width-profile-1024: 320px;
   --height-profile-1024: auto;
   --border-radius-profile-1024: 200px;
 
-  /* ปรับขนาดของ Font ของ Title */
+  /* ปรับ Font-size ของ Title */
   --font-size-title-1024: 56px;
 
-  /* ปรับ Width, Height, Border-radius, ของ Shadow */
-  --border-radius-shadow-1024: 200px;
-  --width-shadow-1024: 340px;
-  --height-shadow-1024: 340px;
-
-  /* ปรับ Width, Max-width, padding, border-radius, ของpanel */
+  /* ปรับ Width, Max-width, padding, border-radius, Box-shadow ของpanel */
   --width-panel-1024: 90%;
   --max-width-panel-1024: 500px;
   --padding-panel-1024: 30px;
   --border-radius-panel-1024: 15px;
+  --box-shadow-panel-1024: 0 8px 24px;
 
-  /* ปรับ margin ของAnswer */
-  --margin-top-answer-1024: 5px;
-  --margin-bottom-answer-1024: 5px;
+  /* ปรับ Margin, Border, Border-radius ของ Dropdown */
+  --margin-dropdown-1024: 10px 0;
+  --border-dropdown-1024: 1px solid;
+  --border-radius-dropdown-1024: 8px;
+
+  /* ปรับ Width, Padding, Font-size ของ Dropdown-toggle */
+  --width-dropdowntoggle-1024: 100%;
+  --height-dropdowntoggle-1024: 12px;
+  --font-size-dropdowntoggle-1024: 16px;
+
+  /* ปรับ Max-height, Padding ของ Dropdown-content  */
+  --max-height-dropdowncontent-1024: 0;
+  --padding-dropdowncontent-1024: 0 12px;
+
+  /* ปรับ Width, Height, Margin-top ของ Dropdown-button */
+  --width-dropdownbutton-1024: 100px;
+  --height-dropdownbutton-1024: 50px;
+  --margin-top-dropdownbutton-1024: 20px;
+
+  /* ปรับ Max-height, Padding ของ Dropdown-active */
+  --max-height-dropdownactive-1024: 200px;
+  --padding-dropdownactive-1024: 12px;
 
   /* ปรับ grid-template columns/rows, gap ของ icon-web */
   --grid-template-rows-icnonweb-1024: repeat(2, 100px);
   --grid-template-columns-iconweb-1024: repeat(3, 100px);
   --gap-iconweb-1024: 20px;
 
-  /* ปรับ padding, margin ของ Project */
-  --padding-project-1024: 25px;
-  --margin-project-1024: 10px;
-
-  /* ปรับ margin ของ Projectcontent */
-  --margin-top-projectcontent-1024: 10px;
-  --margin-bottom-projectcontent-1024: 10px;
-
-  /* ปรับ Width, Height, border-radius ของProject button */
-  --width-projectbutton-1024: 100px;
-  --height-projectbutton-1024: 50px;
-  --border-radius-projectbutton-1024: 5px;
-
   /* ปรับ margin, padding, border-radius ของ Close-btn */
   --margin-top-close-btn-1024: 20px;
   --padding-close-btn-1024: 10px 15px;
   --border-radius-close-btn-1024: 8px;
+
+  /* ปรับ Width, Max-width, Max-height ของ AboutME-Panel */
+  --width-aboutmepanel-1024: 500px;
+  --max-width-aboutmepanel-1024: 90%;
+  --max-height-aboutmepanel-1024: 70vh;
+
+  /* ปรับ Width, Max-width, Height ของ Link-panel */
+  --width-linkpanel-1024: 400px;
+  --max-width-linkpanel-1024: 90%;
+  --height-linkpanel-1024: 400px;
+
+  /* ปรับ Width, Max-width, Max-height ของ FAQ-panel */
+  --width-faqpanel-1024: 450px;
+  --max-width-faqpanel-1024: 75%;
+  --max-height-faqpanel-1024: 60vh;
+
+  /* ปรับ Width, Max-width, Height ของ Project-panel */
+  --width-projectpanel-1024: 600px;
+  --max-width-projectpanel-1024: 75%;
+  --height-projectpanel-1024: 500px;
+
+  /* ปรับ Width, Max-width, Max-height ของ Contact-panel */
+  --width-contactpanel-1024: 350px;
+  --max-width-contactpanel-1024: 90%;
+  --max-height-contactpanel-1024: 50vh;
 }
 
 /* ============================= */
@@ -153,10 +241,11 @@
   --padding-body-320: 20px 10px;
   --max-height-body-320: 100vh;
 
-  /* ปรับ width, height, font-size ของ Buttonsong */
+  /* ปรับ width, height, font-size, border ของ Buttonsong */
   --width-buttonsong-320: 15px;
   --height-buttonsong-320: 15px;
   --font-size-container-320: xx-large;
+  --border-buttonsong-320: 1px solid;
 
   /* ปรับ width, max-width, height, border-radius, padding, margin ของContainer */
   --width-container-320: 95%;
@@ -171,10 +260,11 @@
   --gap-buttonwrapper-320: 20px;
   --width-buttonwrapper-320: 100%;
 
-  /* ปรับ width, height, border-radius ของButton */
+  /* ปรับ width, height, border-radius, boder ของButton */
   --width-button-320: 70px;
   --height-button-320: 70px;
   --border-radius-button-320: 20px;
+  --border-button-320: 2px solid;
 
   /* ปรับ width, height ของbutton-img */
   --width-buttonimg-320: 55px;
@@ -191,26 +281,42 @@
   --border-radius-profile-320: 200px;
   --margin-bottom-profile-320: 20px;
 
-  /* ปรับ font-size, margin-bottom ของ title */
+  /* ปรับ font-size, margin-bottom, text-shadow ของ title */
   --font-size-title-320: 32px;
   --margin-bottom-title-320: 25px;
-
-  /* ปรับ width, height, border-radius, margin-bottom ของ Shadow */
-  --width-shadow-320: 220px;
-  --height-shadow-320: 210px;
-  --border-radius-shadow-320: 200px;
-  --margin-bottom-shadow-320: 15px;
+  --text-shadow-title-320: 3px 3px;
 
   /* ปรับ width, max-width, height, padding, border-radius ของ Panel */
   --width-panel-320: 90%;
   --max-width-panel-320: 500px;
   --height-panel-320: 70%;
   --padding-panel-320: 30px;
-  --border-radius-panel-320: 15px
+  --border-radius-panel-320: 15px;
+  --box-shadow-panel-320: 0 8px 24px;
 
-  /* ปรับ margin-top, margin-bottom ของ answer-h2 */
-  --margin-top-answerh2-320: 5px;
-  --margin-bottom-answerh2-320: 5px;
+  /* ปรับ Margin, Border, Border-radius ของ Dropdown */
+  --margin-dropdown-320: 10px 0;
+  --border-dropdown-320: 1px solid;
+  --border-radius-dropdown-320: 8px;
+
+  /* ปรับ Width, Padding, Font-size ของ Dropdowm-toggle */
+  --width-dropdowntoggle-320: 100%;
+  --padding-dropdowntoggle-320: 12px;
+  --font-size-dropdowntoggle-320: 16px;
+
+  /* ปรับ Max-height, Padding ของ Dropdown-content */
+  --max-height-dropdowncontent-320: 0;
+  --padding-dropdowncontent-320: 0 12px;
+
+  /* ปรับ Width, Height, Margin-top, Border-radius ของ Dropdown-button */
+  --width-dropdownbutton-320: 75px;
+  --height-dropdownbutton-320: 35px;
+  --margin-top-dropdownbutton-320: 20px;
+  --border-radius-dropdownbutton-320: 10px;
+
+  /* ปรับ Max-height, Padding ของ Dropdown-active */
+  --max-height-dropdownactive-320: 200px;
+  --padding-dropdownactive-320: 12px;
 
   /* ปรับ height ของlink-panel */
   --height-linkpanel-320: 40% !important;
@@ -222,27 +328,50 @@
   --margin-top-iconweb-320: 10px;
   --margin-bottom-iconweb-320: 10px;
 
-  /* ปรับ Padding, Margin ของ Project */
-  --padding-project-320: 25px;
-  --margin-project-320: 10px;
-
-  /* ปรับ Margin top / bottom ของ Project-content */
-  --margin-top-projectcontent-320: 10px;
-  --margin-bottom-projectcontent-320: 10px;
-
-  /* ปรับ Width, Height, Border-radius ของ Project-button */
-  --width-projectbutton-320: 100px;
-  --height-projectbutton-320: 50px;
-  --border-radius-projectbutton-320: 5px;
 
   /* ปรับ Margin top, Padding, Border-raidus ของ Close-btn */
   --margin-top-closebtn-320: 20px;
   --padding-closebtn-320: 10px 15px;
   --border-radius-closebtn-320: 8px;
+
+  /* ปรับ Width, Max-width, Height, Max-height, Border-radius ของ Aboutme-panel */
+  --width-aboutmepanel-320: 250px;
+  --max-width-aboutmepanel-320: 90%;
+  --height-aboutmepanel-320: 300px;
+  --max-height-aboutmepanel-320: 70vh;
+  --border-radius-aboutmepanel-320: 10px;
+
+  /* ปรับ Width, Max-width, Height, Border-radius ของ Link-panel */
+  --width-linkpanel-320: 300px;
+  --max-width-linkpanel-320: 90%;
+  --height-linkpanel-320: 325px;
+  --border-radius-linkpanel-320: 10px;
+
+  /* ปรับ Width, Max-width, Max-height, Border-radius ของ FAQ-panel */
+  --width-faqpanel-320: 250px;
+  --max-width-faqpanel-320: 90%;
+  --height-faqpanel-320: auto;
+  --max-height-faqpanel-320: 60vh;
+  --border-radius-faqpanel-320: 10px;
+
+  /* ปรับ Width, Max-width, Height, Border-radius ของ Project-panel */
+  --width-projectpanel-320: 300px;
+  --max-width-projectpanel-320: 75%;
+  --height-projectpanel-320: auto;
+  --max-height-projectpanel-320: 70vh;
+  --border-radius-projectpanel-320: 10px;
+
+  /* ปรับ Width, Max-width, Max-height, Border-radius ของ Contact-panel */
+  --width-contactpanel-320: 250px;
+  --max-width-contactpanel-320: 90%;
+  --height-contactpanel-320: auto;
+  --max-height-contactpanel-320: 50vh;
+  --border-radius-contactpanel-320: 10px;
+
 }
 
 /* ============================= */
-/* สำหรับขนาดหน้าจอ 468-1023 px */
+/* สำหรับขนาดหน้าจอ 768-1023 px */
 /* ============================= */
 :root {
   
@@ -250,9 +379,11 @@
   --height-body-768: 100vh;
   --padding-body-768: 20px;
 
-  /* ปรับ Width, Height ของ  Buttonsong  */
+  /* ปรับ Width, Height, Border, Font-size ของ  Buttonsong  */
   --width-buttonsong-768: 20px;
   --height-buttonsoung-768: 20px;
+  --border-buttonsong-768: 1px solid;
+  --font-size-buttonsong-768: xx-large;
 
   /* ปรับ Width, Max-width, Height, Border-radius, Padding ของ Container */
   --width-container-768: 90%;
@@ -272,18 +403,20 @@
   --gap-buttonwrapper-768: 30px;
   --margin-bottom-buttonwrapper-768: 20px;
 
-  /* ปรับ Width, Height, Border-radius ของ Button */
+  /* ปรับ Width, Height, Border-radius, Border ของ Button */
   --width-button-768: 80px;
   --height-button-768: 80px;
   --border-radius-button-768: 20px;
+  --border-button-768: 2px solid;
 
   /* ปรับ  Width, Height ของ button-img */
   --width-buttonimg-768: 65px;
   --height-buttonimg-768: 65px;
 
-  /* ปรับ Padding, Border-radius ของ text */
+  /* ปรับ Padding, Border-radius, Font-size ของ text */
   --padding-text-768: 6px 10px;
   --border-radius-text-768: 10px;
+  --font-size-text-768: 14px;
 
   /* ปรับ Width, Height, Border-radius, Margin-bottom ของ Profile */
   --width-profile-768: 250px;
@@ -291,46 +424,84 @@
   --border-radius-profile-768: 200px;
   --margin-bottom-profile-768: 25px;
 
-  /* ปรับ Font-size, Margin-bottom ของ title */
+  /* ปรับ Font-size, Margin-bottom, Text-shadow ของ title */
   --font-size-title-768: 44px;
   --margin-bottom-title-768: 25px;
+  --text-shadow-title-768: 3px 3px;
 
-  /* ปรับ Width, Height, Border-radiusm Margin-bottom ของ shadow */
-  --width-shadow-768: 270px;
-  --height-shadow-768: 270px; 
-  --border-radius-shadow-768: 200px;
-  --margin-bottom-shadow-768: 20px;
-
-  /* ปรับ Width, Max-width, Height, Padding, Border-radius ของ panel */
+  /* ปรับ Width, Max-width, Height, Padding, Border-radius, box-shadow ของ panel */
   --width-panel-768: 90%;
   --max-width-panel-768: 500px;
   --height-panel-768: 70%;
   --padding-panel-768: 30px;
-  --border-radius-768: 15px;
+  --border-radius-panel-768: 15px;
+  --box-shadow-panel-768: 0 8px 24px;
 
-  /* ปรับ Margin-top / bottom ของ answer */
-  --margin-top-answer-768: 5px;
-  --margin-bottom-answer-768: 5px;
+    /* ปรับ Margin, Border, Border-radius ของ Dropdown */
+  --margin-dropdown-768: 10px 0;
+  --border-dropdown-768: 1px solid;
+  --border-radius-dropdown-768: 8px;
+
+  /* ปรับ Width, Padding, Font-size ของ Dropdown-toggle */
+  --width-dropdowntoggle-768: 100%;
+  --padding-dropdowntoggle-768: 12px;
+  --font-size-dropdowntoggle-768: 16px;
+  
+  /* ปรับ Max-height, Padding ของ Dropdown-content */
+  --max-height-dropdowncontent-768: 0;
+  --padding-dropdowncontent-768: 0 12px;
+
+  /* ปรับ Width, Height, Margin-top ของ Dropdown-button */
+  --width-dropdownbutton-768: 75px;
+  --height-dropdownbutton-768: 50px;
+  --margin-top-dropdownbutton-768: 20px;
+
+  /* ปรับ Max-height, Padding ของ Dropdown-active */
+  --max-height-dropdownactive-768: 200px;
+  --padding-dropdownactive-768: 12px;
 
   /* ปรับ Grid-row / columns, Gap ของ icon-web */
   --grid-row-iconweb-768: repeat(2, 100px);
   --grid-columns-iconweb-768: repeat(3, 100px);
   --gap-iconweb-768: 20px;
 
-  /* ปรับ Padding, Margin ของ Project */
-  --padding-project-768: 20px;
-  --margin-project-768: 10px;
-
-  /* ปรับ Width, Height, Border-radius ของ project-button */
-  --width-projectbutton-768: 100px;
-  --height-projectbutton-768: 50px;
-  --border-radius-projectbutton-768: 5px;
-
   /* ปรับ Mardin-top, Padding, Border-radius ของ Close-btn */
   --margin-top-closebtn-768: 20px;
   --padding-closebtn-768: 10px 15px;
   --border-radius-closebtn-768: 8px;
 
+  /* ปรับ Width, Max-width, Height, Max-height, Border-radius ของ Aboutme-panel */
+  --width-aboutmepanel-768: 250px;
+  --max-width-aboutmepanel-768: 90%;
+  --height-aboutmepanel-768: auto;
+  --max-height-aboutmepanel-768: 70vh;
+  --border-radius-aboutmepanel-768: 10px;
+
+  /* ปรับ Width, Max-width, Height, Border-radius ของ Link-panel */
+  --width-linkpanel-768: 400px;
+  --max-width-linkpanel-768: 90%;
+  --height-linkpanel-768: auto;
+  --border-radius-linkpanel-768: 10px;
   
+  /* ปรับ Width, Max-width, Height, Max-height, Border-radius ของ FAQ-panel */
+  --width-faqpanel-768: 350px;
+  --max-width-faqpanel-768: 90%;
+  --height-faqpanel-768: auto;
+  --max-height-faqpanel-768: 60vh;
+  --border-radius-faqpanel-768: 10px;
+
+  /* ปรับ Width, Max-width, Height, Max-height, Border-radius ของ Project-panel */
+  --width-projectpanel-768: 400px;
+  --max-width-projectpanel-768: 95%;
+  --height-projectpanel-768: auto;
+  --max-height-projectpanel-768: 75%;
+  --border-radius-projectpanel-768: 10px;
+
+  /* ปรับ Width, Max-width, Height, Max-height, Border-radius ของ Contact-panel */
+  --width-contactpanel-768: 300px;
+  --max-width-contactpanel-768: 90%;
+  --height-contactpanel-768: autp;
+  --max-height-contactpanel-768: 50vh;
+  --border-radius-contactpanel-768: 10px;
 
 }
