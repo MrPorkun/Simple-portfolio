@@ -938,7 +938,7 @@ body {
     text-align: center; /* จัดกึ่งกลาง */
     margin-bottom: var(-margin-bottom-title-768); /* ระยะห่างด้านล่าง */
     color: var(--font-color); /* สีตัวอักษรขาว */
-    text-shadow: var(--text-shadown-title-768) var(--title-shadow); /* เงาตัวอักษรสีดำ */
+    text-shadow: var(--text-shadow-title-768) var(--title-shadow); /* เงาตัวอักษรสีดำ */
     position: static; /* ตำแหน่งปกติ (ไม่ใช้ absolute) */
     left: auto; /* ยกเลิกการเลื่อน */
     bottom: auto; /* ยกเลิกการเลื่อน */
