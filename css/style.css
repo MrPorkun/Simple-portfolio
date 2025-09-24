@@ -120,6 +120,8 @@ body {
     position: relative; /* ตำแหน่งสัมพัทธ์ */
     left: 15px; /* เลื่อนขวา 15px */
     top: 15px; /* เลื่อนลง 15px */
+    width: var(--width-profile-1440);
+    height: var(--height-profile-1440);
     border-radius: var(--border-radius-profile-1440); /* ทำให้เป็นวงกลม */
     filter: var(--profile-filter);
   }
