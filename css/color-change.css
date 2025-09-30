@@ -5,11 +5,23 @@
     /* สีปุ่มหลัก (เช่น ปุ่มกด action) */
     --color-button: #E11D48 ;
 
+    /* สีของ Button เปิด Panel  */
+    --colors-panel-button: #E11D48;
+
+    /* สีของ button ในหน้าของ Link  */
+    --color-link-button: #E11D48;
+
     /* สีของ Dropdown FAQ & Project  */
     --colors-background-dropdown: #E11D48;
 
+    /* สีของ ฺButton Dropdown Project  */
+    --color-dropdown-button: #E11D48;
+
     /* สีของ Font FAQ & Project  */
     --colors-font-dropdown: white;
+
+    /* สีของ Font Dropdown content ใน FAQ & Project  */
+    --colors-font-dropdown-content: black;
 
     /* สีของ Dropdown Content FAQ & Project  */
     --colors-content-dropdown: #f9f9f9;

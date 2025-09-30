@@ -92,6 +92,7 @@ body {
     background: var(--colors-based); /* สีพื้นหลังเหมือนกล่องหลัก */
     z-index: 3; /* ลำดับชั้น */
     border: var(--border-button-1440) var(--colors-based); /* ขอบสีเดียวกับพื้นหลัง */
+    background: var(--colors-panel-button);
   }
 
   /* เอฟเฟกต์เมื่อ hover ปุ่ม */
@@ -208,6 +209,7 @@ body {
     max-height: var(--max-height-dropdown-content-1440);           /* ซ่อนตอนแรก */
     overflow-y: auto;
     transition: max-height 0.3s ease, padding 0.3s ease;
+    color: var(--colors-font-dropdown-content);
     background: var(--colors-content-dropdown);
     padding: var(--padding-dropdown-content-1440);          /* ตอนปิดจะไม่มี padding */
   }
@@ -217,6 +219,8 @@ body {
     height: var(--height-dropdown-button-1440);
     position: relative;
     margin-top: var(--margin-top-dropdowm-button-1440);
+    background: var(--color-dropdown-button);
+    border: 1px solid var(--color-dropdown-button);
   }
 
   /* เวลามี class .active */
@@ -232,6 +236,11 @@ body {
     justify-content: center; /* ตั้งให้อยู่ตรงกลาง */
     gap: var(--gap-iconweb-1440); /* ระยะห่างอยู่ที่ 20px */
     margin-top: var(--margin-top-iconweb-1440); /* ระยะด้านบน 20px  */
+  }
+
+  .icon-web .button {
+    border: 1px solid var(--color-link-button);
+    background: var(--color-link-button);
   }
 
   /* กำหนดขนาดเฉพาะสำหรับ panel "เกี่ยวกับ" */
@@ -359,6 +368,7 @@ body {
     z-index: 3; /* ลำดับชั้น */
     transition: background 0.3s, transform 0.3s; /* เอฟเฟกต์การเปลี่ยน */
     border: var(--border-button-1024) var(--colors-based); /* ขอบสีเดียวกับพื้นหลัง */
+    background: var(--colors-panel-button);
   }
 
   /* เอฟเฟกต์เมื่อ hover ปุ่ม */
@@ -387,7 +397,7 @@ body {
     position: relative; /* ตำแหน่งสัมพัทธ์ */
     right: 280px; /* เลื่อนซ้าย 280px (ลดจาก 300px) */
     border-radius: var(--border-radius-profile-1024); /* ทำให้เป็นวงกลม */
-    width: var(width-profile-1024); /* ความกว้างคงที่ */
+    width: var(--width-profile-1024); /* ความกว้างคงที่ */
     height: var(--height-profile-1024); /* ความสูงตามสัดส่วน */
     filter: var(--profile-filter);
   }
@@ -442,6 +452,7 @@ body {
     max-height: var(--max-height-dropdowncontent-1024);           /* ซ่อนตอนแรก */
     overflow-y: auto;
     transition: max-height 0.3s ease, padding 0.3s ease;
+    color: var(--colors-font-dropdown-content);
     background: var(--colors-font-dropdown);
     padding: var(--padding-dropdowncontent-1024);          /* ตอนปิดจะไม่มี padding */
   }
@@ -451,6 +462,7 @@ body {
     height: var(--height-dropdownbutton-1024);
     position: relative;
     margin-top: var(--margin-top-dropdownbutton-1024);
+    background: var(--color-dropdown-button);
   }
 
 
@@ -466,6 +478,11 @@ body {
     grid-template-columns: var(--grid-template-columns-iconweb-1024); /* จำนวนแถวแนวตั้งและขนาดของกล่อง */
     justify-content: center; /* ตั้งให้อยู่ตรงกลาง */
     gap: var(--gap-iconweb-1024); /* ระยะห่างอยู่ที่ 20px */
+  }
+
+  .icon-web .button {
+    border: 1px solid var(--color-link-button);
+    background: var(--color-link-button);
   }
 
   /* ปุ่มปิด modal */
@@ -595,6 +612,7 @@ body {
     transition: background 0.3s, transform 0.3s; /* เอฟเฟกต์การเปลี่ยน */
     flex-shrink: 0; /* ไม่ให้หดขนาด */
     border: var(--border-button-320) var(--colors-based); /* ขอบสีเดียวกับพื้นหลัง */
+    background: var(--colors-panel-button);
   }
 
   /* เอฟเฟกต์เมื่อ hover ปุ่ม */
@@ -697,6 +715,7 @@ body {
     max-height: var(--max-height-dropdowncontent-320);           /* ซ่อนตอนแรก */
     overflow-y: auto;
     transition: max-height 0.3s ease, padding 0.3s ease;
+    color: var(--colors-font-dropdown-content);
     background: var(--colors-content-dropdown);
     padding: var(--padding-dropdowncontent-320);          /* ตอนปิดจะไม่มี padding */
   }
@@ -707,6 +726,7 @@ body {
     position: relative;
     margin-top: var(--margin-top-dropdownbutton-320);
     border-radius: var(--border-radius-dropdownbutton-320);
+    background: var(--color-dropdown-button);
   }
 
   /* เวลามี class .active */
@@ -729,6 +749,11 @@ body {
     margin-bottom: var(--margin-bottom-iconweb-320); /* ระยะห่างด้านล่าง */
     position: relative;
     right: 10px;
+  }
+
+  .icon-web .button {
+    border: 1px solid var(--color-link-button);
+    background: var(--color-link-button);
   }
 
   .icon-web button {
@@ -887,6 +912,7 @@ body {
     transition: background 0.3s, transform 0.3s; /* เอฟเฟกต์การเปลี่ยน */
     flex-shrink: 0; /* ไม่ให้หดขนาด */
     border: var(--border-button-768) var(--colors-based); /* ขอบสีเดียวกับพื้นหลัง */
+    background: var(--colors-panel-button);
   }
 
   /* เอฟเฟกต์เมื่อ hover ปุ่ม */
@@ -988,6 +1014,7 @@ body {
     max-height: var(--max-height-dropdowncontent-768);           /* ซ่อนตอนแรก */
     overflow-y: auto;
     transition: max-height 0.3s ease, padding 0.3s ease;
+    color: var(--colors-font-dropdown-content);
     background: var(--colors-content-dropdown);
     padding: var(--padding-dropdowncontent-768);          /* ตอนปิดจะไม่มี padding */
   }
@@ -997,6 +1024,7 @@ body {
     height: var(--height-dropdownbutton-768);
     position: relative;
     margin-top: var(--margin-top-dropdownbutton-768);
+    background: var(--color-dropdown-button);
   }
 
 
@@ -1012,6 +1040,11 @@ body {
     grid-template-columns: var(--grid-columns-iconweb-768); /* จำนวนแถวแนวตั้งและขนาดของกล่อง */
     justify-content: center; /* ตั้งให้อยู่ตรงกลาง */
     gap: var(--gap-iconweb-768); /* ระยะห่างอยู่ที่ 20px */
+  }
+
+  .icon-web .button {
+    border: 1px solid var(--color-link-button);
+    background: var(--color-link-button);
   }
 
   /* ปุ่มปิด modal */
